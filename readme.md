@@ -1,3 +1,21 @@
+# Project Goal
+
+to complete
+
+# Project Description
+
+to complete
+
+# Team from Jacobi
+
+| Members        | Roles                    |
+| -------------- | ------------------------ |
+| Usman SAEED    | Project Owner            |
+| Karen BLANQUE  | HR Assistant             |
+| Pierre PAGE    | HR Manager               |
+| Nicolas YVELIN | Factory Manager          |
+| Samuel NEVES   | Maintenance Shop Manager |
+
 # Our Project Team 
 
 
