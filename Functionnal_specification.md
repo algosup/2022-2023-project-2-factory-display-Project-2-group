@@ -33,18 +33,27 @@ Mr. Saeed, the CEO of the company in France, wants a simple and secure communica
 
 ### 4. Risks and Assumptions
 
-**About the environment law :**
-
 **the reglementation :**
 
 ### 5. Non goals
 
 ### 6. Development and environement and Requirements
 
-  - Go[^2]
+  - HTML[^2]
+  - CSS [^3]
+  - JS [^4]
   - Windows/MacOS on development
   
 ### 7. Glossary
 
 [^1]: Jacobi
 It's an air and water purification solutions company. The company is based in Vierzon since 1956.
+
+[^2]: HTML (HyperText Markup Language)
+We use this language to create a web page. It is the skeleton of the page. We write all the content as well as its structure.
+
+[^3]: CSS (Cascading Style Sheets)
+This language completes HTML. It allows to format and make more ergonomic the website. It is the flesh that embellishes the skeleton.
+
+[^4]: JS (JavaScript)
+It is an object-oriented scripting language. This means that...
