@@ -3,15 +3,17 @@
 ## Table of contents
 - [Functional Specification](#functional-specification)
   - [Table of contents](#table-of-contents)
-    - [1. Distribution](#1-distribution)
-    - [2. Overview](#2-overview)
-    - [3. Scenarios](#3-scenarios)
-    - [4. Risks and Assumptions](#4-risks-and-assumptions)
-    - [5. Non goals](#5-non-goals)
-    - [6. Development and environement and Requirements](#6-development-and-environement-and-requirements)
-    - [7. Glossary](#7-glossary)
+    - [Distribution](#distribution)
+    - [Overview](#overview)
+    - [Scenarios](#scenarios)
+      - [1. Alan](#1-alan)
+      - [2. Solange](#2-solange)
+      - [3. Hervé](#3-hervé)
+    - [Risks and Assumptions](#risks-and-assumptions)
+    - [Goals and non goals](#goals-and-non-goals)
+    - [Development and environement and Requirements](#development-and-environement-and-requirements)
 
-### 1. Distribution
+### Distribution
 
 | PERSON | ROLE |
 | :-: | :-: |
@@ -21,30 +23,43 @@
 | Audrey Telliez | Software Engineer |
 | Pierre GORIN | Quality Assurance |
   
-### 2. Overview
+### Overview
 
-Jacobi's[^1] company commissioned us to create a communication tool to centralize the information to be transmitted to all employee.
+Jacobi's[^1] company commissioned us to create a communication tool to centralize the information to be transmitted to all employees.
 
-Actually, the company share and send the informations via different application like Team, Email or Yammer, but also with a paper display. The company would like to facilitate communication and make it more topical with the digital tools that exist.
+Currently, the company share and send the informations via different application like Team, Email or Yammer, but also with a paper display. However, these means of communication are too numerous and even outdated. The company would like to facilitate communication and make it more modern with the digital tools that exist.
 
-Mr. Saeed, the CEO of the company in France, wants a simple and secure communication tool to honor these two key points that Jacobi represents.
+Mr. Saeed, the CEO of the company in France, would like a simple and secure communication tool to honor these two key points that Jacobi represents.
 
-### 3. Scenarios
+### Scenarios
 
-### 4. Risks and Assumptions
+#### 1. Alan
+Alan crée son écran d’actualité et le partage sur les deux écrans
+#### 2. Solange
+Solange charge un écran d’actualité qu’il avait déjà fait et le modifie, puis il le partage sur les deux écrans
+#### 3. Hervé
+Hervé crée un nouvel écran d’actualité et le partage sur un écran puis il en charge un déjà existant et le partage sur le deuxième écran.
+### Risks and Assumptions
 
 **the reglementation :**
 
-### 5. Non goals
+### Goals and non goals
 
-### 6. Development and environement and Requirements
+**Goals :**
+- digitalise the communication
+- make it easy to publish the content
+
+**Non goals :**
+- Do not use the screen for entertainment purposes
+
+### Development and environement and Requirements
 
   - HTML[^2]
   - CSS [^3]
   - JS [^4]
   - Windows/MacOS on development
-  
-### 7. Glossary
+
+<!-- Glossary -->
 
 [^1]: Jacobi
 It's an air and water purification solutions company. The company is based in Vierzon since 1956.
@@ -56,4 +71,4 @@ We use this language to create a web page. It is the skeleton of the page. We wr
 This language completes HTML. It allows to format and make more ergonomic the website. It is the flesh that embellishes the skeleton.
 
 [^4]: JS (JavaScript)
-It is an object-oriented scripting language. This means that...
+It's an object-oriented scripting language. This means that we can make the elements that make up the website dynamic. It is the muscles and joints of the site.
