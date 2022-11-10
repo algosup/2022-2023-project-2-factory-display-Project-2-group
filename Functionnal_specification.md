@@ -6,9 +6,10 @@
     - [Distribution](#distribution)
     - [Overview](#overview)
     - [Scenarios](#scenarios)
-      - [1. Alan](#1-alan)
-      - [2. Solange](#2-solange)
-      - [3. Hervé](#3-hervé)
+      - [1. Hervé](#1-hervé)
+      - [2. Alan](#2-alan)
+      - [3. Solange](#3-solange)
+      - [4. Estelle](#4-estelle)
     - [Risks and Assumptions](#risks-and-assumptions)
     - [Goals and non goals](#goals-and-non-goals)
     - [Development and environement and Requirements](#development-and-environement-and-requirements)
@@ -32,13 +33,25 @@ Currently, the company share and send the informations via different application
 Mr. Saeed, the CEO of the company in France, would like a simple and secure communication tool to honor these two key points that Jacobi represents.
 
 ### Scenarios
+#### 1. Hervé
+Hervé has been Jacobi's communications director for 10 years. He is a vigorous 52 year old man. He divorced his wife 3 years ago with whom he had two children, Jessica and Nathan.
 
-#### 1. Alan
-Alan crée son écran d’actualité et le partage sur les deux écrans
-#### 2. Solange
-Solange charge un écran d’actualité qu’il avait déjà fait et le modifie, puis il le partage sur les deux écrans
-#### 3. Hervé
-Hervé crée un nouvel écran d’actualité et le partage sur un écran puis il en charge un déjà existant et le partage sur le deuxième écran.
+He leaves Salbris, his home, and arrives at Jacobi for 7:15 am. He turns on the two screens in the factory and in the open space. Then he goes on his computer, on the administrator account of the site, then he chooses the "create" option and he sets each element of the scene (number of parts, widgets, text, image...) with the news of the day that his boss, Mr. Saeed, asked him to share with all the employees of the company the day before. Once the settings are complete, he saves the scene and shares it on both screens simultaneously.
+Saving his scene will allow him to load it later if he wants to use it again and to modify it.
+At 7:30 a.m., when all employees arrive at the plant, they can view the news directly.
+#### 2. Alan
+Alan is 36 years old, she is engaged to Estelle and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents-in-law's house in Foëcy, a few blocks from their home.
+
+He arrives at the factory at 7:20 a.m., and leaves for his office. Hervé, his superior, left on vacation the day before and gave him the mission to share the scenes he had already created. He uses the administrator account and chooses the "load" option to load the scene he has to share today on both screens simultaneously.
+#### 3. Solange
+Solange is 42 years old and single. She lives in Vouzeron and has been working in Jacobi since those 20 years, after leaving her BTS communication.
+
+She is Hervé’s right-hand man and yesterday he called her in an emergency. It has been three days since he went on vacation and there has been an amendment to the regulations regarding the plant employees. On the admin account, he asked her to share on the screen that is in the open-space, the scene already preparing by simply loading it, but by changing the image he had and she also corrected an error in the title that Hervé had committed. Then she had to create a new scene in which she would write the new company guidelines and regulations. Then she had to share this scene only on the screen that was in the factory.
+#### 4. Estelle
+Estelle is 39 years old, she is engaged to Alan and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents' house in Foëcy, a few blocks from their home.
+
+She arrives at the factory at 7:20 a.m., puts on her work clothes and goes in front of the screen to find out about possible news.
+On her post, Estelle has a computer you can, if she wishes, have a return of the screens on the same site that Hervé used to create the scene, but with a simple employee account.
 ### Risks and Assumptions
 
 **the reglementation :**
