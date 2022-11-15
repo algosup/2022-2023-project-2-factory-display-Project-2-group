@@ -71,53 +71,62 @@ An Admin will be able to choose between different customizable widgets in order 
 
 ### d. Goals
 
+The objective is to allow employees who do not have an email address to be informed of information or instructions given by the company through screens. 
+
 ### e. Out of Scope
 
-### f. Assumptions
+The screens must be usable only for displaying information (e.g. impossible to show a soccer game).
+<br>
 
+
+### f. Assumptions
+<!-- ! TO DO -->
 ## 2. Solutions
 
 ### a. Current or Existing Solution / Design
-
+<!-- ! TO DO -->
 ### b. Suggested or Proposed Solution / Design
-
+<!-- ! TO DO -->
 ### c. Technical Requirements
 
 | Technical | Using |
 | --------- | ----- |
-| HTML  | HyperText Markup Language : is the code used to structure a web page and its content. For example, the content of your page can be structured as a set of paragraphs, a bulleted list or with images and data tables. |
-| JS | JavaScript : is a programming language that allows you to create dynamically updated content, control multimedia content, animate images, and anything else you can think of. |
-| CSS | Cascading Style Sheets : is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. |
+| [HTML](https://developer.mozilla.org/fr/docs/Web/HTML)  | HyperText Markup Language : is the code used to structure a web page and its content. For example, the content of your page can be structured as a set of paragraphs, a bulleted list or with images and data tables. |
+| [JS](https://www.javascript.com/) | JavaScript : is a programming language that allows you to create dynamically updated content, control multimedia content, animate images, and anything else you can think of. |
+| [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) | Cascading Style Sheets : is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. |
+| [Bootstrap](https://getbootstrap.com/) | Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. |
+
 
 
 ### d. Test Plan
-
+<!-- ! TO DO -->
 ### e. Release / Roll-out and Deployment Plan
-
+<!-- ! TO DO -->
 ### f. Alternate Solutions / Designs
-
+<!-- ! TO DO -->
 ## 3. Further Considerations
 
 ### a. Cost analysis
-
+<!-- ! TO DO -->
 ### b. Security considerations
-
+<!-- ! TO DO -->
 ### c. Privacy considerations
-
+<!-- ! TO DO -->
 ### d. Accessibility considerations
-
+<!-- ! TO DO -->
 ### e. Risks
-
+<!-- ! TO DO -->
 ## 4. Success Evaluation
 
 ### a. Impact
-
+<!-- ! TO DO -->
 ### b. Metrics
-
+<!-- ! TO DO -->
 ## 5. Work
 
 ### a. Work estimates and timelines
-
+<!-- ! TO DO -->
 ### b. Prioritization
-
+<!-- ! TO DO -->
 ### c. Milestones
+<!-- ! TO DO -->
