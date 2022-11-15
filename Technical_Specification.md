@@ -2,11 +2,11 @@
 
 - 2022 Project Factory Display Group 2
 - Team:
-    - [Nicolas Mida]()
-    - [Pierre Gorin]()
-    - [Grégory Pagnoux]()
-    - [Audrey Telliez]()
-    - [Rémy Charles]()
+    - [Nicolas Mida](https://github.com/Nicolas-Mida)
+    - [Pierre Gorin](https://github.com/Pierre2103)
+    - [Grégory Pagnoux](https://github.com/Gregory-Pagnoux)
+    - [Audrey Telliez](https://github.com/audreytllz)
+    - [Rémy Charles](https://github.com/RemyCHARLES)
 - Created on: 2022-08-11
 - Last update: _____
   
@@ -42,6 +42,7 @@ ___
     - [a. Work estimates and timelines](#a-work-estimates-and-timelines)
     - [b. Prioritization](#b-prioritization)
     - [c. Milestones](#c-milestones)
+
 </details>
 
 ___
@@ -51,9 +52,22 @@ ___
 
 ### a. Overview
 
+We need to create a device to display important company information or information from everyday life on screens located in the canteen and the locker room. For this, we will use web pages and single board computers with a wired connection by ethernet cable.
+
 ### b. Glossary
 
+| Terms | Definitions |
+| ----- | ----------- |
+| Web   | The Web is the term commonly used to refer to the World Wide Web, or WWW. It refers to the hypertext system operating on the global computer network Internet. |
+| [Jacobi Group](https://www.jacobi.net/) | Jacobi is the first company to manufacture activated carbon from coconut shells. And it uses activated carbon and ion exchange resins in general in filtration and treatment (water, gas, metal, ...).
+
 ### c. Context
+
+In the Jacobi factory only half of the employees can receive important information about the factory and the company. And the distribution of information by paper is not appropriate in a factory of 8 hectares.
+</br>
+So that's why we are working on a screen installation allowing the diffusion of important information in strategic places. (canteen, locker room).
+</br>
+An Admin will be able to choose between different customizable widgets in order to diffuse them on the screens or he will choose beforehand if it is vertical or horizontal.
 
 ### d. Goals
 
@@ -68,6 +82,13 @@ ___
 ### b. Suggested or Proposed Solution / Design
 
 ### c. Technical Requirements
+
+| Technical | Using |
+| --------- | ----- |
+| HTML  | HyperText Markup Language : is the code used to structure a web page and its content. For example, the content of your page can be structured as a set of paragraphs, a bulleted list or with images and data tables. |
+| JS | JavaScript : is a programming language that allows you to create dynamically updated content, control multimedia content, animate images, and anything else you can think of. |
+| CSS | Cascading Style Sheets : is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. |
+
 
 ### d. Test Plan
 
