@@ -107,6 +107,7 @@ source : [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees
   - HTML[^3]
   - CSS [^4]
   - JS [^5]
+  - PHP [^6]
   - Windows/MacOS on development
 
 ---
@@ -126,3 +127,6 @@ This language completes HTML. It allows to format and make more ergonomic the we
 
 [^5]: JS (JavaScript)
 It's an object-oriented scripting language. This means that we can make the elements that make up the website dynamic. It is the muscles and joints of the site.
+
+[^6]: PHP (Hypertext Prepositor)
+It's a langage used for create dynamic web pages via HTTP server (server side) but also localy.
