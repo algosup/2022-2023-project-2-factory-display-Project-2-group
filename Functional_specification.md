@@ -76,7 +76,7 @@ She arrives at the factory at 7:20 a.m., puts on her work clothes and goes in fr
 On her post, Estelle has a computer you can, if she wishes, have a return of the screens on the same site that Hervé used to create the scene, but with a simple employee account.
 
 ### 4. Use case
-![use case](img/example.png)
+![use case](img/use_case.png)
 
 ### 5. Risks and Assumptions
 
