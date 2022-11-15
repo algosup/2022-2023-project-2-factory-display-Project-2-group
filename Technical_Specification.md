@@ -81,12 +81,18 @@ The screens must be usable only for displaying information (e.g. impossible to s
 
 ### f. Assumptions
 <!-- ! TO DO -->
+
+
 ## 2. Solutions
 
 ### a. Current or Existing Solution / Design
 <!-- ! TO DO -->
+
+
 ### b. Suggested or Proposed Solution / Design
 <!-- ! TO DO -->
+
+
 ### c. Technical Requirements
 
 | Technical | Using |
@@ -97,36 +103,60 @@ The screens must be usable only for displaying information (e.g. impossible to s
 | [Bootstrap](https://getbootstrap.com/) | Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. |
 
 
-
 ### d. Test Plan
 <!-- ! TO DO -->
+
+
 ### e. Release / Roll-out and Deployment Plan
 <!-- ! TO DO -->
+
+
 ### f. Alternate Solutions / Designs
 <!-- ! TO DO -->
+
+
 ## 3. Further Considerations
 
 ### a. Cost analysis
 <!-- ! TO DO -->
+
+
 ### b. Security considerations
 <!-- ! TO DO -->
+
+
 ### c. Privacy considerations
 <!-- ! TO DO -->
+
+
 ### d. Accessibility considerations
 <!-- ! TO DO -->
+
+
 ### e. Risks
 <!-- ! TO DO -->
+
+
 ## 4. Success Evaluation
 
 ### a. Impact
 <!-- ! TO DO -->
+
+
 ### b. Metrics
 <!-- ! TO DO -->
+
+
 ## 5. Work
 
 ### a. Work estimates and timelines
 <!-- ! TO DO -->
+
+
 ### b. Prioritization
 <!-- ! TO DO -->
+
+
 ### c. Milestones
 <!-- ! TO DO -->
+
