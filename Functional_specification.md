@@ -14,6 +14,7 @@
     - [5. Risks and Assumptions](#5-risks-and-assumptions)
     - [6. Goals and non goals](#6-goals-and-non-goals)
     - [7. Development and environement and Requirements](#7-development-and-environement-and-requirements)
+    - [8. Glossary](#8-glossary)
 
 ### 1. Project role distribution
 
@@ -108,7 +109,8 @@ source : [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees
   - JS [^5]
   - Windows/MacOS on development
 
-<!-- ### 8. Glossary -->
+---
+### 8. Glossary
 
 [^1]: Jacobi
 It's an air and water purification solutions company. The company is based in Vierzon since 1956.
