@@ -2,7 +2,7 @@ body{
     background-color: #F2F2F2;
 }
 .properties-bar {
-    max-width: 10vw;
+    max-width: 15vw;
     height: 46vw;
     margin-top: -1vh;
     transform: translateX(-1vw);
@@ -10,7 +10,7 @@ body{
 
 .custom-canva{
     margin-left: 4.5vw;
-    width: 75vw;
+    width: 74.85vw;
     height: 35vw;
     outline: 0.5vw solid #808080;
 }
