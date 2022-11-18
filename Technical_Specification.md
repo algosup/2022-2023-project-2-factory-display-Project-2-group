@@ -17,11 +17,10 @@ ___
 - [Thechnical Specification](#thechnical-specification)
   - [1. Introduction](#1-introduction)
     - [a. Overview](#a-overview)
-    - [b. Glossary](#b-glossary)
-    - [c. Context](#c-context)
-    - [d. Goals](#d-goals)
-    - [e. Out of Scope](#e-out-of-scope)
-    - [f. Assumptions](#f-assumptions)
+    - [b. Context](#b-context)
+    - [c. Goals](#c-goals)
+    - [d. Out of Scope](#d-out-of-scope)
+    - [e. Assumptions](#e-assumptions)
   - [2. Solutions](#2-solutions)
     - [a. Current or Existing Solution / Design](#a-current-or-existing-solution--design)
     - [b. Suggested or Proposed Solution / Design](#b-suggested-or-proposed-solution--design)
@@ -42,26 +41,23 @@ ___
     - [a. Work estimates and timelines](#a-work-estimates-and-timelines)
     - [b. Prioritization](#b-prioritization)
     - [c. Milestones](#c-milestones)
+  - [6. Glossary](#6-glossary)
 
 </details>
 
 ___
 
+<br>
 
 ## 1. Introduction
 
 ### a. Overview
 
-We need to create a device to display important company information or information from everyday life on screens located in the canteen and the locker room. For this, we will use web pages and single board computers with a wired connection by ethernet cable.
+We need to create a device to display important company information or information from everyday life on screens located in the canteen and the locker room. 
 
-### b. Glossary
+For this, we will use web pages and single board computers with a wired connection by ethernet cable.
 
-| Terms | Definitions |
-| ----- | ----------- |
-| Web   | The Web is the term commonly used to refer to the World Wide Web, or WWW. It refers to the hypertext system operating on the global computer network Internet. |
-| [Jacobi Group](https://www.jacobi.net/) | Jacobi is the first company to manufacture activated carbon from coconut shells. And it uses activated carbon and ion exchange resins in general in filtration and treatment (water, gas, metal, ...).
-
-### c. Context
+### b. Context
 
 In the Jacobi factory only half of the employees can receive important information about the factory and the company. And the distribution of information by paper is not appropriate in a factory of 8 hectares.
 </br>
@@ -69,19 +65,21 @@ So that's why we are working on a screen installation allowing the diffusion of 
 </br>
 An Admin will be able to choose between different customizable widgets in order to diffuse them on the screens or he will choose beforehand if it is vertical or horizontal.
 
-### d. Goals
+### c. Goals
 
 The objective is to allow employees who do not have an email address to be informed of information or instructions given by the company through screens. 
 
-### e. Out of Scope
+### d. Out of Scope
 
 The screens must be usable only for displaying information (e.g. impossible to show a soccer game).
 <br>
 
 
-### f. Assumptions
+### e. Assumptions
 <!-- ! TO DO -->
 
+
+<br>
 
 ## 2. Solutions
 
@@ -101,6 +99,10 @@ The screens must be usable only for displaying information (e.g. impossible to s
 | [JS](https://www.javascript.com/) | JavaScript : is a programming language that allows you to create dynamically updated content, control multimedia content, animate images, and anything else you can think of. |
 | [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) | Cascading Style Sheets : is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. |
 | [Bootstrap](https://getbootstrap.com/) | Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. |
+| [PHP](https://www.php.net/) | PHP : is a general-purpose scripting language especially suited to web development. |
+| [Jquery](https://jquery.com/) | Jquery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. |
+| [Python](https://www.python.org/) | Python is an interpreted, high-level, general-purpose programming language. |
+| Rock Pi 4 | Single board computer |
 
 
 ### d. Test Plan
@@ -114,6 +116,7 @@ The screens must be usable only for displaying information (e.g. impossible to s
 ### f. Alternate Solutions / Designs
 <!-- ! TO DO -->
 
+<br>
 
 ## 3. Further Considerations
 
@@ -137,6 +140,8 @@ The screens must be usable only for displaying information (e.g. impossible to s
 <!-- ! TO DO -->
 
 
+<br>
+
 ## 4. Success Evaluation
 
 ### a. Impact
@@ -146,6 +151,8 @@ The screens must be usable only for displaying information (e.g. impossible to s
 ### b. Metrics
 <!-- ! TO DO -->
 
+
+<br>
 
 ## 5. Work
 
@@ -160,3 +167,12 @@ The screens must be usable only for displaying information (e.g. impossible to s
 ### c. Milestones
 <!-- ! TO DO -->
 
+
+<br>
+
+## 6. Glossary
+
+| Terms | Definitions |
+| ----- | ----------- |
+| [Web](https://www.w3.org/)| The Web is the term commonly used to refer to the World Wide Web, or WWW. It refers to the hypertext system operating on the global computer network Internet. |
+| [Jacobi Group](https://www.jacobi.net/) | Jacobi is the first company to manufacture activated carbon from coconut shells. And it uses activated carbon and ion exchange resins in general in filtration and treatment (water, gas, metal, ...).
