@@ -10,7 +10,7 @@
   <script src="/factory-display/assets/js/section/footer.js"></script>
   <script src="/factory-display/assets/js/section/root.js"></script>
   <script src="/factory-display/assets/js/scenes/dynamic.js"></script>
-  <script src="/factory-display/assets/js/scenes/info.js"></script>
+  <script src="/factory-display/assets/js/scenes/info.js" defer></script>
   <script src="/factory-display/assets/js/libs/bootstrap.js"></script>
 
   <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
@@ -49,14 +49,19 @@
           <h2>Orientation</h2>
         </div>
         <div class="row">
-          <div class="col landscape active-orientation">
-            <i class="fa-solid fa-image"></i>
-            <p>Paysage</p>
-          </div>
-          <div onclick="" class="col portrait inactive-orientation">
-            <i class="fa-solid fa-image-portrait"></i>
-            <p>Portrait</p>
-          </div>
+          <button id="landBtn">
+            <div id="landscape">
+              <i class="fa-solid fa-image"></i>
+              <p>Paysage</p>
+            </div>
+          </button>
+          <button id="portBtn">
+            <div id="portrait">
+              <i class="fa-solid fa-image-portrait"></i>
+              <p>Portrait</p>
+            </div>
+          </button>
+          
         </div>
       </div>
     </div>
