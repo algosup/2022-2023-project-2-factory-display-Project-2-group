@@ -1,3 +1,6 @@
+body{
+  background-color: #F2F2F2;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -8,17 +11,21 @@ i {
 }
 
 .btn {
-  background-color: #f1f1f1;
-  color: black;
+  background-color: #FF6600;
+  color: white;
   padding: 16px 20px;
   border: none;
   width: 100%;
   opacity: 0.9;
 }
-
+.btn:hover{
+  background-color: white;
+  border : 3px solid#FF6600;
+  color : #FF6600;
+}
 .col {
   padding: 10px 20px 10px 20px;
-  border: #f1f1f1 solid 1px;
+  border: #000000 solid 1px;
   border-radius: 5px;
   margin: 10px;
 }
