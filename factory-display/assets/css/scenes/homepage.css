@@ -23,6 +23,11 @@ i {
   border : 3px solid#FF6600;
   color : #FF6600;
 }
+.btn:focus{
+  background-color: white;
+  border : 3px solid#FF6600;
+  color : #FF6600;
+}
 .col {
   padding: 10px 20px 10px 20px;
   border: #000000 solid 1px;
@@ -39,3 +44,9 @@ i {
   color: rgb(0, 100, 0);
   font-weight: 500;
 }
+
+.txt-white {
+  color: #FF6600;
+  font-weight: 500;
+}
+
