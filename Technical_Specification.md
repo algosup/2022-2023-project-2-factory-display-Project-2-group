@@ -1,4 +1,4 @@
-# Thechnical Specification
+# Technical Specification
 
 - 2022 Project Factory Display Group 2
 - Team:
@@ -14,7 +14,7 @@ ___
 
 <details><summary>Table of Contents</summary>
 
-- [Thechnical Specification](#thechnical-specification)
+- [Technical Specification](#technical-specification)
   - [1. Introduction](#1-introduction)
     - [a. Overview](#a-overview)
     - [b. Context](#b-context)
