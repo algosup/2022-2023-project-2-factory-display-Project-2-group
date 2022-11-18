@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  font-size: 1em;
+}
+
+.btn {
+  background-color: #f1f1f1;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.col {
+  padding: 10px 20px 10px 20px;
+  border: #f1f1f1 solid 1px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.txt-red {
+  color: rgb(190, 0, 0);
+  font-weight: 500;
+}
+
+.txt-green {
+  color: rgb(0, 100, 0);
+  font-weight: 500;
+}

@@ -15,4 +15,5 @@ function loadSecondView() {
 
 window.onload = function() {
     loadFirstView();
+    // loadSecondView();
 }

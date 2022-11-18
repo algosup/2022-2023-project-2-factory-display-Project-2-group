@@ -10,8 +10,12 @@
   <script src="/factory-display/assets/js/section/footer.js"></script>
   <script src="/factory-display/assets/js/section/root.js"></script>
   <script src="/factory-display/assets/js/scenes/dynamic.js"></script>
+  <script src="/factory-display/assets/js/scenes/info.js"></script>
+  <script src="/factory-display/assets/js/libs/bootstrap.js"></script>
+
   <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
   <link rel="stylesheet" href="/factory-display/assets/css/scenes/info.css">
+  <link rel="stylesheet" href="/factory-display/assets/css/scenes/custom.css">
   <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
 </head>
 
@@ -47,7 +51,7 @@
             <i class="fa-solid fa-image"></i>
             <p>Paysage</p>
           </div>
-          <div class="col portrait inactive-orientation">
+          <div onclick="" class="col portrait inactive-orientation">
             <i class="fa-solid fa-image-portrait"></i>
             <p>Portrait</p>
           </div>
@@ -59,35 +63,168 @@
 
 <div id="second-view">
   <div class="container global-container">
-    <div class="col-6">
+    <div class="col">
       <div class="row">
-        <div class="row">
-          <h2>Titre 1</h2>
+        <div class="col properties-bar">
+          <h3>Réglages</h3>
+
+          <div class="accordion" id="settings-accordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="fileSettingHeading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#fileSettingCollapse" aria-expanded="true" aria-controls="fileSettingCollapse">
+                  Fichier
+                </button>
+              </h2>
+              <div id="fileSettingCollapse" class="accordion-collapse collapse show" aria-labelledby="fileSettingHeading" data-bs-parent="#settings-accordion">
+                <div class="accordion-body no-padding">
+                  <button class="btn btn-outline-danger">Sauvegarder</button>
+                  <button class="btn btn-outline-danger">Download</button>
+                  <button class="btn btn-outline-danger">Charger</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="colorSettingHeading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colorSettingCollapse" aria-expanded="true" aria-controls="colorSettingCollapse">
+                  Couleurs
+                </button>
+              </h2>
+              <div id="colorSettingCollapse" class="accordion-collapse collapse" aria-labelledby="colorSettingHeading" data-bs-parent="#settings-accordion">
+                <div class="accordion-body no-padding">
+                  <button class="btn btn-outline-danger">Arrière-Plan</button>
+                  <button class="btn btn-outline-danger">Principale</button>
+                  <button class="btn btn-outline-danger">Secondaire</button>
+                  <button class="btn btn-outline-danger">Texte</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row">
-          <button class="btn btn-outline-primary">Test</button>
+        <div class="row custom-canva"></div>
+      </div>
+
+
+
+
+
+      <div class="row widgets-storer">
+        <div class="accordion" id="widgets-accordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="textWidgetHeading">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#textWidgetCollapse" aria-expanded="true" aria-controls="textWidgetCollapse">
+                Texte
+              </button>
+            </h2>
+            <div id="textWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="textWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="imageWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#imageWidgetCollapse" aria-expanded="false" aria-controls="imageWidgetCollapse">
+                Images
+              </button>
+            </h2>
+            <div id="imageWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="imageWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="hourWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hourWidgetCollapse" aria-expanded="false" aria-controls="hourWidgetCollapse">
+                Heure
+              </button>
+            </h2>
+            <div id="hourWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="hourWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="dateWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#dateWidgetCollapse" aria-expanded="false" aria-controls="dateWidgetCollapse">
+                Date
+              </button>
+            </h2>
+            <div id="dateWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="dateWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the fourth item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="weatherWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#weatherWidgetCollapse" aria-expanded="false" aria-controls="weatherWidgetCollapse">
+                Météo
+              </button>
+            </h2>
+            <div id="weatherWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="weatherWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the fifth item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="newsWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#newsWidgetCollapse" aria-expanded="false" aria-controls="newsWidgetCollapse">
+                Actualités
+              </button>
+            </h2>
+            <div id="newsWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="newsWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the sixth item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="videoWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#videoWidgetCollapse" aria-expanded="false" aria-controls="videoWidgetCollapse">
+                Vidéos
+              </button>
+            </h2>
+            <div id="videoWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="videoWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the seventh item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="fileWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fileWidgetCollapse" aria-expanded="false" aria-controls="fileWidgetCollapse">
+                Fichier
+              </button>
+            </h2>
+            <div id="fileWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="fileWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the eighth item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="otherWidgetHeading">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#otherWidgetCollapse" aria-expanded="false" aria-controls="otherWidgetCollapse">
+                Autres
+              </button>
+            </h2>
+            <div id="otherWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="otherWidgetHeading" data-bs-parent="#widgets-accordion">
+              <div class="accordion-body">
+                <strong>This is the ninth item's accordion body.</strong>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
-    <div class="col-6">
-      <div class="row">
-        <div class="row">
-          <h2>Titre 2</h2>
-        </div>
-        <div class="row">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis quaerat rerum molestiae. Non vero nam molestias accusantium deserunt iste, repudiandae dolore saepe quidem tenetur illum iusto optio unde aspernatur magnam maxime eos molestiae est nulla rem recusandae quibusdam! Quas nemo nobis deserunt, nisi maxime doloribus ratione consectetur quam doloremque quidem id, voluptatibus, veniam commodi ducimus aspernatur sequi. Alias, ad. Cum quo corrupti enim rem nisi dolore fugiat praesentium eius impedit.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="row">
-        <div class="row">
-          <h2>Titre 3</h2>
-        </div>
-        <div class="row">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis quaerat rerum molestiae. Non vero nam molestias accusantium deserunt iste, repudiandae dolore saepe quidem tenetur illum iusto optio unde aspernatur magnam maxime eos molestiae est nulla rem recusandae quibusdam! Quas nemo nobis deserunt, nisi maxime doloribus ratione consectetur quam doloremque quidem id, voluptatibus, veniam commodi ducimus aspernatur sequi. Alias, ad. Cum quo corrupti enim rem nisi dolore fugiat praesentium eius impedit.</p>
-        </div>
-      </div>
+
+
+
+
+
     </div>
   </div>
 </div>
