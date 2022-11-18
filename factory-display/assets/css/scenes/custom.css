@@ -1,3 +1,6 @@
+body{
+    background-color: #F2F2F2;
+}
 .properties-bar {
     max-width: 10vw;
     height: 46vw;
@@ -6,9 +9,10 @@
 }
 
 .custom-canva{
-    width: 80vw;
-    height: 45vw;
-    outline: 0.5vw solid black;
+    margin-left: 4.5vw;
+    width: 75vw;
+    height: 35vw;
+    outline: 0.5vw solid #808080;
 }
 
 .widgets-storer{
@@ -26,4 +30,9 @@
     padding: 3;
     border-radius: 0%;
     border: 0;
+}
+
+.btn:hover {
+    scale: 1.2;
+    background-color: #F7F7F7;
 }
