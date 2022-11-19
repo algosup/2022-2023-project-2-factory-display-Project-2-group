@@ -120,3 +120,20 @@ button{
   align-items: center;
   flex-direction: column;
 }
+
+#nextBtn {
+  position: absolute;
+  right: 0; 
+  margin-bottom: 35vh;
+  margin-right: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 94, 126, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-left : 15px;
+  padding-right : 15px;
+  padding-top : 15px;
+  padding-bottom : -20px;
+}
