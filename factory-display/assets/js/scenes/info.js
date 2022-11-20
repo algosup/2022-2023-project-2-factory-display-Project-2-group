@@ -13,7 +13,7 @@ function setOrientation(orientationValue) {
   switch (orientationValue) {
     case "portrait":
       portraitBtn.classList.add("active-orientation");
-      landscapeBtn.classList.remove("active-orientation");
+      landscapeBtn.clasList.remove("active-orientation");
       portraitBtn.classList.remove("inactive-orientation");
       landscapeBtn.classList.add("inactive-orientation");
       console.log("portrait");

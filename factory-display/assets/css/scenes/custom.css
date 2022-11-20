@@ -1,29 +1,122 @@
 .properties-bar {
-    max-width: 10vw;
-    height: 46vw;
-    margin-top: -1vh;
-    transform: translateX(-1vw);
+  max-width: 10vw;
+  height: 46vw;
+  margin-top: -1vh;
+  transform: translateX(-1vw);
 }
 
-.custom-canva{
-    width: 80vw;
-    height: 45vw;
-    outline: 0.5vw solid black;
+.custom-canva {
+  width: 80vw;
+  height: 45vw;
+  outline: 0.5vw solid black;
+  padding: 0;
+  overflow: hidden;
 }
 
-.widgets-storer{
-    width: 90vw;
-    margin-top: 15px;
+.widgets-storer {
+  width: 90vw;
+  margin-top: 15px;
 }
 
-.no-padding{
-    padding: 0;
+.no-padding {
+  padding: 0;
 }
 
-.btn{
-    width: 100%;
-    height: 100%;
-    padding: 3;
-    border-radius: 0%;
-    border: 0;
+.btn {
+  width: 100%;
+  height: 100%;
+  padding: 3;
+  border-radius: 0%;
+  border: 0;
+}
+
+.widget-placeholder {
+  width: 15%;
+  height: 15%;
+  border-radius: 0%;
+  border: 0;
+}
+
+.resize-drag {
+  width: 150px;
+  height: 150px;
+}
+
+.resize-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.move {
+  width: 20px;
+  height: 20px;
+  background: white;
+  left: 0;
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 0px 0px 0px 0px;
+  transform: translateY(6px) translateX(6px);
+}
+
+.move i {
+  font-size: 12px;
+  color: black;
+  transform: translateY(-5px) translateX(2px);
+}
+
+.delete {
+  width: 20px;
+  height: 20px;
+  background: white;
+  right: 0;
+  border-radius: 50%;
+  border: 2px solid red;
+  padding: 0px 0px 0px 0px;
+  transform: translateY(6px) translateX(6px);
+}
+
+.delete i {
+  font-size: 12px;
+  color: red;
+  transform: translateY(-5px) translateX(3px);
+}
+
+.resize {
+  width: 20px;
+  height: 20px;
+  background: white;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 2px solid black;
+  padding: 0px 0px 0px 0px;
+  transform: translateY(6px) translateX(6px);
+}
+
+.resize i {
+  font-size: 11px;
+  color: black;
+  transform: translateY(-5px) translateX(3px);
+}
+
+.date-placeholder {
+  background: url(/factory-display/assets/img/widgets/placeholder/calendar.png)
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+.clock-placeholder {
+  background: url(/factory-display/assets/img/widgets/placeholder/clock.png)
+    no-repeat center;
+  background-size: 100% 100%;
+}
+
+.date-hour-placeholder {
+  background: url(/factory-display/assets/img/widgets/placeholder/date_hour.png)
+    no-repeat center;
+  background-size: 100% 100%;
 }
