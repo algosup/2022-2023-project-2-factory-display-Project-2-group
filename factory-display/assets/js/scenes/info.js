@@ -1,32 +1,36 @@
-const landscapeBtn = document.querySelector(".landscape");
-const portraitBtn = document.querySelector(".portrait");
+const portBtn = document.querySelector('#portBtn');
+const landBtn = document.querySelector('#landBtn');
 
-portraitBtn.addEventListener("click", () => {
-  setOrientation("portrait");
-});
+const portrait = document.querySelector('#portrait');
+const landscape = document.querySelector('#landscape');
 
-landscapeBtn.addEventListener("click", () => {
-  setOrientation("landscape");
-});
+const nextBtn = document.querySelector('#nextBtn');
 
-function setOrientation(orientationValue) {
-  switch (orientationValue) {
-    case "portrait":
-      portraitBtn.classList.add("active-orientation");
-      landscapeBtn.clasList.remove("active-orientation");
-      portraitBtn.classList.remove("inactive-orientation");
-      landscapeBtn.classList.add("inactive-orientation");
-      console.log("portrait");
-      break;
-    case "landscape":
-      landscapeBtn.classList.add("active-orientation");
-      portraitBtn.classList.remove("active-orientation");
-      landscapeBtn.classList.remove("inactive-orientation");
-      portraitBtn.classList.add("inactive-orientation");
-      console.log("landscape");
-      break;
-    default:
-      console.log("default");
-      break
-  }
-}
+//! console.log(portBtn);
+//! console.log(landBtn);
+//! console.log(portrait);
+//! console.log(landscape);
+
+//* Function to select portrait orientation
+function selecPort (){
+  portrait.className='active-orientation';
+  landscape.className='inactive-orientation';
+  //! console.log('portrait');
+};
+
+//* Function to select landscape orientation
+function selecLand (){
+  portrait.className='inactive-orientation';
+  landscape.className='active-orientation';
+  //! console.log('landscape');
+};
+
+//* Function to go to the second view
+function nextScene (){
+  console.log(loadSecondView());
+};
+
+portBtn.addEventListener('click', selecPort)
+landBtn.addEventListener('click', selecLand) 
+
+nextBtn.addEventListener('click', nextScene)

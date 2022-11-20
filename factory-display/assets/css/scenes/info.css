@@ -44,9 +44,7 @@
   padding: 10px;
 }
 
-i {
-  font-size: 100px;
-}
+
 
 .orientation-container img {
   width: 10vw;
@@ -60,8 +58,15 @@ i {
 .inactive-orientation {
   transform: translateY(0px) scale(0.5);
   transition: all 0.1s ease-in-out;
-  filter: blur(5px);
 }
+#portrait i, #landscape i {
+  font-size: 60px;
+}
+
+#portrait:hover, #landscape:hover {
+  scale: 1.2;
+}
+
 .big-btn {
   position: absolute;
   bottom: 0;
@@ -103,4 +108,32 @@ i {
   display: none;
   position: relative;
   left: 0;
+}
+
+button{
+  border: none;
+  background: none;
+}
+
+#portbtn, #landbtn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#nextBtn {
+  position: absolute;
+  right: 0; 
+  margin-bottom: 35vh;
+  margin-right: 300px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 94, 126, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding-left : 15px;
+  padding-right : 15px;
+  padding-top : 15px;
+  padding-bottom : -20px;
 }
