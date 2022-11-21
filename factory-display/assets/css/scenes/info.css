@@ -44,8 +44,6 @@
   padding: 10px;
 }
 
-
-
 .orientation-container img {
   width: 10vw;
   height: auto;
@@ -59,11 +57,13 @@
   transform: translateY(0px) scale(0.5);
   transition: all 0.1s ease-in-out;
 }
-#portrait i, #landscape i {
+#portrait i,
+#landscape i {
   font-size: 60px;
 }
 
-#portrait:hover, #landscape:hover {
+#portrait:hover,
+#landscape:hover {
   scale: 1.2;
 }
 
@@ -96,7 +96,7 @@
 
 .row {
   margin-left: 0px;
-  }
+}
 
 #first-view {
   display: none;
@@ -110,12 +110,13 @@
   left: 0;
 }
 
-button{
+button {
   border: none;
   background: none;
 }
 
-#portbtn, #landbtn {
+#portbtn,
+#landbtn {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -123,7 +124,7 @@ button{
 
 #nextBtn {
   position: absolute;
-  right: 0; 
+  right: 0;
   margin-bottom: 35vh;
   margin-right: 300px;
   background: rgba(255, 255, 255, 0.2);
@@ -132,8 +133,20 @@ button{
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding-left : 15px;
-  padding-right : 15px;
-  padding-top : 15px;
-  padding-bottom : -20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: -20px;
+}
+
+div.btnContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+#landBtn, #portBtn {
+  width: 50%;
 }
