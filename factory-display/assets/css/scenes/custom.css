@@ -128,7 +128,7 @@ body{
 
 .btn:hover {
     scale: 1.2;
-    background-color: #F7F7F7;
+    background-color: #fffefe;
 }
 
 
@@ -136,7 +136,7 @@ body{
   color: #FF6600;
 }
 
-.btn-outline-danger {
+.btn-outline-light {
   color: #FF6600 !important;
 }
 
@@ -155,3 +155,4 @@ body{
 #second-view{
   margin-top: 30px;
 }
+
