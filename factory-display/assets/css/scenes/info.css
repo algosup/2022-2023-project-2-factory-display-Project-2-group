@@ -139,28 +139,64 @@ button {
 }
 
 #nextBtn {
-  animation: animate 1000ms infinite; 
+  animation: animate 10s infinite; 
 }
 
 @keyframes animate {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0px) rotate(0deg)  scale(1) skew(60deg);
+    background-color: red;
+
   }
 
-  25% {
-    transform: translatex(-100px);
+  10% {
+    transform: translateY(-50px) rotate(45deg) scale(1.5);
+    background-color: purple;
+  }
+
+  20% {
+    transform: translateX(-50px) rotate(90deg) scale(2) skew(120deg);
+    background-color: blue;
+  }
+
+  30% {
+    transform: translateY(50px) rotate(135deg) scale(2.5) skew(180deg);
+    background-color: green;
+  }
+
+  40% {
+    transform: translateY(50px) rotate(180deg) scale(3);
+    background-color: yellow;
   }
 
   50% {
-    transform: translateY(100px);
+    transform: translateY(-50px) rotate(225deg) scale(3.5) skew(240deg);
+    background-color: orange;
   }
 
-  75% {
-    transform: translatex(100px);
+  60% {
+    transform: translateY(-50px) rotate(270deg) scale(5) skew(300deg);
+    background-color: red;
+  }
+
+  70% {
+    transform: translateY(50px) rotate(315deg) scale(4);
+    background-color: purple;
+  }
+
+  80% {
+    transform: translateY(50px) rotate(360deg) scale(3) skew(360deg);
+    background-color: blue;
+  }
+
+  90% {
+    transform: translateY(-50px) rotate(180deg) scale(2) skew(420deg);
+    background-color: green;
   }
 
   100% {
-    transform: translateY(-100px);
+    transform: translateY(0px) rotate(360deg) scale(1) skew(360deg);
+    background-color: yellow;
   }
 }
 div.btnContainer {
@@ -173,4 +209,5 @@ div.btnContainer {
 
 #landBtn, #portBtn {
   width: 50%;
+  transform: translate();
 }

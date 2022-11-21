@@ -13,8 +13,6 @@ interact(".resize-drag")
   })
   .on("resizemove", function (event) {
     const target = event.target;
-    target.style.width = event.rect.width + "px";
-    target.style.width = event.rect.height + "px";
     target.style.width = event.rect.height + "px";
     target.style.height = event.rect.height + "px";
   });
