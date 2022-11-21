@@ -138,6 +138,31 @@ button {
   padding-bottom: -20px;
 }
 
+#nextBtn {
+  animation: animate 1000ms infinite; 
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px);
+  }
+
+  25% {
+    transform: translatex(-100px);
+  }
+
+  50% {
+    transform: translateY(100px);
+  }
+
+  75% {
+    transform: translatex(100px);
+  }
+
+  100% {
+    transform: translateY(-100px);
+  }
+}
 div.btnContainer {
   display: flex;
   flex-direction: row;
