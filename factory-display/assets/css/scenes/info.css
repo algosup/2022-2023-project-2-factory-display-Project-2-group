@@ -62,8 +62,7 @@
   font-size: 60px;
 }
 
-#portrait:hover,
-#landscape:hover {
+#portrait:hover, #landscape:hover, #nextBtn:hover{
   scale: 1.2;
 }
 
