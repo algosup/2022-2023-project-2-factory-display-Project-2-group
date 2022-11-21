@@ -1,4 +1,4 @@
-window.onload = function() {
-    displayHeader();
-    displayFooter();
-};
+// window.onload = function() {
+//     displayHeader();
+//     displayFooter();
+// };

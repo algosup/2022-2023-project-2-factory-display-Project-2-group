@@ -241,3 +241,8 @@ nav {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+header {
+  z-index: 999 !important;
+  position: absolute;
+}

@@ -33,7 +33,6 @@ interact(".resize-drag").on("tap", function (event) {
   appendsBtns();
 });
 
-
 function dragMoveListener(event) {
   var target = event.target,
     // keep the dragged position in the data-x/data-y attributes
@@ -93,3 +92,8 @@ function removeBtns() {
   });
 }
 
+function uploadFile(file) {
+  var data = new FormData();
+  data.append("upfile", file);
+  fetch("SERVER.SCRIPT", { method: "POST", body: data });
+}

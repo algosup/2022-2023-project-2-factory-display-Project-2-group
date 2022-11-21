@@ -12,8 +12,3 @@ function loadSecondView() {
     document.getElementById('second-view').style.display = 'block';
     console.log('second view is loaded');
 }
-
-window.onload = function() {
-    // loadFirstView();
-    loadSecondView();
-}

@@ -130,3 +130,28 @@ body{
     scale: 1.2;
     background-color: #F7F7F7;
 }
+
+
+.accordion-button > h4 {
+  color: #FF6600;
+}
+
+.btn-outline-danger {
+  color: #FF6600 !important;
+}
+
+.properties-bar > h3 {
+  color: #FF6600;
+}
+
+#global-title {
+  color: #FF6600;
+}
+
+.resize-drag {
+  position: absolute;
+}
+
+#second-view{
+  margin-top: 30px;
+}
