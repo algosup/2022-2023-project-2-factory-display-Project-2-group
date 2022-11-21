@@ -246,3 +246,10 @@ header {
   z-index: 999 !important;
   position: absolute;
 }
+.link-btn{
+  color: black;
+  text-decoration: none;
+}
+.link-btn:hover {
+  color: #FF6600;
+}
