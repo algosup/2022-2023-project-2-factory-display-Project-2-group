@@ -30,11 +30,11 @@
 
 ![Jacobi logo](img/Jacobi-logo.jpg)
 
-Jacobi's[^1] company commissioned us to create a communication tool to centralize the information to be transmitted to all employees.
+Jacobi's[^1] company commissioned ALGOSUP to create a communication tool to ==centralize the information== to be transmitted to all employees.
 
 Currently, the company share and send the informations via different application like Team, Email or Yammer, but also with a paper display. However, these means of communication are too numerous and even outdated. The company would like to facilitate communication and make it more modern with the digital tools that exist.
 
-Mr. Saeed, the Project owner of the company in France, would like a simple and secure communication tool to honor these two key points that Jacobi represents.
+Mr. Saeed, the Project owner of the company, would like a ==simple and secure communication tool== to honor these two key points that Jacobi represents.
 
 **Company distribution**
 
@@ -84,9 +84,9 @@ On her post, Estelle has a computer you can, if she wishes, have a return of the
 **the reglementation of data backups :**
 
 There are three different archives depending on the type of data :
-- Active database archiving where data that are no longer useful to the enterprise (for example, data on job seekers to which they have not followed up) are deleted once the reason for the study has been completed (after a maximum of two years).
-- Intermediate archiving where data are saved even after the purpose of data collection has been achieved as they are still of interest to the enterprise. The duration is set by the person responsible and must be relevant to its usefulness.
-- Final archiving where data that remains of great interest in the future without an end date are saved, after an upstream check.
+- ==Active database archiving== where data that are no longer useful to the enterprise (for example, data on job seekers to which they have not followed up) are deleted once the reason for the study has been completed (after a maximum of two years).
+- ==Intermediate archiving== where data are saved even after the purpose of data collection has been achieved as they are still of interest to the enterprise. The duration is set by the person responsible and must be relevant to its usefulness.
+- ==Final archiving== where data that remains of great interest in the future without an end date are saved, after an upstream check.
 
 source : [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees_de_conservation.pdf)[^2]
 
@@ -94,9 +94,9 @@ source : [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees
 
 **Goals :**
 
-- site very scure
+- site very ==secure==
 - digitalise the communication
-- make it easy to publish the content
+- make it ==easy== to publish the content
 
 **Non goals :**
 
@@ -120,13 +120,13 @@ It's an air and water purification solutions company. The company is based in Vi
 It's an administrative authority that has existed since January 6, 1978, and ensures the proper use and security of computer data.
 
 [^3]: HTML (HyperText Markup Language)
-We use this language to create a web page. It is the skeleton of the page. We write all the content as well as its structure.
+We use this language to create a web page. It's the skeleton of the page. We write all the content as well as its structure.
 
 [^4]: CSS (Cascading Style Sheets)
-This language completes HTML. It allows to format and make more ergonomic the website. It is the flesh that embellishes the skeleton.
+This language completes HTML. It allows to format and make more ergonomic the website. It's the flesh that embellishes the skeleton.
 
 [^5]: JS (JavaScript)
-It's an object-oriented scripting language. This means that we can make the elements that make up the website dynamic. It is the muscles and joints of the site.
+It's an object-oriented scripting language. This means that we can make the elements that make up the website dynamic. It's the muscles and joints of the site.
 
 [^6]: PHP (Hypertext Prepositor)
-It's a langage used for create dynamic web pages via HTTP server (server side) but also localy.
+It's a langage used for create dynamic web pages via HTTP server (==server-side==) but also localy.
