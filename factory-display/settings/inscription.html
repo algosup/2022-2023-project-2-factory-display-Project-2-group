@@ -6,11 +6,45 @@
     <script src="/factory-display/assets/js/init.js"></script>
     
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
+    <link rel="stylesheet" href="/factory-display/assets/css/settings/inscription.css">
 </head>
 <body>
     <header></header>
     <br><br>
     <br><br>
     <br><br>
-    <h1> <center>Inscription</center> </h1>
+    <h1 class="titre"> <center> Inscription : </center></h1>
+    <div class="col">
+        <br>
+        <h3> <center> Formulaire d'inscription :</center> </h3>
+        <form action="" class="login">
+            <input type="text" id="uname" name="name" required size="45" placeholder="Nom" minlength="4" maxlength="30">
+            <span class="validity"></span>
+        <br>
+        <br>
+        <form action="" class="login">
+            <input type="text" id="uname" name="name" required size="45" placeholder="Prénom" minlength="3" maxlength="30">
+            <span class="validity"></span>
+            <br>
+        <br>
+        <form action="" class="login">
+            <input type="text" id="uname" name="name" required size="45" placeholder=" Adresse Mail" minlength="4" maxlength="40">
+            <span class="validity"></span>
+        <br>
+        <br>
+        <div>
+            <input type="password" id="pass" name="password" placeholder="Password (8 characters minimum)" minlength="8" required>
+
+        </div>
+        <br>
+        <div>
+            <input type="password" id="pass" name="password" placeholder="Password (8 characters minimum)" minlength="8" required>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button class="button">Envoyer</button>
+        </div>
+        </form>
+    </div>
 </body>
