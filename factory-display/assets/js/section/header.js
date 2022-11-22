@@ -45,7 +45,7 @@ function displayHeader() {
           </div>
           <div class="dropdown">
               <div class="main-content">
-                  <a id="container" href="#">Scènes <i class="fa fa-caret-down"></i></a>
+                  <a id="container" href="/factory-display/scenes/index.html">Scènes <i class="fa fa-caret-down"></i></a>
               </div>
               <article class="dropdown-content">
                   <a id="" href="/factory-display/scenes/create.html">Nouvelle scène</a>
@@ -55,7 +55,7 @@ function displayHeader() {
           </div>
           <div class="dropdown">
               <div class="main-content">
-                  <a id="container" href="#">Mon Espace <i class="fa fa-caret-down"></i></a>
+                  <a id="container" href="/factory-display/settings/index.html">Mon Espace <i class="fa fa-caret-down"></i></a>
               </div>
               <article class="dropdown-content">
                   <a id="" href="/factory-display/settings/parametre.html">Paramètres</a>
