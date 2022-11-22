@@ -5,19 +5,21 @@
     margin: 50px;
     margin-left: 450px;
     height: 250px;
-    width: 450px;
+    width: 500px;
 }
 body {
     display: grid;
 }
 .login{
     margin-top: 30px;
-    margin-left: 50px;
+    margin-left: 45px;
 }
 .button{
     background-color: #FF6600;
     color: white;
     border-radius: 5px;
+    height: 30px;
+    width : 100px;
 }
 .titre{
     margin: 0 auto ;
