@@ -1,0 +1,20 @@
+.col {
+    padding: 10px 20px 10px 2px;
+    border: #000000 solid 1px;
+    border-radius: 5px;
+    margin: 130px;
+}
+body {
+    display: grid;
+}
+.login{
+    margin-left: 400px;
+}
+.button{
+    background-color: #FF6600;
+    color: white;
+}
+.titre{
+    margin: 0 auto ;
+    color: #FF6600;
+}
