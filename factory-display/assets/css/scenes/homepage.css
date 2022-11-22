@@ -37,13 +37,14 @@ i {
 .txt-red {
   color: rgb(190, 0, 0);
   font-weight: 500;
-  padding-top: 24px;
+  padding-top: 50px;
 }
 
 .txt-green {
   color: rgb(0, 100, 0);
   font-weight: 500;
-  padding-bottom: 23px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .txt-white {
