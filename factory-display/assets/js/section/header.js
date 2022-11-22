@@ -27,56 +27,57 @@ function navbarToggle() {
 function displayHeader() {
   const headerCode = document.querySelector("header");
   headerCode.innerHTML = `
-    <nav>
-        <a href="#" class="nav-icon" aria-label="visit homepage" aria-current="page">
-            <img src="/factory-display/assets/images/jacobi-icon.png" alt="icon jacobi">
-            <span>Jacobi</span>
-        </a>
+  <nav>
+  <a href="#" class="nav-icon" aria-label="visit homepage" aria-current="page">
+      <img src="/factory-display/assets/images/jacobi-icon.png" alt="icon jacobi">
+      <span>Jacobi</span>
+  </a>
 
-        <div class="main-navlinks">
-            <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navlinks-container">
-                <div class="main-content">
-                    <a id="container" href="#" aria-current="page">Accueil</a>
-                </div>
-                <div class="dropdown">
-                    <div class="main-content">
-                        <a id="container" href="#">Scènes <i class="fa fa-caret-down"></i></a>
-                    </div>
-                    <article class="dropdown-content">
-                        <a id="" href="#">Nouvelle scène</a>
-                        <a id="" href="#">Gérer mes scènes</a>
-                        <a id="" href="#">Voir mes scènes</a>
-                    </article>
-                </div>
-                <div class="dropdown">
-                    <div class="main-content">
-                        <a id="container" href="#">Mon Espace <i class="fa fa-caret-down"></i></a>
-                    </div>
-                    <article class="dropdown-content">
-                        <a id="" href="#">Paramètres</a>
-                        <a id="" href="#">Mon compte</a>
-                        <a id="" href="/factory-display/settings/account.html">Connexion</a>
-                    </article>
-                </div>
-            </div>
-        </div>
+  <div class="main-navlinks">
+      <button class="hamburger" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <div class="navlinks-container">
+          <div class="main-content">
+              <a id="container" href="/factory-display/index.html" aria-current="page">Accueil</a>
+          </div>
+          <div class="dropdown">
+              <div class="main-content">
+                  <a id="container" href="#">Scènes <i class="fa fa-caret-down"></i></a>
+              </div>
+              <article class="dropdown-content">
+                  <a id="" href="/factory-display/scenes/create.html">Nouvelle scène</a>
+                  <a id="" href="/factory-display/scenes/manage.html">Gérer mes scènes</a>
+                  <a id="" href="/factory-display/scenes/view.html">Voir mes scènes</a>
+              </article>
+          </div>
+          <div class="dropdown">
+              <div class="main-content">
+                  <a id="container" href="#">Mon Espace <i class="fa fa-caret-down"></i></a>
+              </div>
+              <article class="dropdown-content">
+                  <a id="" href="/factory-display/settings/parametre.html">Paramètres</a>
+                  <a id="" href="/factory-display/settings/compte.html">Mon compte</a>
+                  <a id="" href="/factory-display/settings/account.html">Connexion</a>
+              </article>
+          </div>
+      </div>
+  </div>
 
-        <div class="nav-authentication">
-            <a href="#" class="sign-user" aria-label="Sign in page">
-                <img src="/factory-display/assets/images/user-icon.svg" alt="user-icon">
-            </a>
-            <div class="sign-btns">
-                <button type="button"> <a href="/factory-display/settings/account.html" class="link-btn"> Connexion</a></button>
-                <button type="button">Inscription</button>
-            </div>
-        </div>
-    </nav>
-
+  <div class="nav-authentication">
+      <a href="#" class="sign-user" aria-label="Sign in page">
+          <img src="/factory-display/assets/images/user-icon.svg" alt="user-icon">
+      </a>
+      <div class="sign-btns">
+          <button type="button"> <a href="/factory-display/settings/account.html" class="link-btn"> Connexion</a></button>
+          <button type="button"><a href="/factory-display/settings/inscription.html" class="link-btn"> Inscription </a></button>
+              
+              
+      </div>
+  </div>
+</nav>
 `;
 
   navbarToggle();
