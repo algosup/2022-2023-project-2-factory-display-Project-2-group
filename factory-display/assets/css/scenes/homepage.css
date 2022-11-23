@@ -52,3 +52,16 @@ i {
   font-weight: 500;
 }
 
+@media screen and (max-width: 800px) {
+  .col-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: inherit;
+    margin-bottom: 10vh;
+  }
+}
+
+.container {
+  margin-top: 10vh;
+}
