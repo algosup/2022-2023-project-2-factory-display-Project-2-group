@@ -1,5 +1,6 @@
 window.onload = function() {
     displayHeader();
     displayFooter();
-    loadFirstView();
+    loadSecondView();
+    retrieveElementsDatas();
 };
