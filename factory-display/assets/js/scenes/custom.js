@@ -9,12 +9,12 @@ interact(".resize-drag")
   })
   .resizable({
     edges: { left: false, right: true, bottom: true, top: false },
-    restriction: "parent",
   })
   .on("resizemove", function (event) {
     const target = event.target;
     target.style.width = event.rect.height + "px";
     target.style.height = event.rect.height + "px";
+    retrieveElementsDatas();
   });
 
 interact(".delete").on("tap", function (event) {
@@ -44,6 +44,7 @@ function dragMoveListener(event) {
   // update the posiion attributes
   target.setAttribute("data-x", x);
   target.setAttribute("data-y", y);
+  retrieveElementsDatas();
 }
 
 var moveBtn = document.createElement("div");
@@ -70,6 +71,7 @@ date_hour.className = "resize-drag date-hour-placeholder";
 function appendPlaceholder(img) {
   var resizeContainer = document.querySelector(".resize-container");
   resizeContainer.appendChild(img);
+  retrieveElementsDatas();
 }
 
 function appendsBtns() {
@@ -90,8 +92,74 @@ function removeBtns() {
   });
 }
 
-function uploadFile(file) {
-  var data = new FormData();
-  data.append("upfile", file);
-  fetch("SERVER.SCRIPT", { method: "POST", body: data });
+function retrieveElementsDatas() {
+  var elements = document.querySelectorAll(".resize-drag");
+  var rsz_container = document.querySelector(".resize-container");
+  var ctn_width = rsz_container.offsetWidth;
+  var ctn_height = rsz_container.offsetHeight;
+  var ctn_center_x = Math.floor(ctn_width / 2);
+  var ctn_center_y = Math.floor(ctn_height / 2);
+  elements.forEach((element) => {
+    var el_pos_x = element.getAttribute("data-x");
+    var el_pos_y = element.getAttribute("data-y");
+    var el_width = element.offsetWidth;
+    var type = element.className.split(" ")[1];
+
+    type = type.replace("-placeholder", "");
+
+    if (el_pos_x === null && el_pos_y === null) {
+      el_pos_x = 0;
+      el_pos_y = 0;
+    }
+    el_width = Math.round(el_width);
+    el_pos_x = Math.round(el_pos_x);
+    el_pos_y = Math.round(el_pos_y);
+
+    el_center = Math.round(el_width / 2);
+
+    var el_height = el_width;
+
+    console.log("---------------------------------------------");
+    console.log("container width: " + ctn_width);
+    console.log("container height: " + ctn_height);
+    console.log("element width: " + el_width);
+    console.log("element height: " + el_height);
+    console.log("position in X is: " + el_pos_x);
+    console.log("position in Y is: " + el_pos_y);
+    console.log("type is: " + type);
+
+    if (
+      el_pos_x === ctn_center_x - el_center ||
+      el_pos_x === ctn_center_x - el_center - 1 ||
+      el_pos_x === ctn_center_x - el_center + 1
+    ) {
+      console.log("element is close to the right");
+    }
+
+    if (
+      el_pos_x === -(ctn_center_x - el_center) ||
+      el_pos_x === -(ctn_center_x - el_center) + 1 ||
+      el_pos_x === -(ctn_center_x - el_center) - 1
+    ) {
+      console.log("element is close to the left");
+    }
+
+    if (
+      el_pos_y === ctn_center_y - el_center ||
+      el_pos_y === ctn_center_y - el_center - 1 ||
+      el_pos_y === ctn_center_y - el_center + 1
+    ) {
+      console.log("element is close to the bottom");
+    }
+
+    if (
+      el_pos_y === -(ctn_center_y - el_center) ||
+      el_pos_y === -(ctn_center_y - el_center) + 1 ||
+      el_pos_y === -(ctn_center_y - el_center) - 1  
+    ) {
+      console.log("element is close to the top");
+    }
+
+    
+  });
 }
