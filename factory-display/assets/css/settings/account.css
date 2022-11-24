@@ -139,7 +139,7 @@
 
 
 
-img{
+.form-container > form > .input_password > #eye {
     height:25px ;
     cursor: pointer;
     position: absolute;
