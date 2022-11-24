@@ -7,8 +7,8 @@
     - [2. Overview](#2-overview)
     - [3. Personas and scenario](#3-personas-and-scenario)
         - [a. Hervé](#a-hervé)
-        - [b. Alan](#b-alan)
-        - [c. Solange](#c-solange)
+        - [b. Solange](#b-solange)
+        - [c. Alan](#c-alan)
         - [d. Estelle](#d-estelle)
     - [4. Use case](#4-use-case)
     - [5. Risks and Assumptions](#5-risks-and-assumptions)
@@ -57,24 +57,24 @@ He leaves Salbris, his home, and arrives at Jacobi for 7:15 am. He turns on the 
 Saving his scene will allow him to load it later if he wants to use it again and to modify it.
 At 7:30 a.m., when all employees arrive at the plant, they can view the news directly.
 
-##### b. Alan
-
-Alan is 36 years old, she is engaged to Estelle and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents-in-law's house in Foëcy, a few blocks from their home.
-
-He arrives at the factory at 7:20 a.m., and leaves for his office. Hervé, his superior, left on vacation the day before and gave him the mission to share the scenes he had already created. He uses the administrator account and chooses the "load" option to load the scene he has to share today on both screens simultaneously.
-
-##### c. Solange
+##### b. Solange
 
 Solange is 42 years old and single. She lives in Vouzeron and has been working in Jacobi since those 20 years, after leaving her BTS communication.
 
-She is Hervé’s right-hand man and yesterday he called her in an emergency. It has been three days since he went on vacation and there has been an amendment to the regulations regarding the plant employees. On the admin account, he asked her to share on the screen that is in the open-space, the scene already preparing by simply loading it, but by changing the image he had and she also corrected an error in the title that Hervé had committed. Then she had to create a new scene in which she would write the new company guidelines and regulations. Then she had to share this scene only on the screen that was in the factory.
+She arrives at the factory at 7:15 a.m., and leaves for his office. Hervé, her superior, left on vacation the day before and gave him the mission to share the scenes she had already created. She uses the administrator account and chooses the "load" option to load the scene she has to share today on both screens simultaneously.
+
+##### c. Alan
+
+Alan is 36 years old, she is engaged to Estelle and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents-in-law's house in Foëcy, a few blocks from their home.
+<!-- (Update : Alan devient manager de Estelle)
+He arrives at the factory at 7:20 a.m. He is Hervé’s right-hand man and yesterday he called her in an emergency. It has been three days since he went on vacation and there has been an amendment to the regulations regarding the plant employees. On the admin account, he asked her to share on the screen that is in the open-space, the scene already preparing by simply loading it, but by changing the image he had and she also corrected an error in the title that Hervé had committed. Then she had to create a new scene in which she would write the new company guidelines and regulations. Then she had to share this scene only on the screen that was in the factory. -->
 
 ##### d. Estelle
 
 Estelle is 39 years old, she is engaged to Alan and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents' house in Foëcy, a few blocks from their home.
-
+<!--
 She arrives at the factory at 7:20 a.m., puts on her work clothes and goes in front of the screen to find out about possible news.
-On her post, Estelle has a computer you can, if she wishes, have a return of the screens on the same site that Hervé used to create the scene, but with a simple employee account.
+On her post, Estelle has a computer you can, if she wishes, have a return of the screens on the same site that Hervé used to create the scene, but with a simple employee account.-->
 
 ### 4. Use case
 ![use case](img/use_case.png)
