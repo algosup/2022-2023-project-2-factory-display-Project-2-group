@@ -102,6 +102,8 @@ The screens must be usable only for displaying information (e.g. impossible to s
 | [PHP](https://www.php.net/) | PHP : is a general-purpose scripting language especially suited to web development. |
 | [Jquery](https://jquery.com/) | Jquery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. |
 | [Python](https://www.python.org/) | Python is an interpreted, high-level, general-purpose programming language. |
+| [Azure](https://azure.microsoft.com/fr-fr/)| Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. |
+| [mangoDB](https://www.mongodb.com/) | MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. |
 | Rock Pi 4 | Single board computer |
 
 
