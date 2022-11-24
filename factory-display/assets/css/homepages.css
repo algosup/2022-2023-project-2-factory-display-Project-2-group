@@ -1,8 +1,9 @@
 .custom-canva {
     margin-left: 10vw;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
     width: 80vw;
-    height: 30vw;
+    height: 444px;
     outline: 0.5vw solid #808080;
     padding: 0;
     overflow: hidden;
