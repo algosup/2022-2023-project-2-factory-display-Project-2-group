@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: #343434;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+<iframe src="/factory-display/widgets/date-hour.html" style="width: 24vh;height: 24vh;margin-top: 63vh; margin-bottom: 13vh; margin-left: 80vw; margin-right: 7vw;"></iframe><iframe src="/factory-display/widgets/clock.html" style="width: 47vh;height: 47vh;margin-top: 0vh; margin-bottom: 53vh; margin-left: 0vw; margin-right: 74vw;"></iframe><iframe src="/factory-display/widgets/date.html" style="width: 54vh;height: 54vh;margin-top: 4vh; margin-bottom: 42vh; margin-left: 42vw; margin-right: 28vw;"></iframe>
+<script>
+document.getElementsByTagName("body")[0].addEventListener("click", function() {
+    document.getElementsByTagName("body")[0].requestFullscreen();
+});
+</script>
+</body>
+</html>

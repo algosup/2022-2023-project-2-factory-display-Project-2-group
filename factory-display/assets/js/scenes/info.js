@@ -15,6 +15,7 @@ const nextBtn = document.querySelector('#nextBtn');
 function selecPort (){
   portrait.className='active-orientation';
   landscape.className='inactive-orientation';
+  selectOrientation('portrait');
   //! console.log('portrait');
 };
 
@@ -22,12 +23,14 @@ function selecPort (){
 function selecLand (){
   portrait.className='inactive-orientation';
   landscape.className='active-orientation';
+  selectOrientation('landscape');
   //! console.log('landscape');
 };
 
 //* Function to go to the second view
 function nextScene (){
-  console.log(loadSecondView());
+  getName();
+  loadSecondView();
 };
 
 portBtn.addEventListener('click', selecPort)
