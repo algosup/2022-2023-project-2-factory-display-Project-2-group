@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+* {
+  margin: 0;
+}
+
+html {
+  font-family: "Roboto";
+  height: 100vw;
+}
+
+.date-container {
+  height: 20vw;
+  color: white;
+  font-size: 11vw;
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 10px 0px 0px 20px;
+  background-color: #F70055;
+  text-transform: uppercase;
+  border: #202020 1vw solid;
+}
+
+.day-container {
+  border: #202020 1vw solid;
+  color: #202020;
+  font-size: 40vw;
+  font-weight: 900;
+  text-align: center;
+  height: 70vw;
+  background-color: white;
+  justify-content: center;
+  margin-top: -1vh;
+}
+
+.calendar .day-container h2 {
+  line-height: 70vw;
+}

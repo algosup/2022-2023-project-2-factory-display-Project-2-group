@@ -1,7 +1,7 @@
 interact(".resize-drag")
   .draggable({
     onmove: dragMoveListener,
-    allowFrom: ".move",
+    // allowFrom: ".move",
     restrict: {
       restriction: "parent",
       elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
@@ -11,14 +11,21 @@ interact(".resize-drag")
     edges: { left: false, right: true, bottom: true, top: false },
   })
   .on("resizemove", function (event) {
-    const target = event.target;
-    target.style.width = event.rect.height + "px";
-    target.style.height = event.rect.height + "px";
+    var height = event.rect.height;
+    if (height <= ctn_height) {
+      const target = event.target;
+      target.style.width = event.rect.height + "px";
+      target.style.height = event.rect.height + "px";
+    }
     retrieveElementsDatas();
   });
 
 interact(".delete").on("tap", function (event) {
   event.target.parentNode.parentNode.remove();
+});
+
+interact(".resize-drag").on("doubletap", function (event) {
+  event.target.remove();
 });
 
 interact(".resize-drag").on("tap", function (event) {

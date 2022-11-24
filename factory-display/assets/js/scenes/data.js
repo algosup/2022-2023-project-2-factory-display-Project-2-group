@@ -1,3 +1,22 @@
+function getName() {
+  var name = document.querySelector("#scene-name").value;
+  var desc = document.querySelector("#desc-name").value;
+  console.log(name + " : " + desc);
+
+  selectOrientation();
+
+  window.name = name;
+  window.desc = desc;
+}
+
+function selectOrientation(orientationSelected) {
+  if (orientationSelected === "portrait") {
+    console.log("portrait");
+  } else if (orientationSelected === "landscape") {
+    console.log("landscape");
+  }
+}
+
 function variables() {
   var elements = document.querySelectorAll(".resize-drag");
   var rsz_container = document.querySelector(".resize-container");
@@ -31,13 +50,12 @@ function retrieveElementsDatas() {
     var el_width = element.offsetWidth;
     var type = element.className.split(" ")[1];
 
-    //export all variables to the global scope
     window.el_pos_x = el_pos_x;
     window.el_pos_y = el_pos_y;
     window.el_width = el_width;
-    window.type = type;
 
     type = type.replace("-placeholder", "");
+    window.type = type;
 
     if (el_pos_x === null && el_pos_y === null) {
       el_pos_x = 0;
@@ -51,105 +69,176 @@ function retrieveElementsDatas() {
 
     var el_height = el_width;
 
-    console.log("---------------------------------------------");
-    console.log("container width: " + ctn_width);
-    console.log("container height: " + ctn_height);
-    console.log("element width: " + el_width);
-    console.log("element height: " + el_height);
-    console.log("position in X is: " + el_pos_x);
-    console.log("position in Y is: " + el_pos_y);
-    console.log("type is: " + type);
-
     checkIfElementIsCloseToAnEdge();
-    cantGetNegativePosition();
-
-    const json = {
-      type: type,
-      width: el_width,
-      height: el_height,
-      x: el_pos_x,
-      y: el_pos_y,
-      isOnRight: isOnRight,
-      isOnLeft: isOnLeft,
-      isOnBottom: isOnBottom,
-      isOnTop: isOnTop,
-    };
 
     window.el_width = el_width;
     window.type = type;
     window.el_center = el_center;
-    window.json = json;
+    window.element = element;
+    percent();
   });
 }
-document.querySelector("#saveBtn").addEventListener("click", function () {
-  console.log(json);
-});
 
 function checkIfElementIsCloseToAnEdge() {
   el_pos_x = Math.round(el_pos_x);
   el_pos_y = Math.round(el_pos_y);
 
-  if (
-    el_pos_x === ctn_center_x - el_center ||
-    el_pos_x === ctn_center_x - el_center - 1 ||
-    el_pos_x === ctn_center_x - el_center + 1
-  ) {
-    console.log("element is close to the right");
+  if (el_pos_x === ctn_width - el_width) {
     isOnRight = true;
   }
-  if (
-    el_pos_x === -(ctn_center_x - el_center) ||
-    el_pos_x === -(ctn_center_x - el_center) + 1 ||
-    el_pos_x === -(ctn_center_x - el_center) - 1
-  ) {
-    console.log("element is close to the left");
+  if (el_pos_x === 0) {
     isOnLeft = true;
   }
-  if (
-    el_pos_y === ctn_center_y - el_center ||
-    el_pos_y === ctn_center_y - el_center - 1 ||
-    el_pos_y === ctn_center_y - el_center + 1
-  ) {
-    console.log("element is close to the bottom");
+  if (el_pos_y === ctn_height - el_width) {
     isOnBottom = true;
   }
-  if (
-    el_pos_y === -(ctn_center_y - el_center) ||
-    el_pos_y === -(ctn_center_y - el_center) + 1 ||
-    el_pos_y === -(ctn_center_y - el_center) - 1
-  ) {
-    console.log("element is close to the top");
+  if (el_pos_y === 0) {
     isOnTop = true;
   }
 }
 
-//i need to get the location of the element in percentage in relation to the container
-function cantGetNegativePosition() {
-  variables();
-  if (el_pos_x <= 0) {
-    nn_el_pos_x = Math.floor(el_pos_x + ctn_width / 2 - el_center);
-    console.log("nn_el_pos_x is now: " + nn_el_pos_x);
-  } else if (el_pos_x > 0) {
-    nn_el_pos_x = el_pos_x + Math.floor(el_pos_x + ctn_width / 2 - el_center);
-    console.log("el_pos_x is now: " + nn_el_pos_x);
-  }
-  if (el_pos_y <= 0) {
-    nn_el_pos_y = Math.floor(el_pos_y + ctn_height / 2 - el_center);
-    console.log("el_pos_y is now: " + nn_el_pos_y);
-  } else if (el_pos_y > 0) {
-    nn_el_pos_y = el_pos_y + Math.floor(el_pos_y + ctn_height / 2 - el_center);
-    console.log("el_pos_y is now: " + nn_el_pos_y);
-  }
+function percent() {
+  ratio_X = ctn_width / 100;
+  ctn_width_percent = ctn_width / ratio_X;
+  ratio_Y = ctn_height / 100;
+  ctn_height_percent = ctn_height / ratio_Y;
+  el_width_percent = Math.round(el_width / ratio_X);
+  el_height_percent = Math.round(el_width / ratio_Y);
 
-  //get the percentage of the position in relation to the container
-  percent_ctn_width_ratio = (ctn_width / 100);
-  percent_ctn_width = (ctn_width / percent_ctn_width_ratio);
-  if (el_pos_x <= 0) {
-    nn_el_pos_x_percent = (percent_ctn_width_ratio * nn_el_pos_x) + (ctn_width / 100);
-    console.log("position in percentage is: " + Math.floor(nn_el_pos_x_percent));
-  }
+  var parentPos = rsz_container.getBoundingClientRect(),
+    childPos = element.getBoundingClientRect(),
+    relativePos = {};
 
-  //   el_pos_y_percent = Math.round((el_pos_y / (ctn_height + el_center)) * 100);
-  //   console.log("el_pos_x in percentage is now: " + el_pos_x_percent);
-  //   console.log("el_pos_y in percentage is now: " + el_pos_y_percent);
+  (relativePos.top = Math.round(childPos.top - parentPos.top)),
+    (relativePos.right = Math.round(childPos.right - parentPos.right) * -1),
+    (relativePos.bottom = Math.round(childPos.bottom - parentPos.bottom) * -1),
+    (relativePos.left = Math.round(childPos.left - parentPos.left));
+
+  relativePos.top = Math.round(relativePos.top / ratio_Y);
+  relativePos.right = Math.round(relativePos.right / ratio_X);
+  relativePos.bottom = Math.round(relativePos.bottom / ratio_Y);
+  relativePos.left = Math.round(relativePos.left / ratio_X);
+
+  var values = {
+    type: type,
+    margin_top: relativePos.top,
+    height: el_height_percent,
+    margin_bottom: relativePos.bottom,
+    margin_left: relativePos.left,
+    width: el_width_percent,
+    margin_right: relativePos.right,
+    isOnRight: isOnRight,
+    isOnLeft: isOnLeft,
+    isOnBottom: isOnBottom,
+    isOnTop: isOnTop,
+  };
+
+  window.values = values;
+  element.setAttribute("data-values", JSON.stringify(values));
+
+  console.log(values);
+}
+
+function createHtmlTag() {
+  var htmlString = [];
+  elements.forEach((element) => {
+    var values = JSON.parse(element.getAttribute("data-values"));
+    console.log("VALUES", values);
+
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute(
+      "src",
+      "/factory-display/widgets/" + values.type + ".html"
+    );
+    iframe.setAttribute(
+      "style",
+      "width: " +
+        values.height +
+        "vh;height: " +
+        values.height +
+        "vh;margin-top: " +
+        values.margin_top +
+        "vh; margin-bottom: " +
+        values.margin_bottom +
+        "vh; margin-left: " +
+        values.margin_left +
+        "vw; margin-right: " +
+        values.margin_right +
+        "vw;"
+    );
+    htmlString.push(iframe.outerHTML);
+  });
+  console.log(htmlString);
+  window.htmlString = htmlString;
+  writeTheSceneFile();
+}
+
+// const http = require("http");
+
+// const hostname = "127.0.0.1";
+// const port = 3000;
+
+// const server = http.createServer((req, res) => {
+//   res.statusCode = 200;
+//   res.setHeader("Content-Type", "text/plain");
+//   res.end("Hello World \n");
+// });
+
+// server.listen(port, hostname, () => {
+//   console.log(`Server running at http://${hostname}:${port}/`);
+// });
+
+function writeTheSceneFile() {
+  // const fs = require("fs");
+
+  const headContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: #343434;
+            overflow: hidden;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            
+        }
+    </style>
+</head>
+<body>
+`;
+
+  const footContent = `
+<script>
+document.getElementsByTagName("body")[0].addEventListener("click", function() {
+    document.getElementsByTagName("body")[0].requestFullscreen();
+});
+</script>
+</body>
+</html>
+`;
+
+  const dynamicContent = htmlString.join("");
+  const globalContent = headContent + dynamicContent + footContent;
+  const path = "TEST.html";
+  console.log(globalContent);
+  // const path = "/factory-display/screens/locker-room.html";
+
+  // //clear the file
+  // fs.writeFile(path, "", function () {
+  //   console.log("done");
+  // });
+
+  // //write in the file
+  // fs.writeFile(path, globalContent, { flag: "a+" }, (err) => {});
 }
