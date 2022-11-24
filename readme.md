@@ -2,8 +2,8 @@
 
 - [Trello](https://trello.com/b/dzhNxtqm/project-2-web-js)
 - [Critical Path]()
-- [Technical Specification](Technical_specification.md)
-- [Functional Specification](Functional_specification.md)
+- [Technical Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Technical_Specification.md)
+- [Functional_specification.md](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Functional_specification.md)
 - [Test Plan]()
 
 # Our Project Team
@@ -25,6 +25,7 @@
 Nicolas MIDA is the project manager of the project. He is responsible for the project's success. He is in charge of the project's budget, the project's schedule and the project's quality. He is also in charge of the project's communication with the client.
 
 [Trello](https://trello.com/b/dzhNxtqm/project-2-web-js)
+<br>
 [Critical Path]()
 
 ---
@@ -35,7 +36,7 @@ Nicolas MIDA is the project manager of the project. He is responsible for the pr
 <br>
 Rémy CHARLES is the tech lead of the project. He is responsible for the project's technical success. He is in charge of the project's architecture, the project's design and the project's implementation. He is also in charge of the project's communication with the team.
 
-[Technical Specification](Technical_specification.md)
+[Technical Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Technical_Specification.md)
 
 ---
 ## Program Manager
@@ -45,7 +46,7 @@ Rémy CHARLES is the tech lead of the project. He is responsible for the project
 <br>
 Grégory PAGNOUX is the program manager of the project. He is responsible for the project's programmatic success. He is in charge of the project's requirements, the project's specifications and the project's documentation. He is also in charge of the project's communication with the client.
 
-[Functional Specification](Functional_specification.md)
+[Functional Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Functional_specification.md)
 
 ---
 ## Software Engineer
