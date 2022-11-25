@@ -4,23 +4,56 @@
     <link rel="stylesheet" href="/factory-display/assets/css/connexion départ/inscription.css">
 </head>
 
+
 <body>
-    <header></header>
-    <br>
-    <br>
     <div class="form-container">
         <form action="" method="post">
-        <h3> Inscrivez-vous :</h3>
+        <h1>Inscrivez - vous:</h1>
         <input type="text" name="name" required placeholder="Nom">
+        <br>
         <input type="email" name="email" required placeholder="E-mail">
-        <input type="password" name="password" required placeholder="Mot de passe">
-        <input type="password" name="cpassword" required placeholder="Confirmer votre mot de passe">
+        <div class="input_password">
+            <input type="password" id="pass" name="pass"  placeholder="Mot de passe">
+            <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye" onclick="changer()"/>
+        </div>
+        <div class="input_password">
+            <input type="password" id="pass1" name="pass"  placeholder="Mot de passe">
+            <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()"/>
+        </div>
         <label>User Type :</label>
         <select name="user_type">
             <option value="user">user</option>
             <option value="admin">admin</option>
         </select>
-        <input type="submit" name="submit" value="Inscrivez-vous" class="form-btn">
+        <div class="input submit" onclick="document.fo.submit()"><input type="submit" name="submit" value="Inscrivez-vous" class="form-btn"> </div> 
         <p> Vous avez déjà un compte ? <a href="/factory-display/connexion départ/account.html">Connectez-vous </a></p>
+        <script>
+                e= true
+            function changer(){
+                if(e){
+                    document.getElementById("pass").setAttribute("type","text");
+                    document.getElementById("eye").src="/factory-display/assets/img/icons/oeil_ferme-removebg-preview.png";
+                    e = false;
+                }
+                else{
+                    document.getElementById("pass").setAttribute("type","password");
+                    document.getElementById("eye").src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png";
+                    e = true;
+                }
+            }
+            e= true
+            function changer1(){
+                if(e){
+                    document.getElementById("pass1").setAttribute("type","text");
+                    document.getElementById("eye1").src="/factory-display/assets/img/icons/oeil_ferme.png";
+                    e = false;
+                }
+                else{
+                    document.getElementById("pass1").setAttribute("type","password");
+                    document.getElementById("eye1").src="/factory-display/assets/img/icons/oeil_ouvert.png";
+                    e = true;
+                }
+            }
+        </script>   
     </form>
 </body>

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
@@ -7,7 +5,9 @@
     outline: none; border:none;
     text-decoration: none;
 }
-
+h3{
+    height: 20px;
+}
 .container{
     min-height: 100vh;
     display: flex;
@@ -33,6 +33,7 @@
     padding:0 15px;
 }
 
+
 .container .content h1{
     font-size: 50px;
     color:#333;
@@ -41,6 +42,7 @@
 .container .content h1 span{
     color:#FF6600;
 }
+
 
 .container .content p{
     font-size: 25px;
@@ -57,6 +59,7 @@
     text-transform: capitalize;
 }
 
+
 .container .content .btn:hover{
     background: #FF6600;
 }
@@ -68,6 +71,7 @@
     justify-content: center;
     padding:20px;
     padding-bottom: 60px;
+    background: #eee;
 }
 
 .form-container form{
@@ -78,24 +82,13 @@
     text-align: center;
     width: 500px;
 }
-
 .form-container form h3{
-    font-size: 30px;
+    font-size: 50px;
     text-transform: uppercase;
     margin-bottom: 10px;
     color:#333;
+    margin-left: 35px;
 }
-
-.form-container form input,
-.form-container form select{
-    width: 100%;
-    padding:10px 15px;
-    font-size: 17px;
-    margin:8px 0;
-    background: #eee;
-    border-radius: 5px;
-}
-
 .form-container form select option{
     background: #fff;
 }
@@ -131,4 +124,29 @@
     border-radius: 5px;
     font-size: 20px;
     padding:10px;
+}
+
+.form-container form input{
+    width: 370px;
+    padding: 10px 15px;
+    font-size: 17px;
+    margin: 18px 0;
+    background: #eee;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.form-container > form > .input_password >img{
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 25px;
+}
+
+.label{
+    height: 40px;
+}
+
+.form-container > form > select{
+    scale: 1.3;
 }
