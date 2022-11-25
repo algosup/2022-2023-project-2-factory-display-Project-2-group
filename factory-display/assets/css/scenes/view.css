@@ -1,6 +1,27 @@
-h1{
-    margin-left: 30px;
+.styleTitle,h1{
+    margin-left: 60px;
+    align-items: center;
 }
+
+.iframe-container > .text > .fullscreen{
+    color:#FF6600 ;
+    background-color:#fff ;
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #FF6600;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.styleTitle {
+        margin-top: 100px;
+}
+
 iframe{
     width: 950px;
     height: 534px;
