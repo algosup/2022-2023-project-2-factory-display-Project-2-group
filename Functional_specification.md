@@ -8,8 +8,7 @@
     - [3. Personas and scenario](#3-personas-and-scenario)
         - [a. Hervé](#a-hervé)
         - [b. Solange](#b-solange)
-        - [c. Alan](#c-alan)
-        - [d. Estelle](#d-estelle)
+        - [c. Estelle](#c-estelle)
     - [4. Use case](#4-use-case)
     - [5. Risks and Assumptions](#5-risks-and-assumptions)
     - [6. Goals and non goals](#6-goals-and-non-goals)
@@ -53,28 +52,22 @@ Mr. Saeed, the Project owner of the company, would like a ==simple and secure co
 
 Hervé has been Jacobi's communications director for 10 years. He is a vigorous 52 year old man. He divorced his wife 3 years ago with whom he had two children, Jessica and Nathan.
 
-He leaves Salbris, his home, and arrives at Jacobi for 7:15 am. He turns on the two screens in the factory and in the open space. Then he goes on his computer, on the administrator account of the site, then he chooses the "create" option and he sets each element of the scene (number of parts, widgets, text, image...) with the news of the day that his boss, Mr. Saeed, asked him to share with all the employees of the company the day before. Once the settings are complete, he saves the scene and shares it on both screens simultaneously.
+He leaves Salbris, his home, and arrives at Jacobi for 7:15 am. He turns on the two screens in the locker room and in the cafeteria. Then he goes on his computer, on the administrator account of the site, then he chooses the "Create" option and he sets each element of the scene (number of parts, widgets, text, image...) with the news of the day that his boss asked him to share with all the employees of the company the day before. Once the settings are complete, he saves the scene and shares it on both screens simultaneously.
 Saving his scene will allow him to load it later if he wants to use it again and to modify it.
-At 7:30 a.m., when all employees arrive at the plant, they can view the news directly.
+At 7:30 a.m., When all employees arrive at the plant, they can see the news directly when they prepare in the locker room or when they have their coffee.
 
 ##### b. Solange
 
-Solange is 42 years old and single. She lives in Vouzeron and has been working in Jacobi since those 20 years, after leaving her BTS communication.
+Solange is 42 years old and single. She lives in Vouzeron and has been working in Jacobi since those 20 years, after leaving his BTS communication.
 
-She arrives at the factory at 7:15 a.m., and leaves for his office. Hervé, her superior, left on vacation the day before and gave him the mission to share the scenes she had already created. She uses the administrator account and chooses the "load" option to load the scene she has to share today on both screens simultaneously.
+She arrives at her office at 7:15 a.m. Hervé, her superior, has been on vacation for three days and yesterday, he called her in an emergency. The regulations were changed for the plant employees. On the admin account, he asked her to share on the screen in the cafeteria, the scene he had already prepared by simply loading it onto the screen, but by changing the image he had put and she also corrected an error in the title that Hervé had committed. For this, she chose the "Manage" option after logging in. Then she had to create a new scene with the "Create" option in which she would write the new company guidelines and regulations. Then she shares this scene only on the screen in the locker room.
 
-##### c. Alan
+##### c. Estelle
 
-Alan is 36 years old, she is engaged to Estelle and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents-in-law's house in Foëcy, a few blocks from their home.
-<!-- (Update : Alan devient manager de Estelle)
-He arrives at the factory at 7:20 a.m. He is Hervé’s right-hand man and yesterday he called her in an emergency. It has been three days since he went on vacation and there has been an amendment to the regulations regarding the plant employees. On the admin account, he asked her to share on the screen that is in the open-space, the scene already preparing by simply loading it, but by changing the image he had and she also corrected an error in the title that Hervé had committed. Then she had to create a new scene in which she would write the new company guidelines and regulations. Then she had to share this scene only on the screen that was in the factory. -->
+Estelle is 39, engaged to Alan, her 36-year-old Product Manager, and they have a daughter named Amelia. Alan and Estelle go to work together after dropping their daughter off at her parents' house in Foëcy, a few blocks away.
 
-##### d. Estelle
-
-Estelle is 39 years old, she is engaged to Alan and they have a daughter named Amelia. Alan and Estelle leave for work together after dropping their daughter off at her parents' house in Foëcy, a few blocks from their home.
-<!--
-She arrives at the factory at 7:20 a.m., puts on her work clothes and goes in front of the screen to find out about possible news.
-On her post, Estelle has a computer you can, if she wishes, have a return of the screens on the same site that Hervé used to create the scene, but with a simple employee account.-->
+She arrives at the factory at 7:20 a.m., goes into the locker room to put on her work clothes and goes in front of the screen to discover possible news.
+On her post, Estelle has a computer that allows her, if she wishes, to have a return of the screens on the same site as Hervé, but she connects with her own employee account. This allows him to follow developments during the day without going through the changing rooms or the cafeteria and thus stay at his workstation.
 
 ### 4. Use case
 ![use case](img/use_case.png)
