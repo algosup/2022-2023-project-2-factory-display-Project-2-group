@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0;
   }
@@ -32,7 +34,7 @@ body {
   /* This gives the border and middle button a matching gradient */
   .clock-border,
   .center-button {
-    background-image: linear-gradient(to right, #225378, #1695A3);
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
   }
   /* This gives the border, middle button and hands a matching box-shadow */
   .clock-border,
@@ -192,7 +194,7 @@ body {
     top: 15%;
     height: 35%;
     width: 2%;
-    background-color: #225378;
+    background-color: var(--primary-color);
     animation: tick 3600s linear infinite;
   }
   /* Use smaller height and larger top values to create shorter hands */
@@ -200,7 +202,7 @@ body {
     top: 20%;
     height: 30%;
     width: 3%;
-    background-color: #1695A3;
+    background-color: var(--secondary-color);
     animation: tick 43200s linear infinite;
   }
   /* Give the ticks a fluid width */

@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>Document</title>
     <style>
-        body {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            height: 100vh;
-            width: 100vw;
-            background-color: #343434;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            position: absolute;
-            
-        }
+      body {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--bg-color);
+        overflow: hidden;
+      }
+
+      body::backdrop {
+        background-color: var(--bg-color);
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        position: absolute;
+      }
     </style>
-</head>
-<body>
-<iframe src="/factory-display/widgets/date-hour.html" style="width: 24vh;height: 24vh;margin-top: 63vh; margin-bottom: 13vh; margin-left: 80vw; margin-right: 7vw;"></iframe><iframe src="/factory-display/widgets/clock.html" style="width: 47vh;height: 47vh;margin-top: 0vh; margin-bottom: 53vh; margin-left: 0vw; margin-right: 74vw;"></iframe><iframe src="/factory-display/widgets/date.html" style="width: 54vh;height: 54vh;margin-top: 4vh; margin-bottom: 42vh; margin-left: 42vw; margin-right: 28vw;"></iframe>
+    <link
+      rel="stylesheet"
+      href="/factory-display/assets/css/themes/theme3.css"
+    />
+  </head>
+  <body onload="setColors()">
+<iframe src="/factory-display/widgets/date-hour.html" style="width: 22vh;height: 22vh;margin-top: 0vh; margin-bottom: 78vh; margin-left: 0vw; margin-right: 87vw;"></iframe>
 <script>
 document.getElementsByTagName("body")[0].addEventListener("click", function() {
-    document.getElementsByTagName("body")[0].requestFullscreen();
+  document.getElementsByTagName("body")[0].requestFullscreen();
 });
+
+function setColors() {
+//apply theme colors to all iframe elements
+var iframes = document.getElementsByTagName("iframe");
+for (var i = 0; i < iframes.length; i++) {
+    var cssLink = document.createElement("link");
+    cssLink.href = "/factory-display/assets/css/themes/theme3.css";
+    cssLink.rel = "stylesheet";
+    cssLink.type = "text/css";
+    iframes[i].contentWindow.document.head.appendChild(cssLink);
+}
+
+}
+
 </script>
 </body>
 </html>

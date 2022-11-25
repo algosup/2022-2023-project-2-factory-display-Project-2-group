@@ -16,10 +16,10 @@
 }
 .outer-square {
   position: relative;
-  background: #1E8BC3;
+  background: radial-gradient(ellipse at center, var(--primary-color) 60%, var(--secondary-color) 100%);
   width: 100vw;
   overflow: hidden;
-  border: 1vh solid #fff;
+  border: 1vh solid var(--text-color);
 }
 .outer-square:before {
   content: "";
@@ -29,7 +29,7 @@
 .time * {
   text-align: center;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--text-color);
   font-family: "Roboto Slab", sans-serif;
 }
 #do-time {

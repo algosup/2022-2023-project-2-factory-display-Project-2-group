@@ -11,12 +11,12 @@ html {
 
 .date-container {
   height: 20vw;
-  color: white;
+  color: var(--text-color);
   font-size: 11vw;
   font-weight: 900;
   letter-spacing: 1px;
   padding: 10px 0px 0px 20px;
-  background-color: #F70055;
+  background: radial-gradient(ellipse at center, var(--primary-color) 50%, var(--secondary-color) 100%);
   text-transform: uppercase;
   border: #202020 1vw solid;
 }

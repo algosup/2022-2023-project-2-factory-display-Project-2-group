@@ -136,7 +136,7 @@ function percent() {
   window.values = values;
   element.setAttribute("data-values", JSON.stringify(values));
 
-  console.log(values);
+  // console.log(values);
 }
 
 function createHtmlTag() {
@@ -187,35 +187,47 @@ function createHtmlTag() {
 // server.listen(port, hostname, () => {
 //   console.log(`Server running at http://${hostname}:${port}/`);
 // });
+var theme = 1;
+document.getElementsByClassName("select-color")[0].addEventListener("click", function () {theme=1});
+document.getElementsByClassName("select-color")[1].addEventListener("click", function () {theme=2});
+document.getElementsByClassName("select-color")[2].addEventListener("click", function () {theme=3});
+document.getElementsByClassName("select-color")[3].addEventListener("click", function () {theme=4});
 
 function writeTheSceneFile() {
   // const fs = require("fs");
 
   const headContent = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Document</title>
-    <style>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Document</title>
+      <style>
         body {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            height: 100vh;
-            width: 100vw;
-            background-color: #343434;
-            overflow: hidden;
+          display: flex;
+          padding: 0;
+          margin: 0;
+          height: 100vh;
+          width: 100vw;
+          background-color: var(--bg-color);
+          overflow: hidden;
+        }
+  
+        body::backdrop {
+          background-color: var(--bg-color);
         }
         iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            position: absolute;
-            
+          width: 100%;
+          height: 100%;
+          border: none;
+          position: absolute;
         }
-    </style>
-</head>
-<body>
+      </style>
+      <link
+        rel="stylesheet"
+        href="/factory-display/assets/css/themes/theme`+theme+`.css"
+      />
+    </head>
+    <body onload="setColors()">
 `;
 
   const footContent = `
@@ -223,6 +235,20 @@ function writeTheSceneFile() {
 document.getElementsByTagName("body")[0].addEventListener("click", function() {
     document.getElementsByTagName("body")[0].requestFullscreen();
 });
+
+function setColors() {
+  //apply theme colors to all iframe elements
+  var iframes = document.getElementsByTagName("iframe");
+  for (var i = 0; i < iframes.length; i++) {
+      var cssLink = document.createElement("link");
+      cssLink.href = "/factory-display/assets/css/themes/theme`+theme+`.css";
+      cssLink.rel = "stylesheet";
+      cssLink.type = "text/css";
+      iframes[i].contentWindow.document.head.appendChild(cssLink);
+  }
+
+}
+
 </script>
 </body>
 </html>
@@ -230,7 +256,7 @@ document.getElementsByTagName("body")[0].addEventListener("click", function() {
 
   const dynamicContent = htmlString.join("");
   const globalContent = headContent + dynamicContent + footContent;
-  const path = "TEST.html";
+  // const path = "TEST.html";
   console.log(globalContent);
   // const path = "/factory-display/screens/locker-room.html";
 
@@ -242,3 +268,4 @@ document.getElementsByTagName("body")[0].addEventListener("click", function() {
   // //write in the file
   // fs.writeFile(path, globalContent, { flag: "a+" }, (err) => {});
 }
+
