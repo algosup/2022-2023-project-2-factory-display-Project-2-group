@@ -100,23 +100,38 @@ body {
   transform: translateY(-5px) translateX(3px);
 }
 
-.date-placeholder {
-  background: url(/factory-display/assets/img/widgets/placeholder/calendar.png)
-    no-repeat center;
-  background-size: 100% 100%;
+.resize-drag {
+  background-repeat: no-repeat ;
+  background-size: 100%;
+  background-position: center;
 }
 
-.clock-placeholder {
-  background: url(/factory-display/assets/img/widgets/placeholder/clock.png)
-    no-repeat center;
-  background-size: 100% 100%;
+#date-placeholder, #clock-placeholder, #date-hour-placeholder {
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat ;
+  background-size: 100%;
+  background-position: center;
+  margin: 5px;
 }
 
-.date-hour-placeholder {
-  background: url(/factory-display/assets/img/widgets/placeholder/date_hour.png)
-    no-repeat center;
-  background-size: 100% 100%;
+.date-placeholder, #date-placeholder {
+  background-image: url(/factory-display/assets/img/widgets/placeholder/date/date_theme-1.png);
 }
+
+.clock-placeholder, #clock-placeholder {
+  background-image: url(/factory-display/assets/img/widgets/placeholder/clock/clock_theme-1.png);
+}
+
+.date-hour-placeholder, #date-hour-placeholder {
+  background-image: url(/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png);
+}
+
+#widgets-accordion > .accordion-item > .accordion-collapse > .accordion-body {
+  display: flex;
+  flex-direction: row;
+}
+
 .btn {
   width: 100%;
   height: 100%;
@@ -178,4 +193,27 @@ body {
   height: 80%;
   border: #000 solid 2px;
   border-radius: 10px;
+}
+
+.justify-content-center {
+  margin-top: 100px;
+}
+
+#previewBtn {
+  font-weight: bold;
+  font-size: 1.2em;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ff6600;
+  }
+  to {
+    text-shadow: 0 0 30px #ff6600, 0 0 10px #ff8c3f;
+  }
+}
+
+#preview{
+  display: none;
 }
