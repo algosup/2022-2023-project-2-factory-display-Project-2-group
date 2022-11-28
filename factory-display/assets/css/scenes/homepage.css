@@ -1,5 +1,5 @@
 body{
-  margin-top: 100px;
+  margin-top: 90px;
   background-color: #F2F2F2;
 }
 .container {
@@ -34,23 +34,26 @@ i {
   border-radius: 5px;
   margin: 10px;
 }
-
 .txt-red {
   color: rgb(190, 0, 0);
   font-weight: 500;
-  padding-top: 50px;
+  padding-bottom: -10px;
+  padding-top: 0px;
 }
-
+p.txt-red {
+  padding-top: 40px;
+}
 .txt-green {
   color: rgb(0, 100, 0);
   font-weight: 500;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   padding-top: 25px;
 }
 
 .txt-white {
   color: #FF6600;
   font-weight: 500;
+  padding-bottom: 15px;
 }
 
 @media screen and (max-width: 800px) {
@@ -64,5 +67,5 @@ i {
 }
 
 .container {
-  margin-top: 10vh;
+  margin-top: 10px;
 }

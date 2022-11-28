@@ -45,19 +45,23 @@ body{
   .txt-red {
     color: rgb(190, 0, 0);
     font-weight: 500;
-    padding-top: 50px;
+    padding-bottom: -10px;
+    padding-top: 0px;
   }
-  
+  p.txt-red {
+    padding-top: 40px;
+  }
   .txt-green {
     color: rgb(0, 100, 0);
     font-weight: 500;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
     padding-top: 25px;
   }
   
   .txt-white {
     color: #FF6600;
     font-weight: 500;
+    padding-bottom: 15px;
   }
   
   @media screen and (max-width: 800px) {
@@ -80,5 +84,6 @@ body{
     }
   
   .container {
-    margin-top: 10vh;
+    margin-top: auto;
+    margin-bottom: auto;
   }
