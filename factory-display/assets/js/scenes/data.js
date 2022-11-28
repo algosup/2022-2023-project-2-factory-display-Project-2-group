@@ -67,8 +67,6 @@ function retrieveElementsDatas() {
 
     el_center = Math.round(el_width / 2);
 
-    var el_height = el_width;
-
     checkIfElementIsCloseToAnEdge();
 
     window.el_width = el_width;
@@ -135,8 +133,6 @@ function percent() {
 
   window.values = values;
   element.setAttribute("data-values", JSON.stringify(values));
-
-  // console.log(values);
 }
 
 function createHtmlTag() {
@@ -173,28 +169,103 @@ function createHtmlTag() {
   writeTheSceneFile();
 }
 
-// const http = require("http");
-
-// const hostname = "127.0.0.1";
-// const port = 3000;
-
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader("Content-Type", "text/plain");
-//   res.end("Hello World \n");
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
 var theme = 1;
-document.getElementsByClassName("select-color")[0].addEventListener("click", function () {theme=1});
-document.getElementsByClassName("select-color")[1].addEventListener("click", function () {theme=2});
-document.getElementsByClassName("select-color")[2].addEventListener("click", function () {theme=3});
-document.getElementsByClassName("select-color")[3].addEventListener("click", function () {theme=4});
+document.getElementsByClassName("select-color")[0].addEventListener("click", function () {themeOne()});
+document.getElementsByClassName("select-color")[1].addEventListener("click", function () {themeTwo()});
+document.getElementsByClassName("select-color")[2].addEventListener("click", function () {themeThree()});
+document.getElementsByClassName("select-color")[3].addEventListener("click", function () {themeFour()});
+
+if (theme === 1) {
+  themeOne();
+} else if (theme === 2) {
+  themeTwo();
+} else if (theme === 3) {
+  themeThree();
+} else if (theme === 4) {
+  themeFour();
+}
+
+function themeOne (){
+  theme = 1;
+  document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-1.png')";
+  document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-1.png')";
+  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png')";
+
+
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
+  document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-1.png')";
+}
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-placeholder") !== null) {
+  document.getElementsByClassName("date-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-1.png')";
+}
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
+  document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png')";
+}
+  
+  document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#3e3e3e";
+  console.log("theme 1 loaded");
+}
+
+function themeTwo (){
+  theme = 2;
+  document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-2.png')";
+  document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-2.png')";
+  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
+    document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-2.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-placeholder") !== null) {
+    document.getElementsByClassName("date-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-2.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
+    document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
+  }
+  document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#000000";
+  console.log("theme 2 loaded");
+}
+
+function themeThree (){
+  theme = 3;
+  document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-3.png')";
+  document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-3.png')";
+  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-3.png')";
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
+    document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-3.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-placeholder") !== null) {
+    document.getElementsByClassName("date-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-3.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
+    document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-3.png')";
+  }
+  document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#333333";
+  console.log("theme 3 loaded");
+}
+
+function themeFour (){
+  theme = 4;
+  document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-4.png')";
+  document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-4.png')";
+  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-4.png')";
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
+    document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-4.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-placeholder") !== null) {
+    document.getElementsByClassName("date-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-4.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
+    document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-4.png')";
+  }
+  document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#e3e3e3";
+  console.log("theme 4 loaded");
+}
+
+
+
+
+
 
 function writeTheSceneFile() {
-  // const fs = require("fs");
 
   const headContent = `
   <!DOCTYPE html>
@@ -256,16 +327,10 @@ function setColors() {
 
   const dynamicContent = htmlString.join("");
   const globalContent = headContent + dynamicContent + footContent;
-  // const path = "TEST.html";
   console.log(globalContent);
-  // const path = "/factory-display/screens/locker-room.html";
 
-  // //clear the file
-  // fs.writeFile(path, "", function () {
-  //   console.log("done");
-  // });
 
-  // //write in the file
-  // fs.writeFile(path, globalContent, { flag: "a+" }, (err) => {});
+  var previewWindow = window.open("", "previewWindow", "width=1920,height=1080");
+  previewWindow.document.write(globalContent);
+  previewWindow.document.close();
 }
-
