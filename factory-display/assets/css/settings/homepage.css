@@ -1,89 +1,121 @@
 body{
-    margin-top: 100px;
-    background-color: #F2F2F2;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .container > h1 {
-    text-align: center;
-    padding: 10px;
-    color: #FF6600;
-  }
-  
-  i {
-    font-size: 1em;
-  }
-  
-  .btn {
-    background-color: #FF6600;
-    color: white;
-    padding: 16px 20px;
-    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.main-div {
+    height: 100%;
     width: 100%;
-    opacity: 0.9;
-    
-  }
-  .btn:hover{
-    background-color: white;
-    color : #FF6600;
-  }
-  .btn:focus{
-    background-color: white;
-    color : #FF6600;
-  }
-  .col {
-    padding: 10px 20px 30px 20px;
-    border: #000000 solid 1px;
-    border-radius: 5px;
-    margin: 10px;
-  }
-  
-  .txt-red {
-    color: rgb(190, 0, 0);
-    font-weight: 500;
-    padding-bottom: -10px;
-    padding-top: 0px;
-  }
-  p.txt-red {
-    padding-top: 40px;
-  }
-  .txt-green {
-    color: rgb(0, 100, 0);
-    font-weight: 500;
-    padding-bottom: 40px;
-    padding-top: 25px;
-  }
-  
-  .txt-white {
-    color: #FF6600;
-    font-weight: 500;
-    padding-bottom: 15px;
-  }
-  
-  @media screen and (max-width: 800px) {
-    .row {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-    }
-    .container > .row > .col {
-      height: 10vh;
-      width: fit-content;
-    }
-    .container > .row > .col > .row {
-        margin: 0 0 0 0;
-    }
-  }
+    z-index: -1;
+    position: absolute;
+}
+.leftside-main-container {
+    width: 20%;
+    float: left;
+    height: 100%;
+    background: rgba(36, 36, 36, 0.5);
+}
+.rightside-main-container {
+    width: 80%;
+    float: right;
+    height: 100%;
+    background: rgba(255, 111, 0, 0.721);
+}
 
-    @media screen and (max-width: 580px) {
+
+/* ACCOUNT PART */
+.leftside-account-container{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.leftside-account-container .leftside-text{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.leftside-account-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+}
+
+/* SETTING PART */
+.leftside-setting-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.leftside-setting-container .leftside-text{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.leftside-setting-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+}
+
+/* LOGOUT PART */
+.leftside-logout-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.leftside-logout-container .leftside-text{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.leftside-logout-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+}
+
+@media (max-width: 900px) {
+
+    /* Account part */
+    .leftside-account-container .leftside-icons {
+        display: block;
     }
-  
-  .container {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+
+    .leftside-account-container .leftside-text{
+        display: none;
+    }
+
+    /* Setting Part */
+    .leftside-setting-container .leftside-icons {
+        display: block;
+    }
+
+    .leftside-setting-container .leftside-text{
+        display: none;
+    }
+
+    /* Logout Part */
+    .leftside-logout-container .leftside-icons {
+        display: block;
+    }
+
+    .leftside-logout-container .leftside-text{
+        display: none;
+    }
+}
+
+/* Rightside */
+
+
+.rightside-container-account {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    display: none;
+}
+
+.rightside-container-setting {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    display: none;
+}
