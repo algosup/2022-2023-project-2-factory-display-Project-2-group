@@ -59,11 +59,12 @@ For this, we will use web pages and single board computers with a wired connecti
 
 ### b. Context
 
-In the Jacobi factory only half of the employees can receive important information about the factory and the company. And the distribution of information by paper is not appropriate in a factory of 8 hectares.
-</br>
-So that's why we are working on a screen installation allowing the diffusion of important information in strategic places. (canteen, locker room).
-</br>
-An Admin will be able to choose between different customizable widgets in order to diffuse them on the screens or he will choose beforehand if it is vertical or horizontal.
+<p>In the Jacobi factory only half of the employees can receive important information about the factory and the company. And the distribution of information by paper is not appropriate in a factory of 8 hectares.
+</p>
+<p>So that's why we are working on a screen installation allowing the diffusion of important information in strategic places. (canteen, locker room).
+</p>
+<p>An Admin will be able to choose between different customizable widgets in order to diffuse them on the screens or he will choose beforehand if it is vertical or horizontal.
+</p>
 
 ### c. Goals
 
@@ -76,36 +77,41 @@ The screens must be usable only for displaying information (e.g. impossible to s
 
 
 ### e. Assumptions
-<!-- ! TO DO -->
 
+This requires an internet installation, a tv, a computer, a device and some cable otherwise this project would be impossible.
 
 <br>
 
 ## 2. Solutions
 
 ### a. Current or Existing Solution / Design
-<!-- ! TO DO -->
 
+There are already devices for digital signage in companies like [**I-video**](https://i-video.fr/laffichage-dynamique-distanciel/). It works through a device behind the screen and is connected to the internal internet network. Their interface allows to create a horizontal or vertical display with information such as the weather or private information of the company as the date of the next HR meeting .
+<br>
 
 ### b. Suggested or Proposed Solution / Design
-<!-- ! TO DO -->
 
+The solution that we propose to [**Jacobi Group**](#6-glossary) is realized with the whole of their criteria, they can be similar in some point to the existing version but it will allow the user to create a 100% his interface and to have the whole control of his device without leakage of information in the cloud or any problem of security.
+<br>
+<!-- ! Add more info -->
 
 ### c. Technical Requirements
 
 | Technical | Using |
 | --------- | ----- |
-| [HTML](https://developer.mozilla.org/fr/docs/Web/HTML)  | HyperText Markup Language : is the code used to structure a web page and its content. For example, the content of your page can be structured as a set of paragraphs, a bulleted list or with images and data tables. |
-| [JS](https://www.javascript.com/) | JavaScript : is a programming language that allows you to create dynamically updated content, control multimedia content, animate images, and anything else you can think of. |
+| [HTML](https://developer.mozilla.org/fr/docs/Web/HTML) *version: 5* | HyperText Markup Language : is the code used to structure a web page and its content. For example, the content of your page can be structured as a set of paragraphs, a bulleted list or with images and data tables. |
+| [JS](https://www.javascript.com/) *version: *| JavaScript : is a programming language that allows you to create dynamically updated content, control multimedia content, animate images, and anything else you can think of. |
 | [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) | Cascading Style Sheets : is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. |
 | [Bootstrap](https://getbootstrap.com/) | Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. |
 | [PHP](https://www.php.net/) | PHP : is a general-purpose scripting language especially suited to web development. |
 | [Jquery](https://jquery.com/) | Jquery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. |
 | [Python](https://www.python.org/) | Python is an interpreted, high-level, general-purpose programming language. |
-| [Azure](https://azure.microsoft.com/fr-fr/)| Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. |
+| [Microsoft Azure](https://azure.microsoft.com/fr-fr/)| Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. |
 | [mangoDB](https://www.mongodb.com/) | MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. |
+| [NodeJS](https://nodejs.org/en/) | Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. |
 | Rock Pi 4 | Single board computer |
 
+<br>
 
 ### d. Test Plan
 <!-- ! TO DO -->
@@ -177,4 +183,4 @@ The screens must be usable only for displaying information (e.g. impossible to s
 | Terms | Definitions |
 | ----- | ----------- |
 | [Web](https://www.w3.org/)| The Web is the term commonly used to refer to the World Wide Web, or WWW. It refers to the hypertext system operating on the global computer network Internet. |
-| [Jacobi Group](https://www.jacobi.net/) | Jacobi is the first company to manufacture activated carbon from coconut shells. And it uses activated carbon and ion exchange resins in general in filtration and treatment (water, gas, metal, ...).
+| [Jacobi Group](https://www.jacobi.net/) | Jacobi is the first company to manufacture activated carbon from coconut shells. And it uses activated carbon and ion exchange resins in general in filtration and treatment (water, gas, metal, ...). |
