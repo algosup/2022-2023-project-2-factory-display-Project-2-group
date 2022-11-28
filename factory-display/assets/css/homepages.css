@@ -8,3 +8,12 @@
     padding: 0;
     overflow: hidden;
 }
+
+iframe{
+    width: 950px;
+    height: 534px;
+    overflow: hidden;
+    align-items: center ;
+    margin-left: 160px;
+    margin-top: 40px;
+}
