@@ -2,3 +2,11 @@
     width : "500px";
     height :"330px";
 }
+
+.city-selected{
+    display: none;
+}
+
+.days {
+    display: block;
+}
