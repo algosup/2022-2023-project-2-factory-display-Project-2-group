@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f23b463d-4642-4dcb-8ed3-3004c37326da/AppServices/subscriptions/f23b463d-4642-4dcb-8ed3-3004c37326da/resourceGroups/JacobiGroup_group/providers/Microsoft.Web/sites/JacobiGroup/subscriptions/f23b463d-4642-4dcb-8ed3-3004c37326da/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Jacobi-group",
+    "appService.deploySubpath": "."
+}
