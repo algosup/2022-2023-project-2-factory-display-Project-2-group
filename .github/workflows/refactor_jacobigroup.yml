@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'JacobiGroup'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17A8E925649D4323A2B77C2EF0C6F168 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D4073EE5D62546C9962431BBF1E03D38 }}
           package: .
