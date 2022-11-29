@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/homepage.css">
 
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+
 </head>
 
 <body>
@@ -23,27 +25,27 @@
     <div class="main-div">
         <div class="leftside-main-container">
             <div class="leftside-containers">
-                <div class="leftside-account-container">
-                    <div class="leftside-text" onclick=openAccount()>
-                        <h2>Mon compte</h2>
+                <div class="leftside-account-container" onclick=openAccount()>
+                    <div class="leftside-text">
+                        <h2 class="title"> Mon compte</h2>
                     </div>
                     <div class="leftside-icons">
                         <i class="fa-solid fa-id-card"></i>
                     </div>
                 </div>
-
-                <div class="leftside-setting-container">
-                    <div class="leftside-text" onclick=openSettings()>
-                        <h2>Paramètres</h2>
+                <hr class="solid">
+                <div class="leftside-setting-container" onclick=openSettings()>
+                    <div class="leftside-text">
+                        <h2 class="title">Paramètres</h2>
                     </div>
                     <div class="leftside-icons">
                         <i class="fa-solid fa-gear"></i>
                     </div>
                 </div>
-
+                <hr class="solid">
                 <div class="leftside-logout-container">
                     <div class="leftside-text">
-                        <h2>Déconnexion</h2>
+                        <h2 class="title">Déconnexion</h2>
                     </div>
                     <div class="leftside-icons">
                         <i class="fa-solid fa-sign-out"></i>
@@ -55,9 +57,21 @@
 
         <div class="rightside-main-container">
             <div class="rightside-containers">
-                <div class="rightside-container-account">
-                    <h2>Mon compte</h2>
-                </div>
+                <!-- <div class="rightside-container-account">
+                    <div class="rightside-container-account-header">
+                        <h2>Mon compte</h2>
+                    </div>
+                    <div class="rightside-container-account-body">
+                        <div class="rightside-container-account-body-left">
+                            <div class="account-prenom">
+                                <h2>Prénom</h2>
+                            </div>
+                            <div class="account-nom">
+                                <h2>Nom</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
                 <div class="rightside-container-setting">
                     <h2>Paramètres</h2>
                 </div>
@@ -74,21 +88,6 @@
         var accountContainer = document.querySelector(".rightside-container-account");
         var settingContainer = document.querySelector(".rightside-container-setting");
 
-
-        // Change the cursor when the user is hovering the container
-        account.addEventListener("mouseover", function () {
-            account.style.cursor = "pointer";
-        });
-
-        setting.addEventListener("mouseover", function () {
-            setting.style.cursor = "pointer";
-        });
-
-        logout.addEventListener("mouseover", function () {
-            logout.style.cursor = "pointer";
-        });
-
-        
         function openSettings() {
             accountContainer.style.display = "none";
             settingContainer.style.display = "block";

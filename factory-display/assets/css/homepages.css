@@ -1,3 +1,6 @@
+body {
+  font-family: Noto Sans;
+}
 .custom-canva {
     margin-left: 10vw;
     margin-top: 10px;
@@ -22,4 +25,8 @@
     top: 100px;
     left: 0px;
   color: #FF6600;
+}
+
+hr.solid {
+  border-top: 5px solid #bbb;
 }
