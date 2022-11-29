@@ -5,60 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
-    <title>settings</title>
+    <title>Mon espace</title>
+
     <script src="/factory-display/assets/js/section/header.js"></script>
     <script src="/factory-display/assets/js/section/footer.js"></script>
     <script src="/factory-display/assets/js/init.js"></script>
-    
+
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/homepage.css">
 
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+
 </head>
 
 <body>
     <header></header>
-    <div class="container">
-    <h1>Mon espaces</h1>
-    <br>
-    <div class="row">
-        <div class="col">
-        <div class="row">
-            <div class="row">
-            <h2 style="color:#FF6600"> Paramètres </h2>
-            </div>
-            <div id="cadre-2" class="row">
-            <p class="txt-red"><i class="fa-solid fa-thumbs-down"></i>&nbsp; Ici vous ne pourrez accéder aux paramètres. <br> <br> <br><br></p>
-            <a href="/factory-display/settings/parametre.html"><button class="btn btn-outline-primary">Continuer <i class="fa-solid fa-circle-arrow-right"></i></button></a>
-            </div>
-        </div>
-        </div>
-        <div class="col">
-        <div class="row">
-            <div class="row">
-            <h2 style="color:#FF6600">Mon Comptes </h2>
-            </div>
-            <div class="row">
-            <p class="txt-white"><br><br><i class="fa-solid fa-thumbs-up"></i>&nbsp; Ici vous pourrez  vos informations personnelles<br><br><br></p>
-            <a href="/factory-display/settings/compte.html"><button class="btn btn-outline-primary">Continuer <i class="fa-solid fa-circle-arrow-right"></i></button></a>
-            </div>
-        </div>
-        </div>
-        <div class="col">
-        <div class="row">
-            <div class="row">
-            <h2 style="color:#FF6600"> Connexion </h2>
-            </div>
-            <div id="Cadre-2" class="row">
-            <p class="txt-green"><br><i class="fa-solid fa-thumbs-up"></i>&nbsp; Ici vous pourrez vous connectez a votre compte.<br><br></p>
-            <a href="/factory-display/settings/account.html"><button class="btn btn-outline-primary">Continuer <i class="fa-solid fa-circle-arrow-right"></i></button></a>
+    <div class="main-div">
+        <div class="leftside-main-container">
+            <div class="leftside-containers">
+                <div class="leftside-account-container" onclick=openAccount()>
+                    <div class="leftside-text">
+                        <h2 class="title"> Mon compte</h2>
+                    </div>
+                    <div class="leftside-icons">
+                        <i class="fa-solid fa-id-card"></i>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="leftside-setting-container" onclick=openSettings()>
+                    <div class="leftside-text">
+                        <h2 class="title">Paramètres</h2>
+                    </div>
+                    <div class="leftside-icons">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
+                <hr class="solid">
+                <div class="leftside-logout-container">
+                    <div class="leftside-text">
+                        <h2 class="title">Déconnexion</h2>
+                    </div>
+                    <div class="leftside-icons">
+                        <i class="fa-solid fa-sign-out"></i>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        <div class="rightside-main-container">
+            <div class="rightside-containers">
+                <!-- <div class="rightside-container-account">
+                    <div class="rightside-container-account-header">
+                        <h2>Mon compte</h2>
+                    </div>
+                    <div class="rightside-container-account-body">
+                        <div class="rightside-container-account-body-left">
+                            <div class="account-prenom">
+                                <h2>Prénom</h2>
+                            </div>
+                            <div class="account-nom">
+                                <h2>Nom</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="rightside-container-setting">
+                    <h2>Paramètres</h2>
+                </div>
+
+            </div>
         </div>
     </div>
     </div>
+    <script>
+        // Open the div when the user clicks on the icon and display it on the right side 
+        var account = document.querySelector(".leftside-account-container");
+        var setting = document.querySelector(".leftside-setting-container");
+        var logout = document.querySelector(".leftside-logout-container");
+        var accountContainer = document.querySelector(".rightside-container-account");
+        var settingContainer = document.querySelector(".rightside-container-setting");
+
+        function openSettings() {
+            accountContainer.style.display = "none";
+            settingContainer.style.display = "block";
+        }
+
+        function openAccount() {
+            accountContainer.style.display = "block";
+            settingContainer.style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
