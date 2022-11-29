@@ -9,11 +9,17 @@
     overflow: hidden;
 }
 
-iframe{
-    width: 950px;
-    height: 534px;
-    overflow: hidden;
-    align-items: center ;
-    margin-left: 160px;
-    margin-top: 40px;
+.div-main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-main-container > h1 {
+  text-align: center;
+  position: relative;
+    top: 100px;
+    left: 0px;
+  color: #FF6600;
 }
