@@ -120,7 +120,7 @@
         </div>
         <div class="row custom-canva">
           <div class="resize-container">
-            <div class="resize-drag date-hour-placeholder"></div>
+            <div class="resize-drag news-lg-placeholder"></div>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@
             </h2>
             <div id="textWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="textWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <strong>This is the first item's accordion body.</strong>
+                  <div onclick="appendTextWithHeading()">Lorem, ipsum dolor.</div>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@
             </h2>
             <div id="imageWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="imageWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong>
+                <strong onclick="appendImg()">This is the second item's accordion body.</strong>
               </div>
             </div>
           </div>
@@ -159,8 +159,8 @@
             </h2>
             <div id="hourWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="hourWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <div onclick="appendPlaceholder(clock)" class="widget-placeholder" id="clock-placeholder"></div>
-                <div onclick="appendPlaceholder(date_hour)" class="widget-placeholder" id="date-hour-placeholder"></div>
+                <div onclick="appendPlaceholder(clock)" class="widget-sm-placeholder" id="clock-placeholder"></div>
+                <div onclick="appendPlaceholder(date_hour)" class="widget-sm-placeholder" id="date-hour-placeholder"></div>
               </div>
             </div>
           </div>
@@ -172,8 +172,8 @@
             </h2>
             <div id="dateWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="dateWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <div onclick="appendPlaceholder(date)" class="widget-placeholder" id="date-placeholder"></div>
-                <div onclick="appendPlaceholder(date_hour)" class="widget-placeholder" id="date-hour-placeholder"></div>
+                <div onclick="appendPlaceholder(date)" class="widget-sm-placeholder" id="date-placeholder"></div>
+                <div onclick="appendPlaceholder(date_hour)" class="widget-sm-placeholder" id="date-hour-placeholder"></div>
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@
             </h2>
             <div id="newsWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="newsWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <strong>This is the sixth item's accordion body.</strong>
+                <div onclick="appendPlaceholder(news_lg)" class="widget-lg-placeholder" id="news-lg-placeholder"></div>
               </div>
             </div>
           </div>

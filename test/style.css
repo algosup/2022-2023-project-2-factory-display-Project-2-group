@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300&subset=latin,latin-ext);
+body {
+  background-color: #ffc107;
+}
+ul.menuElement,
+ul.menuContainer {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font: 300 15px "Roboto", sans-serif;
+  position: absolute;
+  color: #333;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul.menuElement *,
+ul.menuContainer * {
+  transition: color 0.4s, background 0.4s;
+}
+
+ul.menuElement li,
+ul.menuContainer li {
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 5px;
+  background-color: #fff;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+ul.menuElement li a,
+ul.menuContainer li a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul.menuElement li:hover,
+ul.menuContainer li:hover {
+  background-color: #ecf0f1;
+}
+
+ul.menuElement li:first-child,
+ul.menuContainer li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+ul.menuElement li:last-child,
+ul.menuContainer li:last-child {
+  background: #ecf0f1;
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+ul.menuElement li:last-child a,
+ul.menuContainer li:last-child a {
+  width: 26%;
+}
+ul.menuElement li:last-child:hover a,
+ul.menuContainer li:last-child:hover a {
+  color: #2c3e50;
+}
+ul.menuElement li:last-child:hover a:hover,
+ul.menuContainer li:last-child:hover a:hover {
+  color: #2980b9;
+}
+
+/* DEMO STYLES */
+span.demo {
+  font: 200 25px "Roboto", sans-serif;
+  display: table;
+  margin: 10px auto;
+  color: #212121;
+}
+
+li > img {
+  width: 75px;
+  height: 25px;
+  border: #333 2px solid;
+  display: none;
+}
+
+.sp {
+  background: #c5c5c5 !important;
+}
+
+.theme-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-selector > i {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.custom-canva {
+  width: 500px;
+  height: 300px;
+  background: #fff;
+}
+
+.resize-drag {
+  width: 100px;
+  height: 100px;
+  background: #333;
+}

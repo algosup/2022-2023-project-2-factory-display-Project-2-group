@@ -12,11 +12,23 @@ interact(".resize-drag")
   })
   .on("resizemove", function (event) {
     var height = event.rect.height;
+    var width = event.rect.width;
     if (height <= ctn_height) {
+      if (event.target.classList.contains("news-lg-placeholder")) {
+        const target = event.target;
+        target.style.width = height * 2 + "px";
+        target.style.height = height + "px";
+      }else{
       const target = event.target;
       target.style.width = event.rect.height + "px";
       target.style.height = event.rect.height + "px";
+      }
     }
+    // if (height < 100) {
+    //   const target = event.target;
+    //   target.style.width = "100px";
+    //   target.style.height = "100px";
+    // }
     retrieveElementsDatas();
   });
 
@@ -24,9 +36,9 @@ interact(".delete").on("tap", function (event) {
   event.target.parentNode.parentNode.remove();
 });
 
-interact(".resize-drag").on("doubletap", function (event) {
-  event.target.remove();
-});
+// interact(".resize-drag").on("doubletap", function (event) {
+//   event.target.remove();
+// });
 
 interact(".resize-drag").on("tap", function (event) {
   const target = event.target;
@@ -34,7 +46,11 @@ interact(".resize-drag").on("tap", function (event) {
   document.querySelectorAll(".resize-drag").forEach((el) => {
     el.classList.remove("selected");
   });
-  target.classList.add("selected");
+  if (target.classList.contains("text-heading")) {
+    target.parentNode.parentNode.classList.add("selected");
+  } else {
+    target.classList.add("selected");
+  }
   appendsBtns();
 });
 
