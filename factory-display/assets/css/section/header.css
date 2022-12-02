@@ -19,7 +19,8 @@ nav {
   box-shadow: inset 0px -1px 0px #c5c5c6;
   width: 100%;
   position: static;
-  z-index: 1;
+  z-index: 10;
+  height: 10vh;
 }
 
 .nav-icon {
@@ -156,7 +157,7 @@ nav {
     align-items: flex-start;
     position: absolute;
     background: #fafafa;
-    top: 75px;
+    top: 66.5px;
     left: 0;
     height: 42vh;
     padding: 15px 50px 15px 20px;
@@ -191,20 +192,6 @@ nav {
   }
 }
 
-@media (max-width: 500px) {
-  .nav-icon img {
-    width: 30px;
-  }
-  .nav-icon span {
-    font-size: 20px;
-  }
-
-  .navlinks-container {
-    position: absolute;
-    top: 63.5px;
-}
-
-}
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
