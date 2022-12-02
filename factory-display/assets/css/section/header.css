@@ -158,17 +158,20 @@ nav {
     background: #fafafa;
     top: 75px;
     left: 0;
-    height: 50vh;
+    height: 42vh;
     padding: 15px 50px 15px 20px;
     border-right: 1px solid #c5c5c6;
+    border-bottom: 1px solid #c5c5c6;
+    border-bottom-right-radius: 15px;
     transform: translate(-100%);
+    z-index: 1000;
   }
   .open {
     transform: translate(0%);
   }
   .navlinks-container a {
-    font-size: 18px;
-    margin: 10px 0
+    font-size: 20px;
+    margin: 25px 0
   }
 
   .nav-authentication {
@@ -186,9 +189,6 @@ nav {
   .sign-user img {
     width: 20px;
   }
-
-  
-
 }
 
 @media (max-width: 500px) {
@@ -199,8 +199,12 @@ nav {
     font-size: 20px;
   }
 
+  .navlinks-container {
+    position: absolute;
+    top: 63.5px;
 }
 
+}
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
