@@ -1,5 +1,5 @@
 window.onload = function() {
-    displayHeader();
+    displayHeader('guest');
     displayFooter();
     loadSecondView();
     retrieveElementsDatas();

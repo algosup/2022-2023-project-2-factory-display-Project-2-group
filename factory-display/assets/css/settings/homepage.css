@@ -1,89 +1,190 @@
 body{
-    margin-top: 100px;
-    background-color: #F2F2F2;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+    font-family: Noto Sans;
+}
+.main-div {
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
 
-  .container > h1 {
+}
+.leftside-main-container {
+    width: 15%;
+    float: left;
+    height: 100%;
+    background: rgba(36, 36, 36, 0.5);
+}
+.rightside-main-container {
+    width: 85%;
+    float: right;
+    height: 100%;
+    background: rgb(166, 166, 166);
+}
+
+
+/* ACCOUNT PART */
+.leftside-account-container{
     text-align: center;
-    padding: 10px;
-    color: #FF6600;
-  }
-  
-  i {
-    font-size: 1em;
-  }
-  
-  .btn {
-    background-color: #FF6600;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    width: 100%;
-    opacity: 0.9;
-    
-  }
-  .btn:hover{
-    background-color: white;
-    color : #FF6600;
-  }
-  .btn:focus{
-    background-color: white;
-    color : #FF6600;
-  }
-  .col {
-    padding: 10px 20px 30px 20px;
-    border: #000000 solid 1px;
-    border-radius: 5px;
-    margin: 10px;
-  }
-  
-  .txt-red {
-    color: rgb(190, 0, 0);
-    font-weight: 500;
-    padding-bottom: -10px;
-    padding-top: 0px;
-  }
-  p.txt-red {
-    padding-top: 40px;
-  }
-  .txt-green {
-    color: rgb(0, 100, 0);
-    font-weight: 500;
-    padding-bottom: 40px;
-    padding-top: 25px;
-  }
-  
-  .txt-white {
-    color: #FF6600;
-    font-weight: 500;
-    padding-bottom: 15px;
-  }
-  
-  @media screen and (max-width: 800px) {
-    .row {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      align-items: center;
-    }
-    .container > .row > .col {
-      height: 10vh;
-      width: fit-content;
-    }
-    .container > .row > .col > .row {
-        margin: 0 0 0 0;
-    }
-  }
+    margin-top: 20px;
+}
 
-    @media screen and (max-width: 580px) {
+.leftside-account-container > .leftside-text > .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.leftside-setting-container > .leftside-text > .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.leftside-logout-container > .leftside-text > .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.leftside-account-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+    color: #efefef
+}
+
+/* SETTING PART */
+.leftside-setting-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.leftside-setting-container .leftside-text{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.leftside-setting-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+    color: #efefef
+}
+
+/* LOGOUT PART */
+.leftside-logout-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.leftside-logout-container .leftside-text{
+    color: white;
+    font-size: 1px;
+    font-weight: 700;
+}
+
+.leftside-logout-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+    color: #efefef
+}
+
+@media (max-width: 900px) {
+
+    /* Account part */
+    .leftside-account-container .leftside-icons {
+        display: block;
     }
-  
-  .container {
-    margin-top: auto;
-    margin-bottom: auto;
-  }
+
+    .leftside-account-container .leftside-text{
+        display: none;
+    }
+
+    /* Setting Part */
+    .leftside-setting-container .leftside-icons {
+        display: block;
+    }
+
+    .leftside-setting-container .leftside-text{
+        display: none;
+    }
+
+    /* Logout Part */
+    .leftside-logout-container .leftside-icons {
+        display: block;
+    }
+
+    .leftside-logout-container .leftside-text{
+        display: none;
+    }
+}
+
+/* Rightside */
+
+
+.rightside-container-account {
+    color: rgb(66, 64, 64);
+    display: none;
+}
+
+.rightside-container-account > .rightside-container-account-header {
+    text-align: center;
+    padding-top: 10px;
+    border: 5px solid rgb(66, 64, 64);
+    box-shadow: 0px 0px 10px 0px rgb(66, 64, 64);
+    border-top: none;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+
+}
+
+.rightside-container-account-body-left {
+    width: 100%;
+    height: 100%;
+    background-color: brown;
+}
+
+.rightside-container-account-body-left > .account-prenom {
+    display: inline-block;
+    background-color: aqua; 
+}
+
+.rightside-container-account-body-left > .account-nom {
+    display: inline-block;   
+    background-color: blue;
+
+}
+
+.rightside-container-setting {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    display: none;
+}
+
+/* Hover effect */
+.leftside-account-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.leftside-setting-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.leftside-logout-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}

@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <script src="/factory-display/assets/js/section/header.js"></script>
-    <script src="/factory-display/assets/js/section/footer.js"></script>
+    <!-- <script src="/factory-display/assets/js/section/footer.js"></script> -->
     <script src="/factory-display/assets/js/init.js"></script>
     
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/inscription.css">
+    <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
 <body>
     <header></header>
-    <br>
-    <br>
     <div class="form-container">
         <form action="" method="post">
-        <h1>Inscrivez - vous:</h1>
+        <h1>Inscrivez-vous:</h1>
         <input type="text" name="name" required placeholder="Nom">
         <br>
         <input type="email" name="email" required placeholder="E-mail">
@@ -26,11 +27,6 @@
             <input type="password" id="pass1" name="pass"  placeholder="Mot de passe">
             <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()"/>
         </div>
-        <label>User Type :</label>
-        <select name="user_type">
-            <option value="user">user</option>
-            <option value="admin">admin</option>
-        </select>
         <div class="input submit" onclick="document.fo.submit()"><input type="submit" name="submit" value="Inscrivez-vous" class="form-btn"> </div> 
         <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.html">Connectez-vous </a></p>
         <script>

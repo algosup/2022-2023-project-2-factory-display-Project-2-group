@@ -1,63 +1,66 @@
 body{
-  margin-top: 90px;
   background-color: #F2F2F2;
+  font-family: Noto Sans;
 }
-.container {
+.scenescontainer, .scenescol-container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
 
 i {
   font-size: 1em;
 }
 
-.btn {
+.scenesbtn {
   background-color: #FF6600;
   color: white;
   padding: 16px 20px;
   border: none;
   width: 100%;
   opacity: 0.9;
-  
 }
-.btn:hover{
+.scenesbtn:hover{
   background-color: white;
   color : #FF6600;
 }
-.btn:focus{
+.scenesbtn:focus{
   background-color: white;
   color : #FF6600;
 }
-.col {
+.scenescol {
   padding: 10px 20px 30px 20px;
   border: #000000 solid 1px;
   border-radius: 5px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-.txt-red {
+.scenestxt-red {
   color: rgb(190, 0, 0);
   font-weight: 500;
   padding-bottom: -10px;
   padding-top: 0px;
 }
-p.txt-red {
+p.scenestxt-red {
   padding-top: 40px;
 }
-.txt-green {
+.scenestxt-green {
   color: rgb(0, 100, 0);
   font-weight: 500;
   padding-bottom: 10px;
   padding-top: 25px;
 }
 
-.txt-white {
+.scenestxt-white {
   color: #FF6600;
   font-weight: 500;
   padding-bottom: 15px;
 }
 
 @media screen and (max-width: 800px) {
-  .col-container {
+  .scenescol-container {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -66,6 +69,19 @@ p.txt-red {
   }
 }
 
-.container {
+.scenescontainer {
   margin-top: 10px;
 }
+
+/* .div-main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-main-container > h1 {
+  text-align: center;
+  padding: 10px;
+  color: #FF6600;
+} */

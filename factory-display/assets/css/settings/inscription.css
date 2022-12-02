@@ -1,5 +1,5 @@
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: Noto Sans;
     margin:0; padding:0;
     box-sizing: border-box;
     outline: none; border:none;
@@ -7,14 +7,6 @@
 }
 h3{
     height: 20px;
-}
-.container{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding:20px;
-    padding-bottom: 60px;
 }
 
 .container .content{
