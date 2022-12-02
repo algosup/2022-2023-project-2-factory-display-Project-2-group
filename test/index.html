@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h1>Hello World !</h1>
-    <button onclick="test()">Click me !</button>
-    <script>
-        function test() {
-          const fs = require('fs');
-          const content = 'Some content!';
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Right Click Menu [context]</title>
+  <link rel="stylesheet" href="./style.css">
 
-          fs.writeFile('/factory-display/test/txt/lala.txt', content, err => {
-            if (err) {
-            console.error(err);
-          }});
-        }
-    </script>
-  </body>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<link href="/factory-display/assets/css/libs/font-awesome.css" rel="stylesheet">
+<ul class="menuElement" hidden>
+  <li><a href="#"><i class="fa fa-circle-plus"></i> Modifier</a></li>
+  <li><a href="#"><i class="fa fa-rotate-right"></i> Pivoter à droite</a></li>
+  <li><a href="#"><i class="fa fa-rotate-left"></i> Pivoter à gauche</a></li>
+  <li><a href="#"><i class="fa fa-clone"></i> Dupliquer</a></li>
+  <li><a href="#"><i class="fa fa-trash"></i> Supprimer</a></li>
+  <li><a href="#"><i class="fa fa-arrow-up"></i> Envoyer vers l'avant</a></li>
+  <li><a href="#"><i class="fa fa-arrow-down"></i> Envoyer vers l'arrière</a></li>
+</ul>
+
+
+<ul class="menuContainer" hidden>
+  <li><a href="#"><i class="fa fa-rotate"></i> Actualiser</a></li>
+  <li><a href="#"><i class="fa fa-expand"></i> Prévisualiser</a></li>
+  <li><a href="#"><i class="fa fa-floppy-disk"></i> Sauvegarder</a></li>
+  <li class="theme-selector">
+    <i class="fa fa-circle-left previous-theme-btn"></i>
+    <img src="/factory-display/assets/img/themes/theme-1.png" alt="" class="slide showing">
+    <img src="/factory-display/assets/img/themes/theme-2.png" alt="" class="slide">
+    <img src="/factory-display/assets/img/themes/theme-3.png" alt="" class="slide">
+    <img src="/factory-display/assets/img/themes/theme-4.png" alt="" class="slide">
+    <i class="fa fa-circle-right next-theme-btn"></i>
+  </li>
+</ul>
+
+<div class="custom-canva">
+  <div class="resize-drag"></div>
+</div>
+<!-- partial -->
+  <script src='/factory-display/assets/js/libs/jquery.js'></script>
+  <script  src="script.js"></script>
+
+</body>
 </html>

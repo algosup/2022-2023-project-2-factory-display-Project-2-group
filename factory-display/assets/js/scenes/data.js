@@ -48,13 +48,21 @@ function retrieveElementsDatas() {
     var el_pos_x = element.getAttribute("data-x");
     var el_pos_y = element.getAttribute("data-y");
     var el_width = element.offsetWidth;
+    var el_height = element.offsetHeight;
     var type = element.className.split(" ")[1];
 
     window.el_pos_x = el_pos_x;
     window.el_pos_y = el_pos_y;
     window.el_width = el_width;
+    window.el_height = el_height;
 
+    
     type = type.replace("-placeholder", "");
+
+    // if (type.includes("-placeholder")) {
+    //   type = type.replace("-placeholder", "");
+    // }
+
     window.type = type;
 
     if (el_pos_x === null && el_pos_y === null) {
@@ -70,7 +78,8 @@ function retrieveElementsDatas() {
     checkIfElementIsCloseToAnEdge();
 
     window.el_width = el_width;
-    window.type = type;
+    window.el_height = el_height;
+    window.el_type = type;
     window.el_center = el_center;
     window.element = element;
     percent();
@@ -100,9 +109,11 @@ function percent() {
   ctn_width_percent = ctn_width / ratio_X;
   ratio_Y = ctn_height / 100;
   ctn_height_percent = ctn_height / ratio_Y;
-  el_width_percent = Math.round(el_width / ratio_X);
-  el_height_percent = Math.round(el_width / ratio_Y);
+    el_width_percent = Math.round(el_width / ratio_X);
+    el_height_percent = Math.round(el_height / ratio_Y);
+  
 
+  
   var parentPos = rsz_container.getBoundingClientRect(),
     childPos = element.getBoundingClientRect(),
     relativePos = {};
@@ -137,32 +148,81 @@ function percent() {
 
 function createHtmlTag() {
   var htmlString = [];
+
   elements.forEach((element) => {
     var values = JSON.parse(element.getAttribute("data-values"));
     console.log("VALUES", values);
 
-    var iframe = document.createElement("iframe");
-    iframe.setAttribute(
-      "src",
-      "/factory-display/widgets/" + values.type + ".html"
-    );
-    iframe.setAttribute(
-      "style",
-      "width: " +
-        values.height +
-        "vh;height: " +
-        values.height +
-        "vh;margin-top: " +
-        values.margin_top +
-        "vh; margin-bottom: " +
-        values.margin_bottom +
-        "vh; margin-left: " +
-        values.margin_left +
-        "vw; margin-right: " +
-        values.margin_right +
-        "vw;"
-    );
-    htmlString.push(iframe.outerHTML);
+    if (element.className.includes("date") || element.className.includes("clock") || element.className.includes("date-hour")) {
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute(
+        "src",
+        "/factory-display/widgets/" + values.type + ".html"
+      );
+      iframe.setAttribute(
+        "style",
+        "width: " +
+          values.height +
+          "vh;height: " +
+          values.height +
+          "vh;margin-top: " +
+          values.margin_top +
+          "vh; margin-bottom: " +
+          values.margin_bottom +
+          "vh; margin-left: " +
+          values.margin_left +
+          "vw; margin-right: " +
+          values.margin_right +
+          "vw;"
+      );
+      htmlString.push(iframe.outerHTML);
+    } else if (element.className.includes("news-lg")) {
+      var iframe = document.createElement("iframe");
+      iframe.setAttribute(
+        "src",
+        "/factory-display/widgets/" + values.type + ".html"
+      );
+      iframe.setAttribute(
+        "style",
+        "width: " +
+          values.height * 2 +
+          "vh;height: " +
+          values.height +
+          "vh;margin-top: " +
+          values.margin_top +
+          "vh; margin-bottom: " +
+          values.margin_bottom +
+          "vh; margin-left: " +
+          values.margin_left +
+          "vw; margin-right: " +
+          values.margin_right +
+          "vw;"
+      );
+      htmlString.push(iframe.outerHTML);
+    
+    } else if(element.className.includes("image")) {
+      var img = document.createElement("img");
+      img.setAttribute(
+        "src",
+        link
+      );
+      img.setAttribute(
+        "style",
+        "width: " +
+          values.width +
+          "vh;height: " +
+          values.height +
+          "vh;margin-top: " +
+          values.margin_top +
+          "vh; margin-bottom: " +
+          values.margin_bottom +
+          "vh; margin-left: " +
+          values.margin_left +
+          "vw; margin-right: " +
+          values.margin_right +
+          "vw;"
+      );
+    }
   });
   console.log(htmlString);
   window.htmlString = htmlString;
@@ -210,6 +270,9 @@ function themeTwo (){
   theme = 2;
   document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-2.png')";
   document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-2.png')";
+  for (let i = 0; i < document.getElementsByClassName("custom-canva")[0].querySelectorAll(".date-hour-placeholder").length; i++) {
+    document.getElementsByClassName("date-hour-placeholder")[i].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
+  }
   document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
     document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-2.png')";
@@ -329,8 +392,13 @@ function setColors() {
   const globalContent = headContent + dynamicContent + footContent;
   console.log(globalContent);
 
-
-  var previewWindow = window.open("", "previewWindow", "width=1920,height=1080");
+  var deviceWidth = window.innerWidth;
+  var deviceHeight = window.innerHeight;
+  
+  var previewWindow = window.open("", "previewWindow", "width=" + deviceWidth + ",height=" + deviceHeight +"fullscreen=yes");
   previewWindow.document.write(globalContent);
   previewWindow.document.close();
+
+
+  
 }

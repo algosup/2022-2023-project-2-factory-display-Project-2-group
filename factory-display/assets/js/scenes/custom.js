@@ -19,10 +19,21 @@ clock.className = "resize-drag clock-placeholder";
 var date_hour = document.createElement("div");
 date_hour.className = "resize-drag date-hour-placeholder";
 
+var news_lg = document.createElement("div");
+news_lg.className = "resize-drag news-lg-placeholder";
+
 function appendPlaceholder(img) {
   var resizeContainer = document.querySelector(".resize-container");
   resizeContainer.appendChild(img);
   retrieveElementsDatas();
+}
+
+function appendImg() {
+  var placeholder = document.createElement("div");
+  placeholder.className = "resize-drag img-placeholder";
+  var source = prompt("Enter Image URL");
+  placeholder.style.backgroundImage = `url(${source})`;
+  appendPlaceholder(placeholder);
 }
 
 function appendsBtns() {
@@ -43,3 +54,27 @@ function removeBtns() {
   });
 }
 
+function appendTextWithHeading() {
+  let text = prompt("Enter yout Text");
+  if (text) {
+    var placeholder = document.createElement("div");
+    placeholder.className = "resize-drag text-heading-placeholder";
+    var textHeadingCtn = document.createElement("div");
+    textHeadingCtn.className = "text-heading-ctn";
+    var textHeading = document.createElement("div");
+    textHeading.className = "text-heading";
+    textHeading.innerHTML = `<h1>${text}</h1>`;
+    textHeadingCtn.appendChild(textHeading);
+    placeholder.appendChild(textHeadingCtn);
+    appendPlaceholder(placeholder);
+  } else {
+    alert("Please enter text");
+  }
+}
+
+
+document.querySelectorAll("h1").forEach((el) => {
+  if (el.classList.contains("selected")) {
+    el.classList.remove("selected");
+  }
+});

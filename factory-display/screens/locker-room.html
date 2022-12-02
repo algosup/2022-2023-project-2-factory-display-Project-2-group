@@ -29,14 +29,13 @@
     />
   </head>
   <body onload="setColors()">
-<iframe src="/factory-display/widgets/date-hour.html" style="width: 67vh;height: 67vh;margin-top: 16vh; margin-bottom: 17vh; margin-left: 79vw; margin-right: -16vw;"></iframe>
+<iframe src="/factory-display/widgets/news-lg.html" style="margin:10vh;width: 100vh;height: 50vh;"></iframe>
 <script>
 document.getElementsByTagName("body")[0].addEventListener("click", function() {
   document.getElementsByTagName("body")[0].requestFullscreen();
 });
 
 function setColors() {
-//apply theme colors to all iframe elements
 var iframes = document.getElementsByTagName("iframe");
 for (var i = 0; i < iframes.length; i++) {
     var cssLink = document.createElement("link");

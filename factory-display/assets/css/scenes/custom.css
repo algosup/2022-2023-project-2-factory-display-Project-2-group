@@ -10,7 +10,7 @@ body {
 
 .custom-canva {
   margin-left: 4.5vw;
-  width: 71.1vw;
+  width: 67.5vw;
   height: 40vw;
   outline: 0.5vw solid #808080;
   padding: 0;
@@ -26,7 +26,14 @@ body {
   padding: 0;
 }
 
-.widget-placeholder {
+.widget-sm-placeholder {
+  width: 15%;
+  height: 15%;
+  border-radius: 0%;
+  border: 0;
+}
+
+.widget-lg-placeholder {
   width: 15%;
   height: 15%;
   border-radius: 0%;
@@ -47,6 +54,16 @@ body {
   align-items: center; */
 }
 
+.move, .resize, .delete {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .move {
   width: 20px;
   height: 20px;
@@ -55,7 +72,7 @@ body {
   border-radius: 50%;
   border: 2px solid black;
   padding: 0px 0px 0px 0px;
-  transform: translateY(6px) translateX(6px);
+  transform: translateY(-6px) translateX(-6px);
 }
 
 .move i {
@@ -72,7 +89,7 @@ body {
   border-radius: 50%;
   border: 2px solid red;
   padding: 0px 0px 0px 0px;
-  transform: translateY(6px) translateX(6px);
+  transform: translateY(-6px) translateX(6px);
 }
 
 .delete i {
@@ -115,6 +132,15 @@ body {
   margin: 5px;
 }
 
+#news-lg-placeholder {
+  width: 300px;
+  height: 150px;
+  background-repeat: no-repeat ;
+  background-size: 100%;
+  background-position: center;
+  margin: 5px;
+}
+
 .date-placeholder, #date-placeholder {
   background-image: url(/factory-display/assets/img/widgets/placeholder/date/date_theme-1.png);
 }
@@ -125,6 +151,15 @@ body {
 
 .date-hour-placeholder, #date-hour-placeholder {
   background-image: url(/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png);
+}
+
+.news-lg-placeholder, #news-lg-placeholder {
+  background-image: url(/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-1.png);
+}
+
+.news-lg-placeholder{
+  width: 300px;
+  height: 150px;
 }
 
 #widgets-accordion > .accordion-item > .accordion-collapse > .accordion-body {
@@ -202,7 +237,7 @@ body {
 #previewBtn {
   font-weight: bold;
   font-size: 1.2em;
-  animation: glow 1s ease-in-out infinite alternate;
+  animation: glow .7s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
@@ -217,3 +252,27 @@ body {
 #preview{
   display: none;
 }
+
+
+.text-heading-placeholder {
+  display: inherit;
+}
+
+.text-heading-ctn {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.text-heading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.text-heading > h1 {
+  font-size: 1.7em;
+  height: max-content;
+  color: #ff6600;
+}
+
