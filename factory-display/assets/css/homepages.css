@@ -19,14 +19,52 @@ body {
   align-items: center;
 }
 
-.div-main-container > h1 {
+.a-propos {
+  color: #FF6600;
+}
+
+.div-main-container > h3 {
   text-align: center;
   position: relative;
     top: 30px;
     left: 0px;
-  color: #FF6600;
+}
+
+.contact-admin {
+  background-color: #FF6600;
+  color:white;
+}
+
+.div-main-container-bis > h3 {
+  text-align: center;
+  position: relative;
+    top: 30px;
+    left: 0px;
+}
+
+p {
+  margin: 50px;
+}
+
+.contact-admin > p {
+  text-align: center;
 }
 
 hr.solid {
   border-top: 5px solid #bbb;
+}
+
+a {
+  color: #7426d3;
+}
+
+.text_presentation > p {
+  margin-right: 530px;
+}
+
+.jacobi_services {
+  height: 148.7px;
+  width: 378.7px;
+  position: absolute;
+  right: 78px;
 }
