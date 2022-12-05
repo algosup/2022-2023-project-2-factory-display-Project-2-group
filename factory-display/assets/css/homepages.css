@@ -55,16 +55,19 @@ hr.solid {
 }
 
 a {
-  color: #7426d3;
+  color: black;
 }
 
 .text_presentation > p {
-  margin-right: 530px;
+  margin-right: 480px;
 }
 
 .jacobi_services {
-  height: 148.7px;
-  width: 378.7px;
-  position: absolute;
-  right: 78px;
+  float: right;
+  margin-right: 50px;
+  /* height: 148.7px;
+  width: 378.7px; */
+  max-width: 25%;
+  width: 30%;
+  height: auto;
 }
