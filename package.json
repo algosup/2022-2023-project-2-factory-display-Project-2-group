@@ -1,0 +1,22 @@
+{
+  "name": "2022-2023-project-2-factory-display-project-2-group",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group.git"
+  },
+  "author": "Group-2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/issues"
+  },
+  "homepage": "https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group#readme"
+}
