@@ -18,18 +18,44 @@
         <div class="text">
             <h1> Écran Numéro 1 (Vestiaire): </h1>
             <br>
-            <button class="fullscreen" type="button" id="1">Mode Plein Écran</button>
+            <button class="fullscreen" type="button" onclick="getFullscreenElement1()">Mode Plein Écran</button>
             <br>
         </div>
-        <iframe src="/factory-display/screens/locker-room.html" frameborder="0"></iframe> 
+        <iframe src="/factory-display/screens/locker-room.html" frameborder="0" id="1" ></iframe> 
     </div>
     <div class="iframe-container">
         <div class="text">
             <h1> Écran Numéro 2 (cafétéria): </h1>
             <br>
-            <button class="fullscreen" type="button" id="2">Mode Plein Écran</button>
+            <button class="fullscreen" type="button" onclick="getFullscreenElement2()">Mode Plein Écran</button>
             <br>
         </div>
-        <iframe src="/factory-display/screens/locker-room.html" frameborder="0"></iframe>
+        <iframe src="/factory-display/screens/locker-room.html" frameborder="0" id="2"></iframe>
     </div>
+    <script>
+        function getFullscreenElement1() {
+    return document.getElementById("1").fullscreenElement 
+    }
+    
+    function toggleFullscreen1() {
+        if (getFullscreenElement1()) {
+            document.getElementById("1").exitFullscreen();
+        }else {
+            document.getElementById("1").getElementById("container").getFullscreenElement1().catch(console.log);
+        }
+    }  
+    function getFullscreenElement2() {
+    return document.getElementById("2").fullscreenElement 
+    }
+    
+    function toggleFullscreen2() {
+        if (getFullscreenElement2()) {
+            document.getElementById("2").exitFullscreen();
+        }else {
+            document.getElementById("2").getElementById("container").getFullscreenElement2().catch(console.log);
+        }
+    }  
+    document.getElementById("button").addEventListener("click", () => {toggleFullscreen1();};
+    document.getElementById("button").addEventListener("click", () => {toggleFullscreen2();};
+    </script>
 </body>
