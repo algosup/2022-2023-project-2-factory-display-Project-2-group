@@ -18,7 +18,7 @@
         <div class="text">
             <h1> Écran Numéro 1 (Vestiaire): </h1>
             <br>
-            <button class="fullscreen" type="button" onclick="getFullscreenElement1()">Mode Plein Écran</button>
+            <button class="fullscreen"  onclick="fullscreen1()" type="button"> Mode Plein Écran</button>
             <br>
         </div>
         <iframe src="/factory-display/screens/locker-room.html" frameborder="0" id="1" ></iframe> 
@@ -27,35 +27,17 @@
         <div class="text">
             <h1> Écran Numéro 2 (cafétéria): </h1>
             <br>
-            <button class="fullscreen" type="button" onclick="getFullscreenElement2()">Mode Plein Écran</button>
+            <button class="fullscreen" onclick="fullscreen2()" type="button"> Mode Plein Écran</button>
             <br>
         </div>
-        <iframe src="/factory-display/screens/locker-room.html" frameborder="0" id="2"></iframe>
+        <iframe src="/factory-display/screens/locker-room2.html" frameborder="0" id="2"></iframe>
     </div>
     <script>
-        function getFullscreenElement1() {
-    return document.getElementById("1").fullscreenElement 
-    }
-    
-    function toggleFullscreen1() {
-        if (getFullscreenElement1()) {
-            document.getElementById("1").exitFullscreen();
-        }else {
-            document.getElementById("1").getElementById("container").getFullscreenElement1().catch(console.log);
+        function fullscreen1() {
+            return (document.getElementById("1").requestFullscreen || document.getElementById("1").webkitRequestFullscreen || document.getElementById("1").mozRequestFullScreen || document.getElementById("1").msRequestFullscreen).call(document.getElementById("1"));
         }
-    }  
-    function getFullscreenElement2() {
-    return document.getElementById("2").fullscreenElement 
-    }
-    
-    function toggleFullscreen2() {
-        if (getFullscreenElement2()) {
-            document.getElementById("2").exitFullscreen();
-        }else {
-            document.getElementById("2").getElementById("container").getFullscreenElement2().catch(console.log);
+        function fullscreen2() {
+            return (document.getElementById("2").requestFullscreen || document.getElementById("2").webkitRequestFullscreen || document.getElementById("2").mozRequestFullScreen || document.getElementById("2").msRequestFullscreen).call(document.getElementById("2"));
         }
-    }  
-    document.getElementById("button").addEventListener("click", () => {toggleFullscreen1();};
-    document.getElementById("button").addEventListener("click", () => {toggleFullscreen2();};
     </script>
 </body>
