@@ -25,21 +25,24 @@
     </style>
     <link
       rel="stylesheet"
-      href="/factory-display/assets/css/themes/theme3.css"
+      href="/factory-display/assets/css/themes/theme1.css"
     />
   </head>
   <body onload="setColors()">
-<iframe src="/factory-display/widgets/news-lg.html" style="margin:10vh;width: 100vh;height: 50vh;"></iframe>
+<iframe src="/factory-display/widgets/weather.html"></iframe>
+
+
 <script>
 document.getElementsByTagName("body")[0].addEventListener("click", function() {
   document.getElementsByTagName("body")[0].requestFullscreen();
 });
 
 function setColors() {
+//apply theme colors to all iframe elements
 var iframes = document.getElementsByTagName("iframe");
 for (var i = 0; i < iframes.length; i++) {
     var cssLink = document.createElement("link");
-    cssLink.href = "/factory-display/assets/css/themes/theme3.css";
+    cssLink.href = "/factory-display/assets/css/themes/theme1.css";
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
     iframes[i].contentWindow.document.head.appendChild(cssLink);
