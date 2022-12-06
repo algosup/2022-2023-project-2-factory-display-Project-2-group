@@ -185,7 +185,7 @@
             </h2>
             <div id="weatherWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="weatherWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <strong>This is the fifth item's accordion body.</strong>
+                <div onclick="appendPlaceholder(weather_sm)" class="widget-sm-placeholder" id="weather-sm-placeholder"></div>
               </div>
             </div>
           </div>
@@ -242,8 +242,13 @@
     </div>
   </div>
 </div>
-<div id="preview preview-container">
+
+<div class="tooSmall">
+  <h1> Veuillez agrandir votre fenêtre </h1>
+  <h2> pour une meilleure éxperience nous avons expressement bloquer cette page tant que votre fenêtre ne sera pas agrandi </h2>
 </div>
+
+
 
 <script src='https://unpkg.com/interactjs@1.3.4/dist/interact.js'></script>
 <script  src="/factory-display/assets/js/scenes/custom.js"></script>

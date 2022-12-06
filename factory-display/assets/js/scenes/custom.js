@@ -22,6 +22,9 @@ date_hour.className = "resize-drag date-hour-placeholder";
 var news_lg = document.createElement("div");
 news_lg.className = "resize-drag news-lg-placeholder";
 
+var weather_sm = document.createElement("div");
+weather_sm.className = "resize-drag weather-sm-placeholder";
+
 function appendPlaceholder(img) {
   var resizeContainer = document.querySelector(".resize-container");
   resizeContainer.appendChild(img);

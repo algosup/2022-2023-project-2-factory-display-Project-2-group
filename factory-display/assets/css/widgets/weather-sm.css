@@ -1,0 +1,126 @@
+.weather__sunrise img, .weather__sunset img, .weather__humidity img, .weather__temp_min img, .weather__temp_max img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.weather__sunrise, .weather__sunset, .weather__humidity, .weather__temp_min, .weather__temp_max {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 5vw;
+    height: 5vw;
+    margin: 2vw;
+}
+
+body {
+  background: radial-gradient(ellipse at center, var(--secondary-color) 0%, var(--primary-color) 100%);
+  width: 100vw;
+    height: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#weather {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weather > .weather__location > h1 {
+    font-size: 10vw;
+    margin-top: 5vw;
+}
+
+#weather > .weather__location {
+    margin-left: -30vw;
+}
+
+#weather > .weather__feels_like {
+    margin-left: -30vw;
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+    font-size: 3vw;
+    opacity: 0.8;
+}
+
+#weather > .weather__temp {
+    font-size: 30vw;
+    margin-left: -30vw;
+    height: fit-content;
+}
+
+#weather > .weather__description {
+    font-size: 5vw;
+    margin-left: -30vw;
+    margin-top: 0vh;
+    font-style: italic;
+}
+
+
+#weather > .weather__icon > img {
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2vw;
+    margin-top: 2vw;
+    background: rgba( 255, 255, 255, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 50%;
+    
+}
+
+.bar_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 80vw;
+    margin-bottom: 2vh;
+    font-size: 3vw;
+}
+
+.progressbar-wrapper {
+    background-color: #dfe6e9;
+    color: white;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+.progress_bar {
+    height: 2vh;
+    border: 1px solid var(--text-color);
+    border-radius: 15px;
+    width: 70vw;
+}
+
+.humidity {
+    background: linear-gradient(90deg, rgba(0,217,252,1) 0%, rgba(0,196,253,1) 50%, rgba(0,95,255,1) 100%);
+}
+
+.schedules {
+    background: linear-gradient(90deg, rgba(175,11,4,1) 0%, rgba(226,126,1,1) 15%, rgba(254,170,1,1) 30%, rgba(237,162,115,1) 45%, rgba(202,150,153,1) 60%, rgba(177,127,154,1) 75%, rgba(119,81,133,1) 90%, rgba(49,32,88,1) 100%);
+}
+
+.min_max    {
+    background: linear-gradient(90deg, rgba(49,54,149,1) 0%, rgba(68,117,180,1) 10%, rgba(117,172,208,1) 20%, rgba(170,217,233,1) 30%, rgba(224,242,248,1) 40%, rgba(255,255,191,1) 50%, rgba(254,224,143,1) 60%, rgba(252,173,97,1) 70%, rgba(243,109,67,1) 80%, rgba(165,0,38,1) 90%, rgba(215,48,38,1) 100%);
+}
+

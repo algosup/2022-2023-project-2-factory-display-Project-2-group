@@ -153,7 +153,7 @@ function createHtmlTag() {
     var values = JSON.parse(element.getAttribute("data-values"));
     console.log("VALUES", values);
 
-    if (element.className.includes("date") || element.className.includes("clock") || element.className.includes("date-hour")) {
+    if (element.className.includes("date") || element.className.includes("clock") || element.className.includes("date-hour") || element.className.includes("weather-sm")) {
       var iframe = document.createElement("iframe");
       iframe.setAttribute(
         "src",
