@@ -157,7 +157,7 @@ function createHtmlTag() {
       var iframe = document.createElement("iframe");
       iframe.setAttribute(
         "src",
-        "/factory-display/widgets/" + values.type + ".html"
+        "/screens-side/widgets/" + values.type + ".html"
       );
       iframe.setAttribute(
         "style",
@@ -180,7 +180,7 @@ function createHtmlTag() {
       var iframe = document.createElement("iframe");
       iframe.setAttribute(
         "src",
-        "/factory-display/widgets/" + values.type + ".html"
+        "/screens-side/widgets/" + values.type + ".html"
       );
       iframe.setAttribute(
         "style",
@@ -358,7 +358,7 @@ function writeTheSceneFile() {
       </style>
       <link
         rel="stylesheet"
-        href="/factory-display/assets/css/themes/theme`+theme+`.css"
+        href="/screens-side/assets/css/themes/theme`+theme+`.css"
       />
     </head>
     <body onload="setColors()">
@@ -375,7 +375,7 @@ function setColors() {
   var iframes = document.getElementsByTagName("iframe");
   for (var i = 0; i < iframes.length; i++) {
       var cssLink = document.createElement("link");
-      cssLink.href = "/factory-display/assets/css/themes/theme`+theme+`.css";
+      cssLink.href = "/screens-side/assets/css/themes/theme`+theme+`.css";
       cssLink.rel = "stylesheet";
       cssLink.type = "text/css";
       iframes[i].contentWindow.document.head.appendChild(cssLink);

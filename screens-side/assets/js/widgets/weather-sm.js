@@ -51,31 +51,31 @@ function getLocation() {
                 <div class="weather__description">${weatherDesc}</div>
                   <div class="weather__feels_like">Ressenti: ${Math.round(data.main.feels_like - 273.15)}°C</div>
                 <div class="weather__icon">
-                  <img src="/factory-display/assets/img/icons/weather/animated/${weatherImg}.svg" alt="weather icon">
+                  <img src="/screens-side/assets/img/weather/animated/${weatherImg}.svg" alt="weather icon">
                 </div>
                 <div class="bar_container">
-                  <div class="weather__humidity"><img src="/factory-display/assets/img/icons/weather/humidity.png" alt="">
+                  <div class="weather__humidity"><img src="/screens-side/assets/img/weather/humidity.png" alt="">
                     ${data.main.humidity}%
                   </div>
                     <div class="progress_bar humidity"></div>
-                  <div class="weather__humidity"><img src="/factory-display/assets/img/icons/weather/transparent.png" alt=""></div>
+                  <div class="weather__humidity"><img src="/screens-side/assets/img/weather/transparent.png" alt=""></div>
                 </div>
                 <div class="bar_container">
-                  <div class="weather__sunrise"><img src="/factory-display/assets/img/icons/weather/sunrise.png" alt="">
+                  <div class="weather__sunrise"><img src="/screens-side/assets/img/weather/sunrise.png" alt="">
                     ${new Date(data.sys.sunrise * 1000).toLocaleTimeString().slice(0, -3)}
                   </div>
                   <div class="progress_bar schedules"></div>
                   <div class="weather__sunset">
-                    <img src="/factory-display/assets/img/icons/weather/sunset.png" alt="">
+                    <img src="/screens-side/assets/img/weather/sunset.png" alt="">
                     ${new Date(data.sys.sunset * 1000).toLocaleTimeString().slice(0,-3)}
                   </div>
                 </div>
                   <div class="bar_container">
-                  <div class="weather__temp_min"><img src="/factory-display/assets/img/icons/weather/min_temp.png" alt=""> ${Math.round(data.main.temp_min - 273.15)}°C</div>
+                  <div class="weather__temp_min"><img src="/screens-side/assets/img/weather/min_temp.png" alt=""> ${Math.round(data.main.temp_min - 273.15)}°C</div>
                   <div class="progress_bar min_max">
                   </div>
 
-                  <div class="weather__temp_max"><img src="/factory-display/assets/img/icons/weather/max_temp.png" alt=""> ${Math.round(data.main.temp_max - 273.15)}°C</div>
+                  <div class="weather__temp_max"><img src="/screens-side/assets/img/weather/max_temp.png" alt=""> ${Math.round(data.main.temp_max - 273.15)}°C</div>
                 </div>
             `;
         });

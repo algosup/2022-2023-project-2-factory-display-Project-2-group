@@ -25,11 +25,11 @@
     </style>
     <link
       rel="stylesheet"
-      href="/factory-display/assets/css/themes/theme1.css"
+      href="/screens-side/assets/css/themes/theme1.css"
     />
   </head>
   <body onload="setColors()">
-<iframe src="/factory-display/widgets/news-lg.html" style="width: 124vh;height: 62vh;margin-top: 35vh; margin-bottom: 4vh; margin-left: 15vw; margin-right: 12vw;"></iframe><iframe src="/factory-display/widgets/date-hour.html" style="width: 33vh;height: 33vh;margin-top: 0vh; margin-bottom: 67vh; margin-left: 5vw; margin-right: 76vw;"></iframe><iframe src="/factory-display/widgets/clock.html" style="width: 40vh;height: 40vh;margin-top: 3vh; margin-bottom: 56vh; margin-left: 74vw; margin-right: 2vw;"></iframe>
+<iframe src="/screens-side/widgets/news-lg.html" style="width: 58vh;height: 29vh;margin-top: 12vh; margin-bottom: 59vh; margin-left: 9vw; margin-right: 57vw;"></iframe><iframe src="/screens-side/widgets/clock.html" style="width: 35vh;height: 35vh;margin-top: 1vh; margin-bottom: 64vh; margin-left: 51vw; margin-right: 28vw;"></iframe><iframe src="/screens-side/widgets/date-hour.html" style="width: 35vh;height: 35vh;margin-top: 32vh; margin-bottom: 32vh; margin-left: 75vw; margin-right: 4vw;"></iframe><iframe src="/screens-side/widgets/weather-sm.html" style="width: 35vh;height: 35vh;margin-top: 50vh; margin-bottom: 15vh; margin-left: 19vw; margin-right: 60vw;"></iframe><iframe src="/screens-side/widgets/date.html" style="width: 35vh;height: 35vh;margin-top: 58vh; margin-bottom: 7vh; margin-left: 51vw; margin-right: 28vw;"></iframe>
 <script>
 document.getElementsByTagName("body")[0].addEventListener("click", function() {
   document.getElementsByTagName("body")[0].requestFullscreen();
@@ -40,7 +40,7 @@ function setColors() {
 var iframes = document.getElementsByTagName("iframe");
 for (var i = 0; i < iframes.length; i++) {
     var cssLink = document.createElement("link");
-    cssLink.href = "/factory-display/assets/css/themes/theme1.css";
+    cssLink.href = "/screens-side/assets/css/themes/theme1.css";
     cssLink.rel = "stylesheet";
     cssLink.type = "text/css";
     iframes[i].contentWindow.document.head.appendChild(cssLink);
