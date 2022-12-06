@@ -29,11 +29,12 @@
 
 ![Jacobi logo](img/Jacobi-logo.jpg)
 
-Jacobi's[^1] company commissioned ALGOSUP to create a communication tool to ==centralize the information== to be transmitted to all employees.
+Jacobi's[^1] is a company ==developing innovative air and water filtration products== with active coals and resin. The company created by Ferdinand Adolphe Wilhelm Jacobi has been in existence since 1916 and continues to develop around the world, such as in Allemangne, Philadelphia, India and Malaysia.
+Remko Goudappel, CEO of Jacobi Company, makes a point of the ==safety== of these customers and products, but also the ==respect of the environment== during each stage of production. To contribute to the success of all these goals, the company can count on these employees whose well-being within the company is also a key point in Jacobi’s success.
 
+The company commissioned ALGOSUP to create a communication tool to ==centralize the information== to be transmitted to all employees.
 Currently, the company share and send the informations via different application like Team, Email or Yammer, but also with a paper display. However, these means of communication are too numerous and even outdated. The company would like to facilitate communication and make it more modern with the digital tools that exist.
-
-Mr. Saeed, the Project owner of the company, would like a ==simple and secure communication tool== to honor these two key points that Jacobi represents.
+Mr. Saeed, the Project owner of the company, would like a ==simple and secure communication tool==.
 
 **Company distribution**
 
