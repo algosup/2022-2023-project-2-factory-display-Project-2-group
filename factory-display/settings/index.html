@@ -69,38 +69,18 @@
                             <div class="account-nom">
                                 <h2>Nom</h2>
                             </div>-->
-                            <div class="form-container">
-                                <form action="" method="post">
-                                <h2>Connectez-vous :</h2>
-                                <input type="email" name="email" required placeholder="E-mail">
-                                <div class="input_password">
-                                    <input type="password" id="pass" name="pass"  placeholder="Mot de passe">
-                                    <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye" onclick="changer()"/>
-                                </div>
-                                <div class="input submit" onclick="document.fo.submit()"><input type="submit" name="submit" value="Connectez-vous" class="form-btn"> </div> 
-                                <script>
-                                        e= true
-                                    function changer(){
-                                        if(e){
-                                            document.getElementById("pass").setAttribute("type","text");
-                                            document.getElementById("eye").src="/factory-display/assets/img/icons/oeil_ferme-removebg-preview.png";
-                                            e = false;
-                                        }
-                                        else{
-                                            document.getElementById("pass").setAttribute("type","password");
-                                            document.getElementById("eye").src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png";
-                                            e = true;
-                                        }
-                                    }
-                                </script>   
-                                <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.html"> Inscrivez-vous </a></p>     
-                        </div>
+                    <div class="profil">
+                        <h3>nom d'utilisateur : </h3>
+                        <h4>(nom)</h4> 
+                        <h3>email : </h3>   
+                        <h4>(ng******************com)</h4>
+                        <h3>mot de passe : </h3>                                
+                        <h4>(**********)</h4>
                     </div>
-                </div> 
+        
                 <div class="rightside-container-setting">
                     <h2>Paramètres</h2>
                 </div>
-
             </div>
         </div>
     </div>
