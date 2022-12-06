@@ -12,3 +12,9 @@ function loadSecondView() {
     document.getElementById('second-view').style.display = 'block';
     console.log('second view is loaded');
 }
+
+function tooSmallScreen() {
+    document.getElementById('first-view').style.display = 'none';
+    document.getElementById('second-view').style.display = 'none';
+    console.log('your device is too small');
+}
