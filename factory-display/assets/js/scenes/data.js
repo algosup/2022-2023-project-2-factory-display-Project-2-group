@@ -345,7 +345,6 @@ function writeTheSceneFile() {
           background-color: var(--bg-color);
           overflow: hidden;
         }
-  
         body::backdrop {
           background-color: var(--bg-color);
         }
@@ -371,7 +370,6 @@ document.getElementsByTagName("body")[0].addEventListener("click", function() {
 });
 
 function setColors() {
-  //apply theme colors to all iframe elements
   var iframes = document.getElementsByTagName("iframe");
   for (var i = 0; i < iframes.length; i++) {
       var cssLink = document.createElement("link");
@@ -380,8 +378,12 @@ function setColors() {
       cssLink.type = "text/css";
       iframes[i].contentWindow.document.head.appendChild(cssLink);
   }
-
 }
+
+function autoRefresh() {
+  window.location = window.location.href;
+}
+setInterval('autoRefresh()', 120000);
 
 </script>
 </body>
@@ -390,7 +392,52 @@ function setColors() {
 
   const dynamicContent = htmlString.join("");
   const globalContent = headContent + dynamicContent + footContent;
-  console.log(globalContent);
+  window.globalContent = globalContent;
+
+
+
+
+
+}
+
+function publishScene(location) {
+  createHtmlTag();
+
+
+  switch (location) {
+    case "locker-room":
+      window.location.href = "create.php?locker-room";
+      break;
+    case "cafeteria":
+      window.location.href = "create.php?cafeteria";
+      break;
+  }
+
+
+$(document).ready(function () {
+  createCookie("code", globalContent, "10");
+});
+
+function createCookie(name, value, days) {
+  var expires;
+    
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toGMTString();
+  }
+  else {
+      expires = "";
+  }
+    
+  document.cookie = escape(name) + "=" + 
+      escape(value) + expires + "; path=/";
+}
+
+}
+
+function runPreview() {
+  createHtmlTag();
 
   var deviceWidth = window.innerWidth;
   var deviceHeight = window.innerHeight;
@@ -398,7 +445,7 @@ function setColors() {
   var previewWindow = window.open("", "previewWindow", "width=" + deviceWidth + ",height=" + deviceHeight +"fullscreen=yes");
   previewWindow.document.write(globalContent);
   previewWindow.document.close();
-
-
-  
 }
+
+
+
