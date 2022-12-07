@@ -110,12 +110,14 @@ For this, we will use web pages and single board computers with a wired connecti
 | [CSS](https://developer.mozilla.org/fr/docs/Web/CSS) <br> *version: 3.0* | Cascading Style Sheets : is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. |
 | [Bootstrap](https://getbootstrap.com/) *version: 5.2.2* | Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. |
 | [PHP](https://www.php.net/) <br> *version: 7.2.5* | PHP : is a general-purpose scripting language especially suited to web development. |
+| [MySQL](https://www.mysql.com/fr/) <br> *version: 8.0.26* | MySQL is an open-source relational database management system. |
 | [Jquery](https://jquery.com/) <br> *version: 3.6.0* | Jquery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. |
-| [Python](https://www.python.org/) <br> *version: v2022.18.2* | Python is an interpreted, high-level, general-purpose programming language. |
 | [Microsoft Azure](https://azure.microsoft.com/fr-fr/)| Azure is a cloud computing service created by Microsoft for building, testing, deploying, and managing applications and services through Microsoft-managed data centers. |
-| [mangoDB](https://www.mongodb.com/) <br> *version: 5.0*| MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. |
 | [NodeJS](https://nodejs.org/en/) <br> *version: 18.12.1*| Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. |
-| Rock Pi 4 | Single board computer |
+| [Rock Pi 4B+](https://wiki.radxa.com/Rockpi4) <br> *version: 4B+* | Rock Pi 4 is a powerful single board computer that features the Rockchip RK3399 hexa-core processor, 4GB LPDDR4 RAM, 32GB eMMC flash, and dual Gigabit Ethernet. |
+| [Ubuntu](https://ubuntu.com/) <br> *version: 20.04.3* | Ubuntu is a free and open-source Linux distribution based on Debian. |
+| [Python](https://www.python.org/) <br> *version: v2022.18.2* | Python is an interpreted, high-level, general-purpose programming language. |
+| [Selenium](https://www.selenium.dev/) <br> *version: 3.141.0* | Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. |
 
 <br>
 
