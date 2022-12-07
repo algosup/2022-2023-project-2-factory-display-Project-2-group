@@ -58,13 +58,10 @@ a {
   color: black;
 }
 
-.text_presentation > p {
-  margin-right: 480px;
-}
-
 .jacobi_services {
   float: right;
   margin-right: 50px;
+  margin-left: 50px;
   /* height: 148.7px;
   width: 378.7px; */
   max-width: 25%;
