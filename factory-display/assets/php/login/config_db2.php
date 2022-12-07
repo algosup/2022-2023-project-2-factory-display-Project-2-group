@@ -1,25 +1,20 @@
 <?php
-  $db_host = 'jacobi-dbserver-grp2.database.windows.net';
-  $db_user = 'sqljacobi';
-  $db_password = 'pQgxk#6B3tNHDjG4';
-  $db_db = 'JacobiDatabase';
-  $db_port = 1433;
+$db_host = 'jacobi-dbserver-grp2.database.windows.net';
+$db_user = 'sqljacobi';
+$db_password = 'pQgxk#6B3tNHDjG4';
+$db_db = 'JacobiDatabase';
+$db_port = 1433;
 
-  $conn = new mysqli(
-    $db_host,
-    $db_user,
-    $db_password,
-    $db_db
-  );
-	
-  if ($conn->connect_error) {
-    echo 'Errno: '.$conn->connect_errno;
-    echo '<br>';
-    echo 'Error: '.$conn->connect_error;
-    exit();
-  }
+$conn = mysqli_init();
+mysqli_ssl_set($conn, NULL, NULL, "BaltimoreCyberTrustRoot.crt.pem", NULL, NULL);
+mysqli_real_connect($conn, $db_host, $db_user, $db_password, $db_db, $db_port, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
 
-  $_SESSION['test_connection'] = 'Success: A proper connection to the server was made. <br> Host information: '.$conn->host_info.'<br> Protocol version:'.$conn->protocol_version.'<br>';
-  echo $_SESSION['test_connection']; // Used to print the connection status
+if (mysqli_connect_errno()) {
+    die('Failed to connect to MySQL: ' . mysqli_connect_error());
+} else {
+    echo 'Connection OK';
+}
+
+$_SESSION['test_connection'] = 'Success: A proper connection to the server was made. <br> Host information: ' . $conn->host_info . '<br> Protocol version:' . $conn->protocol_version . '<br>';
+echo $_SESSION['test_connection']; // Used to print the connection status
 ?>
-
