@@ -1,5 +1,1 @@
-
-factory-display/assets/img/.DS_Store
-.github/workflows/
-.vscode/
-
+.vscode/*

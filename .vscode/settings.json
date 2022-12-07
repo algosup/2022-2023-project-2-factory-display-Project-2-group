@@ -1,9 +1,0 @@
-{
-    "liveServer.settings.port": 5502,
-    "appService.zipIgnorePattern": [
-        "node_modules{,/**}",
-        ".vscode{,/**}"
-    ],
-    "appService.defaultWebAppToDeploy": "/subscriptions/f23b463d-4642-4dcb-8ed3-3004c37326da/AppServices/subscriptions/f23b463d-4642-4dcb-8ed3-3004c37326da/resourceGroups/FactoryDisplay-Group2_group/providers/Microsoft.Web/sites/FactoryDisplay-Group2",
-    "appService.deploySubpath": "."
-}
