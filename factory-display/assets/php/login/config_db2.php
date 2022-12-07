@@ -7,7 +7,7 @@ $db_port = 1433;
 
 $conn = mysqli_init();
 mysqli_ssl_set($conn, NULL, NULL, "BaltimoreCyberTrustRoot.crt.pem", NULL, NULL);
-mysqli_real_connect($conn, $db_host, $db_user, $db_password, $db_db, $db_port, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
+mysqli_real_connect($conn, $db_host, $db_user, $db_password, $db_db, $db_port, MYSQLI_CLIENT_SSL, MYSQLI_CLIENT_SSL);
 
 if (mysqli_connect_errno()) {
     die('Failed to connect to MySQL: ' . mysqli_connect_error());
