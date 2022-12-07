@@ -20,6 +20,8 @@
 <body>
     <header></header>
     <br>
+    <?php include 'testphp.php'; ?>
+    
     <div class="a-propos">
         <div class="div-main-container">
             <h3>L'entreprise</h3>
