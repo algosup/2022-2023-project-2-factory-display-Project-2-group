@@ -36,6 +36,10 @@ The company commissioned ALGOSUP to create a communication tool to ==centralize 
 Currently, the company share and send the informations via different application like Team, Email or Yammer, but also with a paper display. However, these means of communication are too numerous and even outdated. The company would like to facilitate communication and make it more modern with the digital tools that exist.
 Mr. Saeed, the Project owner of the company, would like a ==simple and secure communication tool==.
 
+source :
+ - [Jacobi Group history](https://www.jacobi.net/jacobi-history/)
+ - [Jacobi Group about](https://www.jacobi.net/about/)
+
 **Company distribution**
 
 | PERSON | ROLE | DESCRIPTION |
@@ -82,7 +86,8 @@ There are three different archives depending on the type of data :
 - ==Intermediate archiving== where data are saved even after the purpose of data collection has been achieved as they are still of interest to the enterprise. The duration is set by the person responsible and must be relevant to its usefulness.
 - ==Final archiving== where data that remains of great interest in the future without an end date are saved, after an upstream check.
 
-source : [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees_de_conservation.pdf)[^2]
+source :
+ - [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees_de_conservation.pdf)[^2]
 
 ### 6. Goals and non goals
 
