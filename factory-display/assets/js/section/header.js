@@ -45,14 +45,14 @@ function displayHeader(status) {
             </button>
             <div class="navlinks-container">
                 <div class="main-content">
-                    <a id="container" href="/factory-display/index.html" aria-current="page">Accueil</a>
+                    <a id="container" href="/factory-display/index.php" aria-current="page">Accueil</a>
                 </div>
                 <div class="dropdown">
                     <div class="main-content">
                         <a id="container" href="/factory-display/scenes/index.html">Scènes </a>
                     </div>
                     <article class="dropdown-content">
-                        <a id="" href="/factory-display/scenes/create.html">Nouvelle scène</a>
+                        <a id="" href="/factory-display/scenes/create.php">Nouvelle scène</a>
                         <a id="" href="/factory-display/scenes/manage.html">Gérer mes scènes</a>
                         <a id="" href="/factory-display/scenes/view.html">Voir mes scènes</a>
                     </article>
