@@ -1,6 +1,5 @@
 <?php
     @include 'assets/php/login/config_db.php';
-    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,15 +23,6 @@
 <body>
     <header></header>
     <br>
-    <?php 
-    
-        if(isset($_SESSION['test_connection'])){ 
-            echo $_SESSION['test_connection'];
-        }
-        else{
-            echo 'No connection';
-        }
-    ?>
 
     <div class="a-propos">
         <div class="div-main-container">
