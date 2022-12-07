@@ -12,6 +12,7 @@
   <script src="/factory-display/assets/js/scenes/dynamic.js"></script>
   <script src="/factory-display/assets/js/scenes/info.js" defer></script>
   <script src="/factory-display/assets/js/libs/bootstrap.js"></script>
+  <script src="/factory-display/assets/js/libs/jquery.js"></script>
   <!-- <script src="/factory-display/assets/js/scenes/custom.js"></script> -->
   <script src="/factory-display/assets/js/scenes/themes.js"></script>
   <script src="/factory-display/assets/js/init.js"></script>
@@ -26,7 +27,13 @@
 </head>
 
 <body>
+
+
+
+
+
   <header></header>
+
   <div class="d-flex justify-content-center">
     <h1 id="global-title">Nouvelle scène</h1>
   </div>
@@ -94,10 +101,12 @@
               </h2>
               <div id="fileSettingCollapse" class="accordion-collapse collapse show" aria-labelledby="fileSettingHeading" data-bs-parent="#settings-accordion">
                 <div class="accordion-body no-padding">
-                  <button class="btn btn-outline-light" id="previewBtn" onclick="createHtmlTag()">Preview</button>
+                  <button class="btn btn-outline-light" id="previewBtn" onclick="runPreview()">Preview</button>
                   <button class="btn btn-outline-light" id="saveBtn">Sauvegarder</button>
                   <button class="btn btn-outline-light">Télécharger</button>
                   <button class="btn btn-outline-light">Charger</button>
+                  <button class="btn btn-outline-light" onclick="publishScene('locker-room')">Publier au Vestiaires</button>
+                  <button class="btn btn-outline-light" onclick="publishScene('cafeteria')">Publier à la Cafeteria</button>
                 </div>
               </div>
             </div>
@@ -248,7 +257,33 @@
   <h2> pour une meilleure éxperience nous avons expressement bloquer cette page tant que votre fenêtre ne sera pas agrandi </h2>
 </div>
 
+<footer></footer>
 
+<?php
+
+function writeInLockers() {
+  $myfile = fopen("../../screens-side/screens/locker-room.html", "w") or die("Unable to open file!");
+  $txt = $_COOKIE["code"];
+  fwrite($myfile, $txt);
+  fclose($myfile);
+}
+
+function writeInCafeteria() {
+  $myfile = fopen("../../screens-side/screens/cafeteria.html", "w") or die("Unable to open file!");
+  $txt = $_COOKIE["code"];
+  fwrite($myfile, $txt);
+  fclose($myfile);
+}
+
+if (isset($_GET['locker-room'])) {
+  writeInLockers();
+}
+
+if (isset($_GET['cafeteria'])) {
+  writeInCafeteria();
+}
+
+  ?>
 
 <script src='https://unpkg.com/interactjs@1.3.4/dist/interact.js'></script>
 <script  src="/factory-display/assets/js/scenes/custom.js"></script>
@@ -257,9 +292,7 @@
 <script src="/factory-display/assets/js/scenes/write.js"></script>
 <script src="/factory-display/assets/js/scenes/colors.js"></script>
 
-  <footer></footer>
+
 </body>
 
 </html>
-
-<!-- i want same code as above but in php -->
