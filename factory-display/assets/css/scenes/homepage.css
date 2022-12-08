@@ -14,18 +14,18 @@ i {
 
 .scenesbtn {
   background-color: #FF6600;
-  color: white;
+  color: #F7F7F7;
   padding: 16px 20px;
   border: none;
   width: 100%;
   opacity: 0.9;
 }
 .scenesbtn:hover{
-  background-color: white;
+  background-color: #F7F7F7;
   color : #FF6600;
 }
 .scenesbtn:focus{
-  background-color: white;
+  background-color: #F7F7F7;
   color : #FF6600;
 }
 .scenescol {
