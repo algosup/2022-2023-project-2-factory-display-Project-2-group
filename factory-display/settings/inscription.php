@@ -17,14 +17,21 @@ if (isset($_POST['submit'])) {
 
     if ($email_count) {
         $error[] = "Un compte avec cet email existe déjà.";
-    } else { 
+    } else {
         if ($pass == $c_pass) {
             $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
             $result = $conn->query($sql);
             if ($result) {
                 $success[] = "Votre compte a été créé avec succès.";
                 // wait 3 seconds before redirecting to login page
-                header("refresh:3;url=/factory-display/settings/account.html");
+                //header("refresh:3;url=/factory-display/settings/account.html");
+
+                // print values
+                echo "Name: " . $_POST['name'] . "<br>";
+                echo "Email: " . $_POST['email'] . "<br>";
+                echo "Password: " . $_POST['pass'] . "<br>";
+                echo "Confirm Password: " . $_POST['c_pass'] . "<br>";
+
             } else {
                 $error[] = "Une erreur s'est produite lors de la création de votre compte.";
             }
@@ -72,7 +79,7 @@ if (isset($_POST['submit'])) {
                 }
             }
             ?>
-            
+
             <input type="text" name="name" required placeholder="Nom">
             <br>
             <input type="email" name="email" required placeholder="E-mail">
@@ -88,38 +95,36 @@ if (isset($_POST['submit'])) {
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()" />
             </div>
 
-            <div class="input_submit" onclick="document.fo.submit()">
-                <input type="submit" name="submit" value="Inscrivez-vous" class="form-btn">
-            </div>
+            <input type="submit" name="submit" value="Inscrivez-vous" class="form-btn">
             <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.html">Connectez-vous </a></p>
 
-            <script>
-                e = true
-                function changer() {
-                    if (e) {
-                        document.getElementById("pass").setAttribute("type", "text");
-                        document.getElementById("eye").src = "/factory-display/assets/img/icons/oeil_ferme-removebg-preview.png";
-                        e = false;
-                    }
-                    else {
-                        document.getElementById("pass").setAttribute("type", "password");
-                        document.getElementById("eye").src = "/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png";
-                        e = true;
-                    }
-                }
-                e = true
-                function changer1() {
-                    if (e) {
-                        document.getElementById("c_pass").setAttribute("type", "text");
-                        document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ferme.png";
-                        e = false;
-                    }
-                    else {
-                        document.getElementById("c_pass").setAttribute("type", "password");
-                        document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ouvert.png";
-                        e = true;
-                    }
-                }
-            </script>
         </form>
+        <script>
+            e = true
+            function changer() {
+                if (e) {
+                    document.getElementById("pass").setAttribute("type", "text");
+                    document.getElementById("eye").src = "/factory-display/assets/img/icons/oeil_ferme-removebg-preview.png";
+                    e = false;
+                }
+                else {
+                    document.getElementById("pass").setAttribute("type", "password");
+                    document.getElementById("eye").src = "/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png";
+                    e = true;
+                }
+            }
+            e = true
+            function changer1() {
+                if (e) {
+                    document.getElementById("c_pass").setAttribute("type", "text");
+                    document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ferme.png";
+                    e = false;
+                }
+                else {
+                    document.getElementById("c_pass").setAttribute("type", "password");
+                    document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ouvert.png";
+                    e = true;
+                }
+            }
+        </script>
 </body>
