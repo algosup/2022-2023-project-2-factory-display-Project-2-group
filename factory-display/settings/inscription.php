@@ -67,7 +67,9 @@ if (isset($_POST['submit'])) {
                 }
             }
             if (isset($success)) {
-                echo '<p class="success">' . $success . '</p>';
+                foreach ($success as $success) {
+                    echo '<p class="success">' . $success . '</p>';
+                }
             }
             ?>
             <input type="text" name="name" required placeholder="Nom">
@@ -81,7 +83,7 @@ if (isset($_POST['submit'])) {
             </div>
 
             <div class="input_password">
-                <input type="password" id="c_pass" name="pass" placeholder="Confirmer votre mot de passe">
+                <input type="password" id="c_pass" name="c_pass" placeholder="Confirmer votre mot de passe">
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()" />
             </div>
 
