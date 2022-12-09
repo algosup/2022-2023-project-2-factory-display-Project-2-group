@@ -48,10 +48,9 @@
         </div>
         <br>
         <p>Mr. Usman Saeed : <strong><a href="mailto:usman.saeed@jacobi.net" role="link" tabindex="0" target="_blank">usman.saeed@jacobi.net</a></strong><br>
-            Mr. Samuel Neves <small>(Maintenance Shop Manager)</small> : <strong><a href="#" role="link" tabindex="0" target="_blank">...</a></strong><br>
-            Mr. Pierre Page <small>(HR Manager)</small>: <strong><a href="#" role="link" tabindex="0" target="_blank">...</a></strong><br>
-            Ms. Karen Blanque <small>(HR Assistant)</small>: <strong><a href="#" role="link" tabindex="0" target="_blank">...</a></strong><br>
-            Mr. Nicolas Yvelin <small>(Factory Manager)</small>: <strong><a href="#" role="link" tabindex="0" target="_blank">...</a></strong></p>
+            Mr. Pierre Page <small>(HR Manager)</small>: <strong><a href="mailto:pierre.page@jacobi.net" role="link" tabindex="0" target="_blank">pierre.page@jacobi.net</a></strong><br>
+            Ms. Karen Blanque <small>(HR Assistant)</small>: <strong><a href="mailto:karen.blanque@jacobi.net" role="link" tabindex="0" target="_blank">karen.blanque@jacobi.net</a></strong><br>
+            Mr. Nicolas Yvelin <small>(Factory Manager)</small>: <strong><a href="mailto:nicolas.yvelin@jacobi.net" role="link" tabindex="0" target="_blank">nicolas.yvelin@jacobi.net</a></strong></p>
         <br>
     </div>
 </body>
