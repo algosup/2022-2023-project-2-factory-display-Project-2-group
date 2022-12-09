@@ -3,13 +3,13 @@ setInterval(function () {
 }, 1000);
 
 function formatTime() {
-  var d = new Date() + 3600000;
+  var d = new Date();
   minutes =
     d.getMinutes().toString().length == 1
       ? "0" + d.getMinutes()
       : d.getMinutes();
   hours =
-    d.getHours().toString().length == 1 ? "0" + d.getHours() : d.getHours();
+    d.getHours().toString().length == 1 ? "0" + d.getHours() : d.getHours() +1;
   months = [
     "Janvier",
     "Février",
