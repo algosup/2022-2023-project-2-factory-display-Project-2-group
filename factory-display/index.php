@@ -44,7 +44,7 @@ else {
         }
     }
     if (isset($success)) {
-        foreach ($error as $error) {
+        foreach ($success as $success) {
             echo '<p class="success">' . $success . '</p>';
         }
     }

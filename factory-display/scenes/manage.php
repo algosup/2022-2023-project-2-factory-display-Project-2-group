@@ -1,3 +1,19 @@
+<?php
+@include '../assets/php/login/config_db.php';
+
+session_start();
+
+// check if the user is logged in with $_SESSION['logged_in']
+if (isset($_SESSION['logged_in'])) {
+    $success[] = "Vous êtes connecté en tant que " . $_SESSION['name'] . ".";
+
+}
+else {
+    // redirect to the login page
+    header('location:/factory-display/settings/account.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
