@@ -48,10 +48,10 @@ source :
 | PERSON | COMPANY ROLE | PROJECT ROLE | CONTACT |
 | :-: | :-: | :-: | :-: |
 | Mr. Remko GOUDAPPEL | CEO | *none* |  |
-| Mr. Usman SAEED |  | Project owner | usman.saeed@jacobi.net |
-| Mr. Pierre PAGE | HR Manager | Content creator |  |
-| Ms. Karen BLANQUE | HR Assistant | Content creator |  |
-| Mr. Nicolas YVELIN | Factory Manager | Content creator |  |
+| Mr. Usman SAEED | Director | Project owner | usman.saeed@jacobi.net |
+| Mr. Pierre PAGE | HR Manager | Content creator | pierre.page@jacobi.net |
+| Ms. Karen BLANQUE | HR Assistant | Content creator | karen.blanque@jacobi.net |
+| Mr. Nicolas YVELIN | Factory Manager | Content creator | nicolas.yvelin@jacobi.net |
 | Mr. Samuel NEVES | Maintenance Shop Manager | On-site installation manager |  |
 
 ### 3. Goals and non goals
