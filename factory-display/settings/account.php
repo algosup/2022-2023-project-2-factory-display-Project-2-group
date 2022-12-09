@@ -60,6 +60,10 @@ if (isset($_POST['submit'])) {
 
 <body>
     <header></header>
+    <?php
+    // include guest navbar
+    include '../assets/php/section/navbar_guest.php';
+    ?>
     <div class="form-container">
         <form action="" method="post">
             <h2>Connectez-vous :</h2>

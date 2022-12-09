@@ -10,6 +10,7 @@ if (isset($_SESSION['logged_in'])) {
 }
 else {
     // redirect to the login page
+
     header('location:/factory-display/settings/account.php');
 }
 ?>
@@ -23,8 +24,8 @@ else {
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Accueil</title>
     <script src="/factory-display/assets/js/section/header.js"></script>
-    <script src="/factory-display/assets/js/section/footer.js"></script>
-    <script src="/factory-display/assets/js/init.js"></script>
+    <!-- <script src="/factory-display/assets/js/section/footer.js"></script>
+    <script src="/factory-display/assets/js/init.js"></script> -->
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
@@ -35,18 +36,17 @@ else {
 </head>
 
 <body>
-    <header></header>
-    <br>
+    <!-- <header></header> -->
     <?php
-    if (isset($error)) {
-        foreach ($error as $error) {
-            echo '<p class="error">' . $error . '</p>';
-        }
+    // check if the user is logged in with $_SESSION['logged_in'] and check if the user is an admin
+    if (isset($_SESSION['logged_in']) && $_SESSION['user_type'] == "admin") {
+       //include the navbar for the admin
+        @include 'assets/headers/header_admin.html';
     }
-    if (isset($success)) {
-        foreach ($success as $success) {
-            echo '<p class="success">' . $success . '</p>';
-        }
+    // check if the user is logged in with $_SESSION['logged_in'] and check if the user is a user
+    elseif (isset($_SESSION['logged_in']) && $_SESSION['user_type'] == "user") {
+        //include the navbar for the user
+        @include 'assets/headers/header_user.html';
     }
     ?>
 
