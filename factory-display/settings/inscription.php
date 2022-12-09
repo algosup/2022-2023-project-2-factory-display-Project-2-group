@@ -60,7 +60,16 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h1>Inscrivez-vous:</h1>
-
+            <?php
+            if (isset($error)) {
+                foreach ($error as $error) {
+                    echo '<p class="error">' . $error . '</p>';
+                }
+            }
+            if (isset($success)) {
+                echo '<p class="success">' . $success . '</p>';
+            }
+            ?>
             <input type="text" name="name" required placeholder="Nom">
             <br>
             <input type="email" name="email" required placeholder="E-mail">
