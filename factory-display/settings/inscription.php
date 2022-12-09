@@ -20,7 +20,9 @@ if (isset($_POST['submit'])) {
     } else {
         if ($pass == $c_pass) {
             $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
-            $result = $conn->query($sql);
+            //$result = $conn->query($sql);
+            $result = $conn->exec($sql);
+            echo $result;
             if ($result) {
                 $success[] = "Votre compte a été créé avec succès.";
                 // wait 3 seconds before redirecting to login page
@@ -100,7 +102,7 @@ if (isset($_POST['submit'])) {
 
         </form>
         <script>
-            e = true
+             e = true
             function changer() {
                 if (e) {
                     document.getElementById("pass").setAttribute("type", "text");
