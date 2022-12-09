@@ -18,12 +18,12 @@
         <div class="memoryscenes" id="1">
             <h1> 1. scenes du (date) : </h1>
             <br>
-        <iframe src="/factory-display/screens/locker-room.html" frameborder="0" id="1" ></iframe>
+        <iframe src="/screens-side/scrrens/locker-room.html" frameborder="0" id="1" ></iframe>
     <br>
         <div class="memoryscenes" id="2">
             <h1> 2. scenes du (date) : </h1>
             <br>
-        <iframe src="/factory-display/screens/locker-room.html" frameborder="0" id="2" ></iframe>
+        <iframe src="/screens-side/scrrens/cafeteria.html" frameborder="0" id="2" ></iframe>
         </div>
     </div>
 </body>
