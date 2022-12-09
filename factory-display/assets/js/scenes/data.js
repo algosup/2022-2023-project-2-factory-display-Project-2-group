@@ -381,7 +381,10 @@ function setColors() {
 }
 
 function autoRefresh() {
-  window.location = window.location.href;
+  var iframes = document.getElementsByTagName("iframe");
+  for (var i = 0; i < iframes.length; i++) {
+      iframes[i].contentWindow.location.reload();
+  }
 }
 setInterval('autoRefresh()', 120000);
 
@@ -393,16 +396,10 @@ setInterval('autoRefresh()', 120000);
   const dynamicContent = htmlString.join("");
   const globalContent = headContent + dynamicContent + footContent;
   window.globalContent = globalContent;
-
-
-
-
-
 }
 
 function publishScene(location) {
   createHtmlTag();
-
 
   switch (location) {
     case "locker-room":
@@ -447,5 +444,43 @@ function runPreview() {
   previewWindow.document.close();
 }
 
+function downloadScene(){
+  createHtmlTag();
+  var blob = new Blob([globalContent], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, "scene.html");
+}
+
+function saveScene(){
+  createHtmlTag();
+
+  switch (location) {
+    case "locker-room":
+      window.location.href = "create.php?locker-room";
+      break;
+    case "cafeteria":
+      window.location.href = "create.php?cafeteria";
+      break;
+  }
 
 
+$(document).ready(function () {
+  createCookie("code", globalContent, "10");
+});
+
+function createCookie(name, value, days) {
+  var expires;
+    
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toGMTString();
+  }
+  else {
+      expires = "";
+  }
+    
+  document.cookie = escape(name) + "=" + 
+      escape(value) + expires + "; path=/";
+}
+
+}

@@ -102,8 +102,8 @@
               <div id="fileSettingCollapse" class="accordion-collapse collapse show" aria-labelledby="fileSettingHeading" data-bs-parent="#settings-accordion">
                 <div class="accordion-body no-padding">
                   <button class="btn btn-outline-light" id="previewBtn" onclick="runPreview()">Preview</button>
-                  <button class="btn btn-outline-light" id="saveBtn">Sauvegarder</button>
-                  <button class="btn btn-outline-light">Télécharger</button>
+                  <button class="btn btn-outline-light" id="saveBtn" onclick="saveScene()">Sauvegarder</button>
+                  <button class="btn btn-outline-light" onclick="downloadScene()">Télécharger</button>
                   <button class="btn btn-outline-light">Charger</button>
                   <button class="btn btn-outline-light" onclick="publishScene('locker-room')">Publier au Vestiaires</button>
                   <button class="btn btn-outline-light" onclick="publishScene('cafeteria')">Publier à la Cafeteria</button>
