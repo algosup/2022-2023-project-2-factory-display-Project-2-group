@@ -4,7 +4,7 @@
 session_start();
 
 if ($_SESSION['logged_in'] == false) {
-    header('location:assets/php/login/login.php');
+    header('location:account.php');
     $error[] = "Vous n'êtes pas connecté.";
 }
 ?>

@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
 
             $_SESSION['name'] = $retrieveData['name'];
             $_SESSION['email'] = $retrieveData['email'];
-            $_SESSION['role'] = $retrieveData['role'];
+            $_SESSION['role'] = $retrieveData['user_type'];
             $_SESSION['logged_in'] = true;
 
             header('location:../index.php');

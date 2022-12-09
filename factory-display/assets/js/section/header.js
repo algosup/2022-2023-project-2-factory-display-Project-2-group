@@ -100,7 +100,7 @@ function displayHeader(status) {
                 </div>
                 <div class="dropdown">
                     <div class="main-content">
-                        <a id="container" href="/factory-display/settings/index.html">Mon Espace </a>
+                        <a id="container" href="/factory-display/settings/index.php">Mon Espace </a>
                     </div>
                     <article class="dropdown-content">
                         <a id="" href="/factory-display/settings/parametre.html">Paramètres</a>
@@ -135,7 +135,7 @@ function displayHeader(status) {
                     <a class="container" href="/factory-display/scenes/index.html">Scènes </a>
                 </div>
                 <div class="main-content">
-                    <a class="container" href="/factory-display/settings/index.html">Mon Espace </a>    
+                    <a class="container" href="/factory-display/settings/index.php">Mon Espace </a>    
                 </div>
             </div>
         </div>
@@ -145,8 +145,8 @@ function displayHeader(status) {
                 <img src="/factory-display/assets/images/user-icon.svg" alt="user-icon">
             </a>
             <div class="sign-btns">
-                <button type="button"> <a href="/factory-display/settings/account.html" class="link-btn"> Connexion </a></button>
-                <button type="button"><a href="/factory-display/settings/inscription.html" class="link-btn"> Inscription </a></button>            
+                <button type="button"> <a href="/factory-display/settings/account.php" class="link-btn"> Connexion </a></button>
+                <button type="button"><a href="/factory-display/settings/inscription.php" class="link-btn"> Inscription </a></button>            
             </div>
         </div>
       </nav>
