@@ -1,5 +1,6 @@
 <?php
 @include 'assets/php/login/config_db1.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
