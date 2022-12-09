@@ -1,4 +1,4 @@
-.styleTitle,h1{
+/* .styleTitle,h1{
     margin-left: 60px;
     align-items: center;
 }
@@ -39,4 +39,20 @@ iframe{
 
 iframe > html > body > iframe {
     overflow: hidden !important;
+} */
+
+.screen-container > iframe {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.screen-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }

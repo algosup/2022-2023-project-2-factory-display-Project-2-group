@@ -1,0 +1,56 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>Document</title>
+      <style>
+        body {
+          display: flex;
+          padding: 0;
+          margin: 0;
+          height: 100vh;
+          width: 100vw;
+          background-color: var(--bg-color);
+          overflow: hidden;
+        }
+        body::backdrop {
+          background-color: var(--bg-color);
+        }
+        iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+          position: absolute;
+        }
+      </style>
+      <link
+        rel="stylesheet"
+        href="/screens-side/assets/css/themes/theme3.css"
+      />
+    </head>
+    <body onload="setColors()">
+<iframe src="/screens-side/widgets/clock.html" style="width: 75vh;height: 75vh;margin-top: 8vh; margin-bottom: 16vh; margin-left: 21vw; margin-right: 34vw;"></iframe>
+<script>
+document.getElementsByTagName("body")[0].addEventListener("click", function() {
+    document.getElementsByTagName("body")[0].requestFullscreen();
+});
+
+function setColors() {
+  var iframes = document.getElementsByTagName("iframe");
+  for (var i = 0; i < iframes.length; i++) {
+      var cssLink = document.createElement("link");
+      cssLink.href = "/screens-side/assets/css/themes/theme3.css";
+      cssLink.rel = "stylesheet";
+      cssLink.type = "text/css";
+      iframes[i].contentWindow.document.head.appendChild(cssLink);
+  }
+}
+
+function autoRefresh() {
+  window.location = window.location.href;
+}
+setInterval('autoRefresh()', 120000);
+
+</script>
+</body>
+</html>
