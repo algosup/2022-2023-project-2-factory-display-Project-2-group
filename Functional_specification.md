@@ -5,15 +5,18 @@
   - [Table of contents](#table-of-contents)
     - [1. Project role distribution](#1-project-role-distribution)
     - [2. Overview](#2-overview)
-    - [3. Personas and scenario](#3-personas-and-scenario)
+    - [3. Goals and non goals](#3-goals-and-non-goals)
+    - [4. Personas and scenario](#4-personas-and-scenario)
         - [a. Hervé](#a-hervé)
         - [b. Solange](#b-solange)
         - [c. Estelle](#c-estelle)
-    - [4. Use case](#4-use-case)
-    - [5. Risks and Assumptions](#5-risks-and-assumptions)
-    - [6. Goals and non goals](#6-goals-and-non-goals)
-    - [7. Development and environement and Requirements](#7-development-and-environement-and-requirements)
-    - [8. Glossary](#8-glossary)
+    - [5. Use case](#5-use-case)
+    - [6. What will happen for the site](#6-what-will-happen-for-the-site)
+        - [Today](#today)
+        - [Tomorrow](#tomorrow)
+    - [7. Risks and Assumptions](#7-risks-and-assumptions)
+    - [8. Development and environement and Requirements](#8-development-and-environement-and-requirements)
+    - [9. Glossary](#9-glossary)
 
 ### 1. Project role distribution
 
@@ -24,12 +27,12 @@
 | Rémy CHARLES | Tech Leader |
 | Audrey Telliez | Software Engineer |
 | Pierre GORIN | Quality Assurance |
-  
+
 ### 2. Overview
 
 ![Jacobi logo](img/Jacobi-logo.jpg)
 
-Jacobi's[^1] is a company ==developing innovative air and water filtration products== with active coals and resin. The company created by Ferdinand Adolphe Wilhelm Jacobi has been in existence since 1916 and continues to develop around the world, such as in Allemangne, Philadelphia, India and Malaysia.
+[Jacobi](http://www.jacobi.net)[^1] is a company ==developing innovative air and water filtration products== with active coals and resin. The company created by Ferdinand Adolphe Wilhelm Jacobi has been in existence since 1916 and continues to develop around the world, such as in Allemangne, Philadelphia, India and Malaysia.
 Remko Goudappel, CEO of Jacobi Company, makes a point of the ==safety== of these customers and products, but also the ==respect of the environment== during each stage of production. To contribute to the success of all these goals, the company can count on these employees whose well-being within the company is also a key point in Jacobi’s success.
 
 The company commissioned ALGOSUP to create a communication tool to ==centralize the information== to be transmitted to all employees.
@@ -42,16 +45,33 @@ source :
 
 **Company distribution**
 
-| PERSON | ROLE | DESCRIPTION |
-| :-: | :-: | :-: |
-| Mr. Remko GOUDAPPEL | CEO |  |
-| Mr. Usman SAEED |  | Project owner |
-| Mr. Pierre PAGE | HR Manager | Content creator |
-| Ms. Karen BLANQUE | HR Assistant | Content creator |
-| Mr. Nicolas YVELIN | Factory Manager | Content creator |
-| Mr. Samuel NEVES | Maintenance Shop Manager | On-site installation manager |
+| PERSON | COMPANY ROLE | PROJECT ROLE | CONTACT |
+| :-: | :-: | :-: | :-: |
+| Mr. Remko GOUDAPPEL | CEO | *none* |  |
+| Mr. Usman SAEED |  | Project owner | usman.saeed@jacobi.net |
+| Mr. Pierre PAGE | HR Manager | Content creator |  |
+| Ms. Karen BLANQUE | HR Assistant | Content creator |  |
+| Mr. Nicolas YVELIN | Factory Manager | Content creator |  |
+| Mr. Samuel NEVES | Maintenance Shop Manager | On-site installation manager |  |
 
-### 3. Personas and scenario
+### 3. Goals and non goals
+
+**Goals :**
+
+- site very ==secure==
+- digitalise the communication
+- make it ==easy== to publish the content
+
+**Non goals :**
+
+- Do not use the screen for entertainment purposes
+
+---
+Information :
+- [exchange report with Mr SAEED](https://docs.google.com/document/d/14CGThUVf1itMEbXqam2NZHnIt6qDEUlVNuUI7ULTiBA/edit?usp=sharing)
+---
+
+### 4. Personas and scenario
 
 ##### a. Hervé
 
@@ -74,10 +94,23 @@ Estelle is 39, engaged to Alan, her 36-year-old Product Manager, and they have a
 She arrives at the factory at 7:20 a.m., goes into the locker room to put on her work clothes and goes in front of the screen to discover possible news.
 On her post, Estelle has a computer that allows her, if she wishes, to have a return of the screens on the same site as Hervé, but she connects with her own employee account. This allows him to follow developments during the day without going through the changing rooms or the cafeteria and thus stay at his workstation.
 
-### 4. Use case
+### 5. Use case
 ![use case](img/use_case.png)
 
-### 5. Risks and Assumptions
+### 6. What will happen for the site
+
+##### Today
+
+When the administrator, logs in with his account, He has the possibility, thanks to the "scene" tab in the navigation bar, to see the scenes that are shared on the screens, manage the scenes saved on the site for reuse or even modify them. But it can also create scenes in which it can integrate basic widgets like text or images, but also optional widgets like date, time, weather or news.
+Thanks to the second tab "my account" the administrator can manage the various options of his account such as his password or his email address, but he can also have access to the site setting.
+The "home" tab presents the company, its history and these values. You can access the company’s main site and have the site administrators email address so that employees can contact them if a problem is observed when sharing scenes on the screens.
+Of course, employees will have limited access to the site. On their phone they will only be able to access the home page and the shared scene on the screen they decide to view.
+
+##### Tomorrow
+
+<!-- que feras le site plus tard -->
+
+### 7. Risks and Assumptions
 
 **the reglementation of data backups :**
 
@@ -89,19 +122,7 @@ There are three different archives depending on the type of data :
 source :
  - [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees_de_conservation.pdf)[^2]
 
-### 6. Goals and non goals
-
-**Goals :**
-
-- site very ==secure==
-- digitalise the communication
-- make it ==easy== to publish the content
-
-**Non goals :**
-
-- Do not use the screen for entertainment purposes
-
-### 7. Development and environement and Requirements
+### 8. Development and environement and Requirements
 
   - HTML[^3]
   - CSS [^4]
@@ -110,7 +131,7 @@ source :
   - Windows/MacOS on development
 
 ---
-### 8. Glossary
+### 9. Glossary
 
 [^1]: Jacobi
 It's an air and water purification solutions company. The company is based in Vierzon since 1956.
