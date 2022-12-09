@@ -1,6 +1,42 @@
 <?php
 @include './assets/php/login/config_db.php';
 session_start();
+
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $pass = $_POST['pass'];
+    $c_pass = $_POST['c_pass'];
+
+    $pass_hash = password_hash($pass, PASSWORD_BCRYPT);
+    
+    $sql_email_search = "SELECT * FROM user_form WHERE email = '$email' ";
+
+    $result_email_exist = $conn->query($sql_email_search);
+
+    $email_count = $result_email_exist->rowCount();
+
+    if($email_count){
+        echo "Un compte avec cet email existe déjà.";
+    }
+    else{
+        if($pass != $c_pass){
+            echo "Les mots de passe ne correspondent pas.";
+        }
+        else{
+            $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
+            $result = $conn->query($sql);
+            if($result){
+                echo "Votre compte a été créé avec succès.";
+                // wait 3 seconds before redirecting to login page
+                header("refresh:3;url=/factory-display/settings/account.html");
+            }
+            else{
+                echo "Une erreur s'est produite lors de la création de votre compte.";
+            }
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,16 +65,22 @@ session_start();
         <input type="text" name="name" required placeholder="Nom">
         <br>
         <input type="email" name="email" required placeholder="E-mail">
+
         <div class="input_password">
             <input type="password" id="pass" name="pass"  placeholder="Mot de passe">
             <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye" onclick="changer()"/>
         </div>
+
         <div class="input_password">
-            <input type="password" id="pass1" name="pass"  placeholder="Mot de passe">
+            <input type="password" id="c_pass" name="pass"  placeholder="Confirmer votre mot de passe">
             <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()"/>
         </div>
-        <div class="input submit" onclick="document.fo.submit()"><input type="submit" name="submit" value="Inscrivez-vous" class="form-btn"> </div> 
+
+        <div class="input_submit" onclick="document.fo.submit()">
+            <input type="submit" name="submit" value="Inscrivez-vous" class="form-btn"> 
+        </div> 
         <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.html">Connectez-vous </a></p>
+
         <script>
                 e= true
             function changer(){

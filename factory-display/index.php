@@ -1,6 +1,5 @@
 <?php
-@include 'assets/php/login/config_db1.php';
-
+@include 'assets/php/login/config_db.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
