@@ -3,7 +3,7 @@ setInterval(function () {
 }, 1000);
 
 function formatTime() {
-  var d = new Date();
+  var d = new Date() + 3600000;
   minutes =
     d.getMinutes().toString().length == 1
       ? "0" + d.getMinutes()
