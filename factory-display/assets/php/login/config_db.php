@@ -20,3 +20,5 @@ if($conn){
 }else{
     echo "Connection could not be established";
 }
+
+?>
