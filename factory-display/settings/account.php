@@ -1,6 +1,8 @@
 <?php
 // login system
 @include '../assets/php/login/config_db.php';
+session_destroy();
+
 session_start();
 
 if (isset($_POST['submit'])) {
@@ -25,7 +27,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['role'] = $retrieveData['user_type'];
             $_SESSION['logged_in'] = true;
 
-            header('location:../index.php');
+            header('location:/factory-display/index.php');
         } else {
             $error[] = "Le mot de passe est incorrect.";
         }
