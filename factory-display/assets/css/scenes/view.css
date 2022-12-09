@@ -3,6 +3,12 @@
     flex-direction: row;
 }
 
+h1 {
+    margin: 8vh auto 2vh 20vw;
+    border-left: 5px solid rgba(0,0,0,0.7);
+    padding-left:5px;
+}
+
 iframe{
     width: 80vw;
     height: 45vw;
