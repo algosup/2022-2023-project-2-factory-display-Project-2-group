@@ -17,19 +17,19 @@ if (isset($_POST['submit'])) {
     $email_count = $result_email_exist->rowCount();
 
     if ($email_count) {
-        echo "Un compte avec cet email existe déjà.";
+        $error[] = "Un compte avec cet email existe déjà.";
     } else {
         if ($pass != $c_pass) {
-            echo "Les mots de passe ne correspondent pas.";
+            $error[] = "Les mots de passe ne correspondent pas.";
         } else {
             $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
             $result = $conn->query($sql);
             if ($result) {
-                echo "Votre compte a été créé avec succès.";
+                $success = "Votre compte a été créé avec succès.";
                 // wait 3 seconds before redirecting to login page
                 header("refresh:3;url=/factory-display/settings/account.html");
             } else {
-                echo "Une erreur s'est produite lors de la création de votre compte.";
+                $error[] = "Une erreur s'est produite lors de la création de votre compte.";
             }
         }
     }
@@ -61,6 +61,16 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h1>Inscrivez-vous:</h1>
+            <?php
+            if (isset($error)) {
+                foreach ($error as $error) {
+                    echo '<p class="error">' . $error . '</p>';
+                }
+            }
+            if (isset($success)) {
+                echo '<p class="success">' . $success . '</p>';
+            }
+            ?>
             <input type="text" name="name" required placeholder="Nom">
             <br>
             <input type="email" name="email" required placeholder="E-mail">
