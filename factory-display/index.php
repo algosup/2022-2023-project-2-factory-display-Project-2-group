@@ -32,7 +32,9 @@
         }
     }
     if (isset($success)) {
-        echo '<p class="success">' . $success . '</p>';
+        foreach ($error as $error) {
+            echo '<p class="success">' . $success . '</p>';
+        }
     }
     ?>
 
