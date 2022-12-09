@@ -1,5 +1,6 @@
 <?php
 // login system
+@include '../assets/php/login/config_db.php';
 session_start();
 
 if (isset($_POST['submit'])) {
@@ -10,11 +11,11 @@ if (isset($_POST['submit'])) {
     $result_email_exist = $conn->query($sql_email_search);
     $email_count = $result_email_exist->rowCount();
 
-    if ($email_count) {  // If email exists we check the password
+    if ($email_count) { // If email exists we check the password
         $retrieveData = $result_email_exist->fetch(PDO::FETCH_ASSOC);
 
         $pass_db = substr($retrieveData['password'], 0, 60); // We are using the first 60 characters of the password hash to verify the password because the password hash is 60 characters long to prevent errors when comparing the password hash with the password hash from the database
-        $verified = password_verify($login_pass, $pass_db); // Verify the password given by the user with the password hash from the database
+        $verified = password_verify($pass, $pass_db); // Verify the password given by the user with the password hash from the database
 
         if ($verified) { // If the password is correct we start the session
             $success[] = "Vous êtes connecté avec succès.";
@@ -45,8 +46,8 @@ if (isset($_POST['submit'])) {
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Connexion</title>
     <script src="/factory-display/assets/js/section/header.js"></script>
-    <script src="/factory-display/assets/js/section/footer.js"></script>
     <script src="/factory-display/assets/js/init.js"></script>
+    <script src="/factory-display/assets/js/settings/account.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/account.css">
@@ -75,7 +76,8 @@ if (isset($_POST['submit'])) {
             <input type="email" name="email" required placeholder="E-mail">
             <div class="input_password">
                 <input type="password" id="pass" name="pass" placeholder="Mot de passe">
-                <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye" onclick="changer()" />
+                <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye"
+                    onclick="changer()" />
             </div>
             <input type="submit" name="submit" value="Connectez-vous" class="form-btn">
             <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.html"> Inscrivez-vous </a></p>
