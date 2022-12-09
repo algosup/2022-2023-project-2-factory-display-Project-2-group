@@ -1,17 +1,11 @@
 .iframe-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-iframe > html > body > iframe {
-    overflow: hidden;
 }
 
 iframe{
-    width: 90vw;
-    height: 50.625vw;
+    width: 80vw;
+    height: 45vw;
     overflow: hidden;
-    pointer-events: none;
+    margin-left:10vw;
 }

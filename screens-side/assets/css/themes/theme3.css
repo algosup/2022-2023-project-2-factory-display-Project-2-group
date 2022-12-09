@@ -4,3 +4,7 @@
     --secondary-color: #0057C9;
     --text-color: #ffffff;
   }
+
+  html {
+    cursor: none;
+  }
