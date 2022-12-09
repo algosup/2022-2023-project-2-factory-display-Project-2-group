@@ -27,7 +27,7 @@ $sql = "SELECT * FROM user_form";
 $result = $conn->query($sql);
 // fetch data
 while($row = $result->fetchAll(PDO::FETCH_ASSOC)){
-    echo $row['id'];
+    echo $row['name'];
 }
 
 ?>
