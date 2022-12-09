@@ -19,20 +19,13 @@ if (isset($_POST['submit'])) {
         $error[] = "Un compte avec cet email existe déjà.";
     } else {
         if ($pass == $c_pass) {
-            $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
-            //$result = $conn->query($sql);
-            $result = $conn->exec($sql);
-            echo $result;
+            $sql = "INSERT INTO user_form (name, email, password) VALUES ('$name', '$email', '$pass_hash')";
+            $result = $conn->query($sql);
+
             if ($result) {
                 $success[] = "Votre compte a été créé avec succès.";
                 // wait 3 seconds before redirecting to login page
-                //header("refresh:3;url=/factory-display/settings/account.html");
-
-                // print values
-                echo "Name: " . $_POST['name'] . "<br>";
-                echo "Email: " . $_POST['email'] . "<br>";
-                echo "Password: " . $_POST['pass'] . "<br>";
-                echo "Confirm Password: " . $_POST['c_pass'] . "<br>";
+                header('refresh:3;location:account.php');
 
             } else {
                 $error[] = "Une erreur s'est produite lors de la création de votre compte.";
@@ -52,10 +45,11 @@ if (isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
-    <title>inscription</title>
+    <title>Inscription</title>
     <script src="/factory-display/assets/js/section/header.js"></script>
-    <!-- <script src="/factory-display/assets/js/section/footer.js"></script> -->
+
     <script src="/factory-display/assets/js/init.js"></script>
+    <script src="/factory-display/assets/js/settings/inscription.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/inscription.css">
@@ -69,6 +63,7 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h1>Inscrivez-vous:</h1>
+
             <?php
             if (isset($error)) {
                 foreach ($error as $error) {
@@ -83,17 +78,15 @@ if (isset($_POST['submit'])) {
             ?>
 
             <input type="text" name="name" required placeholder="Nom">
-            <br>
             <input type="email" name="email" required placeholder="E-mail">
 
             <div class="input_password">
-                <input type="password" name="pass" placeholder="Mot de passe">
-                <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye"
-                    onclick="changer()" />
+                <input type="password" id="pass" name="pass" placeholder="Mot de passe">
+                <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
 
             <div class="input_password">
-                <input type="password" name="c_pass" placeholder="Confirmer votre mot de passe">
+                <input type="password" id="c_pass" name="c_pass" placeholder="Confirmer votre mot de passe">
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()" />
             </div>
 
@@ -101,32 +94,4 @@ if (isset($_POST['submit'])) {
             <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.html">Connectez-vous </a></p>
 
         </form>
-        <script>
-             e = true
-            function changer() {
-                if (e) {
-                    document.getElementById("pass").setAttribute("type", "text");
-                    document.getElementById("eye").src = "/factory-display/assets/img/icons/oeil_ferme-removebg-preview.png";
-                    e = false;
-                }
-                else {
-                    document.getElementById("pass").setAttribute("type", "password");
-                    document.getElementById("eye").src = "/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png";
-                    e = true;
-                }
-            }
-            e = true
-            function changer1() {
-                if (e) {
-                    document.getElementById("c_pass").setAttribute("type", "text");
-                    document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ferme.png";
-                    e = false;
-                }
-                else {
-                    document.getElementById("c_pass").setAttribute("type", "password");
-                    document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ouvert.png";
-                    e = true;
-                }
-            }
-        </script>
 </body>

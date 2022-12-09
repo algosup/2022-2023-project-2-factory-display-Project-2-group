@@ -1,5 +1,12 @@
 <?php
 @include 'assets/php/login/config_db.php';
+
+session_start();
+
+if (!isset($_SESSION['logged_in'])) {
+    //header('location:assets/php/login/login.php');
+    $error[]= "Vous n'êtes pas connecté.";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

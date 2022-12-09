@@ -1,3 +1,14 @@
+<?php
+@include 'assets/php/login/config_db.php';
+
+session_start();
+
+if ($_SESSION['logged_in'] == false) {
+    header('location:assets/php/login/login.php');
+    $error[] = "Vous n'êtes pas connecté.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +34,13 @@
 
 <body>
     <header></header>
+    <?php
+    if (isset($error)) {
+        foreach ($error as $error) {
+            echo '<p class="error">' . $error . '</p>';
+        }
+    }
+    ?>
     <div class="main-div">
         <div class="leftside-main-container">
             <div class="leftside-containers">
@@ -71,17 +89,17 @@
                                 <h2>Nom</h2>
                             </div>-->
                     <div class="rightside-container-account-header">
-                        <h2>Mon compte</h2 >
+                        <h2>Mon compte</h2>
                     </div>
-                    <div class="profil">                           
+                    <div class="profil">
                         <h3>nom d'utilisateur : </h3>
-                        <h4>(nom)</h4> 
-                        <h3>email : </h3>                                      
+                        <h4>(nom)</h4>
+                        <h3>email : </h3>
                         <h4>(ng******************com)</h4>
-                        <h3>mot de passe : </h3>                                
-                        <h4>(**********)</h4>                                
+                        <h3>mot de passe : </h3>
+                        <h4>(**********)</h4>
                     </div>
-                </div>    
+                </div>
                 <div class="rightside-container-setting">
                     <div class="rightside-container-setting-header">
                         <h2>Paramètres</h2>
