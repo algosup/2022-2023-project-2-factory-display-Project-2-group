@@ -25,5 +25,5 @@
             <br>
         <iframe src="/screens-side/scrrens/cafeteria.html" frameborder="0" id="2" ></iframe>
         </div>
-    </div>
+    </div>  
 </body>
