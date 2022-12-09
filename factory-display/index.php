@@ -7,8 +7,7 @@ session_start();
 if (isset($_SESSION['logged_in'])) {
     $success[] = "Vous êtes connecté en tant que " . $_SESSION['name'] . ".";
 
-}
-else {
+} else {
     // redirect to the login page
 
     header('location:/factory-display/settings/account.php');
@@ -23,7 +22,7 @@ else {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Accueil</title>
-    <script src="/factory-display/assets/js/section/header.js"></script>
+    <script src="/factory-display/assets/headers/header.js"></script>
     <!-- <script src="/factory-display/assets/js/section/footer.js"></script>
     <script src="/factory-display/assets/js/init.js"></script> -->
 
@@ -36,20 +35,18 @@ else {
 </head>
 
 <body>
-    <!-- <header></header> -->
-    <?php
-    // check if the user is logged in with $_SESSION['logged_in'] and check if the user is an admin
-    if (isset($_SESSION['logged_in']) && $_SESSION['user_type'] == "admin") {
-       //include the navbar for the admin
-        @include 'assets/headers/header_admin.html';
-    }
-    // check if the user is logged in with $_SESSION['logged_in'] and check if the user is a user
-    elseif (isset($_SESSION['logged_in']) && $_SESSION['user_type'] == "user") {
-        //include the navbar for the user
-        @include 'assets/headers/header_user.html';
-    }
-    ?>
-
+    <header>
+        <?php
+        if (isset($_SESSION['role'])) {
+            if ($_SESSION['role'] == "user") {
+                @include 'assets/headers/header-user.html';
+            } else
+                if ($_SESSION['role'] == "admin") {
+                    @include 'assets/headers/header-admin.html';
+                }
+        }
+        ?>
+    </header>
     <div class="a-propos">
         <div class="div-main-container">
             <h3>L'entreprise</h3>
