@@ -9,16 +9,15 @@ $db_port = 1433;
 try {
     $conn = new PDO("sqlsrv:server = tcp:jacobi-dbserver-grp2.database.windows.net,1433; Database = JacobiDatabase", "sqljacobi", "pQgxk#6B3tNHDjG4");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
+} catch (PDOException $e) {
+    $error[]= "Error connecting to SQL Server.";
     die(print_r($e));
 }
 
-if($conn){
-    echo "Connection established \r\n";
-}else{
-    echo "Connection could not be established \r\n";
+if ($conn) {
+    $success[]= "Connection established \r\n";
+} else {
+    $error[]= "Connection could not be established \r\n";
 }
 
 
