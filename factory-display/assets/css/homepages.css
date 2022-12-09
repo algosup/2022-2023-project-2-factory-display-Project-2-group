@@ -68,3 +68,90 @@ a {
   width: 30%;
   height: auto;
 }
+
+
+
+body.dark-mode {
+  font-family: Noto Sans;
+  background-color: rgb(21, 14, 38);
+}
+
+body.dark-mode > .custom-canva {
+  margin-left: 10vw;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  width: 80vw;
+  height: 444px;
+  outline: 0.5vw solid rgb(38, 20, 81);
+  padding: 0;
+  overflow: hidden;
+}
+
+body.dark-mode > .custom-canva {
+    margin-left: 10vw;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 80vw;
+    height: 444px;
+    outline: 0.5vw solid rgb(38, 20, 81);
+    padding: 0;
+    overflow: hidden;
+}
+
+body.dark-mode > .div-main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+body.dark-mode >.a-propos {
+  color: #be6f3a;
+}
+
+body.dark-mode > .div-main-container > h3 {
+  text-align: center;
+  position: relative;
+    top: 30px;
+    left: 0px;
+}
+
+body.dark-mode > .contact-admin {
+  background-color: #ca6f32;
+  color:rgb(38, 20, 81);
+}
+
+body.dark-mode > .div-main-container-bis > h3 {
+  text-align: center;
+  position: relative;
+    top: 30px;
+    left: 0px;
+}
+
+body.dark-mode > p {
+  margin: 50px;
+}
+
+
+body.dark-mode > .contact-admin > p {
+  text-align: center;
+}
+
+body.dark-mode > hr.solid {
+  border-top: 5px solid rgb(38, 20, 81);
+}
+
+body.dark-mode > a {
+  color: rgb(255, 255, 255);
+}
+
+body.dark-mode > .jacobi_services {
+  float: right;
+  margin-right: 50px;
+  margin-left: 50px;
+  /* height: 148.7px;
+  width: 378.7px; */
+  max-width: 25%;
+  width: 30%;
+  height: auto;
+}
