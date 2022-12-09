@@ -16,9 +16,9 @@ catch (PDOException $e) {
 }
 
 if($conn){
-    echo "Connection established";
+    echo "Connection established \r\n";
 }else{
-    echo "Connection could not be established";
+    echo "Connection could not be established \r\n";
 }
 
 // create select query
