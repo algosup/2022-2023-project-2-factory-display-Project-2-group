@@ -7,7 +7,7 @@ $db_db = 'JacobiDatabase';
 $db_port = 1433;
 
 try {
-    $conn = new PDO("sqlsrv:server = tcp:$db_host,$db_port; Database = $db_db", "$db_user", "$db_password");
+    $conn = new PDO("sqlsrv:server = tcp:jacobi-dbserver-grp2.database.windows.net,1433; Database = JacobiDatabase", "sqljacobi", "pQgxk#6B3tNHDjG4");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -21,13 +21,5 @@ if($conn){
     echo "Connection could not be established \r\n";
 }
 
-// create select query
-$sql = "SELECT * FROM user_form";
-// execute query
-$result = $conn->query($sql);
-// fetch data
-while($row = $result->fetchAll(PDO::FETCH_ASSOC)){
-    echo $row['name'];
-}
 
 ?>
