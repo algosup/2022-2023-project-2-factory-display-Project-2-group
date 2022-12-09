@@ -365,10 +365,6 @@ function writeTheSceneFile() {
 
   const footContent = `
 <script>
-document.getElementsByTagName("body")[0].addEventListener("click", function() {
-    document.getElementsByTagName("body")[0].requestFullscreen();
-});
-
 function setColors() {
   var iframes = document.getElementsByTagName("iframe");
   for (var i = 0; i < iframes.length; i++) {
