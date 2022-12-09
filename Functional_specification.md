@@ -108,7 +108,8 @@ Of course, employees will have limited access to the site. On their phone they w
 
 ##### Tomorrow
 
-<!-- que feras le site plus tard -->
+In the future, on the amdinistrator side, it will be possible to add videos, files (PDF type) via links or QR code or to see the state of the internet network or having more color choices for scenes.
+The page may also be translated into several languages to promote the export of the website to other Jacobi production sites.
 
 ### 7. Risks and Assumptions
 
