@@ -9,7 +9,7 @@ function formatTime() {
       ? "0" + d.getMinutes()
       : d.getMinutes();
   hours =
-    d.getHours().toString().length == 1 ? "0" + d.getHours() : d.getHours()+3600000;
+    d.getHours().toString().length == 1 ? "0" + d.getHours() : d.getHours() +1;
   months = [
     "Janvier",
     "Février",
