@@ -10,20 +10,30 @@
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
 </head><link rel="stylesheet" href="/factory-display/assets/css/scenes/manage.css">
 <body>
-    <header></header>
-    <h1> <center>Gérer écrans </center> </h1>
-    <hr>
-    <br>
-    <div class="iframe-container" >
-        <div class="memoryscenes" id="1">
-            <h1> 1. scenes du (date) : </h1>
-            <br>
-        <iframe src="/screens-side/screens/locker-room.html" frameborder="0" id="1" ></iframe>
-    <br>
-        <div class="memoryscenes" id="2">
-            <h1> 2. scenes du (date) : </h1>
-            <br>
-        <iframe src="/screens-side/screens/cafeteria.html" frameborder="0" id="2" ></iframe>
-        </div>
-    </div>  
+    
+<header></header>
+
+<?php 
+    if ($handle = opendir('../../screens-side/screens/')) {
+
+        while (false !== ($entryLink = readdir($handle))) {
+    
+            if ($entryLink != "." && $entryLink != "..") {
+                if ($entryLink == "cafeteria.html") {
+                    $entry = "Cafétéria";
+                }
+                if ($entryLink == "locker-room.html") {
+                    $entry = "Vestiaire";
+                }
+                echo "<div class='screen-container'>";
+                echo str_replace(".html","","<h1>$entry</h1>");
+                echo "<iframe src='../../screens-side/screens/$entryLink' frameborder='0'></iframe>";
+                echo "</div>";
+            }
+        }
+        closedir($handle);
+    }
+?>
+
+<footer></footer> 
 </body>
