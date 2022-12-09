@@ -18,18 +18,18 @@ if (isset($_POST['submit'])) {
     if ($email_count) {
         $error[] = "Un compte avec cet email existe déjà.";
     } else {
-        if ($pass != $c_pass) {
-            $error[] = "Les mots de passe ne correspondent pas.";
-        } else {
+        if ($pass === $c_pass) {
             $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
             $result = $conn->query($sql);
             if ($result) {
-                $success = "Votre compte a été créé avec succès.";
+                $success[] = "Votre compte a été créé avec succès.";
                 // wait 3 seconds before redirecting to login page
                 header("refresh:3;url=/factory-display/settings/account.html");
             } else {
                 $error[] = "Une erreur s'est produite lors de la création de votre compte.";
             }
+        } else {
+            $error[] = "Les mots de passe ne correspondent pas.";
         }
     }
 }
