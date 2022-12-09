@@ -38,7 +38,18 @@ else {
 </head>
 
 <body>
-    <header></header>
+<header>
+        <?php
+        if (isset($_SESSION['role'])) {
+            if ($_SESSION['role'] == "user") {
+                @include './assets/headers/header-user.html';
+            } else
+                if ($_SESSION['role'] == "admin") {
+                    @include './assets/headers/header-admin.html';
+                }
+        }
+        ?>
+    </header>
     <?php
     if (isset($error)) {
         foreach ($error as $error) {

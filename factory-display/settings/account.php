@@ -59,11 +59,12 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header></header>
-    <?php
+    <header>
+        <?php
     // include guest navbar
-    include '../assets/php/section/navbar_guest.php';
+    include './assets/php/section/navbar_guest.php';
     ?>
+    </header>
     <div class="form-container">
         <form action="" method="post">
             <h2>Connectez-vous :</h2>
