@@ -17,8 +17,8 @@ if (isset($_POST['submit'])) {
 
     if ($email_count) {
         $error[] = "Un compte avec cet email existe déjà.";
-    } else {
-        if ($pass === $c_pass) {
+    } else { 
+        if ($pass == $c_pass) {
             $sql = "INSERT INTO user_form (name, email, pass) VALUES ('$name', '$email', '$pass_hash')";
             $result = $conn->query($sql);
             if ($result) {
@@ -72,18 +72,19 @@ if (isset($_POST['submit'])) {
                 }
             }
             ?>
+            
             <input type="text" name="name" required placeholder="Nom">
             <br>
             <input type="email" name="email" required placeholder="E-mail">
 
             <div class="input_password">
-                <input type="password" id="pass" name="pass" placeholder="Mot de passe">
+                <input type="password" name="pass" placeholder="Mot de passe">
                 <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye"
                     onclick="changer()" />
             </div>
 
             <div class="input_password">
-                <input type="password" id="c_pass" name="c_pass" placeholder="Confirmer votre mot de passe">
+                <input type="password" name="c_pass" placeholder="Confirmer votre mot de passe">
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()" />
             </div>
 
@@ -109,12 +110,12 @@ if (isset($_POST['submit'])) {
                 e = true
                 function changer1() {
                     if (e) {
-                        document.getElementById("pass1").setAttribute("type", "text");
+                        document.getElementById("c_pass").setAttribute("type", "text");
                         document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ferme.png";
                         e = false;
                     }
                     else {
-                        document.getElementById("pass1").setAttribute("type", "password");
+                        document.getElementById("c_pass").setAttribute("type", "password");
                         document.getElementById("eye1").src = "/factory-display/assets/img/icons/oeil_ouvert.png";
                         e = true;
                     }
