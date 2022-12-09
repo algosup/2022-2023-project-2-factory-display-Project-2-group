@@ -67,7 +67,7 @@ else {
                     </div>
                 </div>
                 <hr class="solid">
-                <div class="leftside-logout-container">
+                <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
                     <div class="leftside-text">
                         <h2 class="title">Déconnexion</h2>
                     </div>
