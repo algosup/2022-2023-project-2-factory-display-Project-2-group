@@ -18,5 +18,3 @@ function tooSmallScreen() {
     document.getElementById('second-view').style.display = 'none';
     console.log('your device is too small');
 }
-
-loadFirstView();

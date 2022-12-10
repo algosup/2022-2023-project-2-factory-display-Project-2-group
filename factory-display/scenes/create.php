@@ -42,7 +42,7 @@ else {
   
 </head>
 
-<body>
+<body onload="loadFirstView()">
 
 
 
