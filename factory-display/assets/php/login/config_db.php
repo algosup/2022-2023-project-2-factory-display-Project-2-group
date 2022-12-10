@@ -14,9 +14,4 @@ try {
     die(print_r($e));
 }
 
-if ($conn) {
-    $success[] = "Connection with the database has been established \r\n";
-} else {
-    $error[] = "Connection could not be established \r\n";
-}
 ?>

@@ -24,6 +24,8 @@ else {
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Mon espace</title>
 
+    <script src="/factory-display/assets/headers/header.js"></script>
+    
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
