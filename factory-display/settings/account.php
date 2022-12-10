@@ -47,9 +47,8 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Connexion</title>
-    <script src="/factory-display/assets/js/section/header.js"></script>
-    <script src="/factory-display/assets/js/init.js"></script>
-    <script src="/factory-display/assets/js/settings/account.js"></script>
+ 
+    <script src="/factory-display/assets/headers/header.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/account.css">
@@ -61,9 +60,9 @@ if (isset($_POST['submit'])) {
 <body>
     <header>
         <?php
-    // include guest navbar
-    include './assets/php/section/navbar_guest.php';
-    ?>
+        // include guest navbar
+        @include '../assets/headers/header-guest.html';
+        ?>
     </header>
     <div class="form-container">
         <form action="" method="post">
