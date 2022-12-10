@@ -5,14 +5,113 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="3; URL=/factory-display/index.php" />
+  <meta http-equiv="refresh" content="0; URL=/factory-display/index.php" />
   <title>Redirection</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #f1f1f1;
+    }
+
+    .loader {
+      border: 16px solid gray;
+      /* Light grey */
+      border-top: 16px solid #3498db;
+      /* Blue */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 2s linear infinite;
+      margin-top: 10px;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .main_div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .text_loader {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text_loader p {
+      margin: 0;
+      font-size: 1.2rem;
+      
+    }
+
+    .text_loader a {
+      text-decoration: none;
+      color: #3498db;
+    }
+
+    .text_loader a:hover {
+      text-decoration: underline;
+    }
+
+    /* media queries for responsive design */
+    @media screen and (max-width: 800px) {
+      .main_div {
+      }
+
+      .title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .text_loader {
+        text-align: center;
+      }
+
+      .text_loader p {
+        font-size: 1rem;
+      }
+
+      .loader {
+        width: 40px;
+        height: 40px;
+      }
+      #redirect {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Redirection</h1>
-  <p>Vous allez être redirigé vers la page d'accueil dans 3 secondes.</p>
-  <p>Si vous n'êtes pas redirigé, cliquez <a href="/factory-display/index.php">ici</a>.</p>
+  <div class="main_div">
+    <h1 class="title">Redirection</h1>
+    <div class="text_loader">
+      <p>Vous allez être automatiquement redirigé vers la page d'accueil.</p>
+      <p id="redirect">Si vous n'êtes pas redirigé, cliquez <a href="/factory-display/index.php">ici</a>.</p>
+    </div>
+    <div class="loader"></div>
+  </div>
 </body>
 
 </html>

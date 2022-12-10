@@ -46,9 +46,8 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Inscription</title>
-    <script src="/factory-display/assets/js/section/header.js"></script>
 
-    <script src="/factory-display/assets/js/init.js"></script>
+    <script src="/factory-display/assets/headers/header.js"></script>
     <script src="/factory-display/assets/js/settings/inscription.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
@@ -59,7 +58,9 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <?php @include '../assets/headers/header-guest.html'; ?>
+    </header>
     <div class="form-container">
         <form action="" method="post">
             <h1>Inscrivez-vous:</h1>
@@ -91,7 +92,7 @@ if (isset($_POST['submit'])) {
             </div>
 
             <input type="submit" name="submit" value="Inscrivez-vous" class="form-btn">
-            <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.html">Connectez-vous </a></p>
+            <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.php">Connectez-vous </a></p>
 
         </form>
 </body>

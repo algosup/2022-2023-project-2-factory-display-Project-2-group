@@ -47,8 +47,9 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Connexion</title>
- 
+
     <script src="/factory-display/assets/headers/header.js"></script>
+    <script src="factory-display/assets/js/settings/connexion.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/account.css">
@@ -81,12 +82,12 @@ if (isset($_POST['submit'])) {
             ?>
             <input type="email" name="email" required placeholder="E-mail">
             <div class="input_password">
-                <input type="password" id="pass" name="pass" placeholder="Mot de passe">
+                <input type="password" id="pass" name="pass" placeholder="Mot de passe" required>
                 <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye"
                     onclick="changer()" />
             </div>
             <input type="submit" name="submit" value="Connectez-vous" class="form-btn">
-            <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.html"> Inscrivez-vous </a></p>
+            <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
             <p>Mot de passe oublié ? <a href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>
         </form>
 </body>
