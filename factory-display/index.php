@@ -23,7 +23,7 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Accueil</title>
 
-    <script src="assets/headers/header.js"></script>
+    <script src="assets/headers/header.js" defer></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
