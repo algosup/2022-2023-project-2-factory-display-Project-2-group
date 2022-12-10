@@ -83,8 +83,7 @@ if (isset($_POST['submit'])) {
             <input type="email" name="email" required placeholder="E-mail">
             <div class="input_password">
                 <input type="password" id="pass" name="pass" placeholder="Mot de passe" required>
-                <img src="/factory-display/assets/img/icons/oeil_ouvert-removebg-preview.png" id="eye"
-                    onclick="changer()" />
+                <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
             <input type="submit" name="submit" value="Connectez-vous" class="form-btn">
             <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>

@@ -68,6 +68,9 @@ nav {
   margin-left: auto;
 }
 
+.nav-deconnexion {
+  margin-left: auto;
+}
 .sign-btns button {
   font-family: Roboto Flex, sans-serif;
   font-size: 16px;
@@ -84,6 +87,26 @@ nav {
   background-color: #e4e4e8;
 }
 .sign-user {
+  display: none;
+}
+
+
+.sign-out-btn button {
+  font-family: Roboto Flex, sans-serif;
+  font-size: 16px;
+  min-width: 90px;
+  padding: 10px 5px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none; 
+}
+
+.sign-out-btn button:nth-child(2) {
+  border: none;
+  background-color: #e4e4e8;
+}
+.sign-out {
   display: none;
 }
 
@@ -173,6 +196,22 @@ nav {
   .navlinks-container a {
     font-size: 20px;
     margin: 25px 0
+  }
+
+  .nav-deconnexion {
+    order: 3;
+    margin-left: 0;
+  }
+
+  .sign-out {
+    display: block;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+  }
+
+  .sign-out-btn {
+    display: none;
   }
 
   .nav-authentication {

@@ -22,9 +22,7 @@ if (isset($_SESSION['logged_in'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
   <title>Scènes</title>
-  <script src="/factory-display/assets/js/section/header.js"></script>
-  <script src="/factory-display/assets/js/section/footer.js"></script>
-  <script src="/factory-display/assets/js/init.js"></script>
+
 
   <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
   <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
@@ -37,15 +35,15 @@ if (isset($_SESSION['logged_in'])) {
 <body id="testbody">
   <header>
     <?php
-        if (isset($_SESSION['role'])) {
-          if ($_SESSION['role'] == "user") {
-            @include './assets/headers/header-user.html';
-          } else
-            if ($_SESSION['role'] == "admin") {
-              @include './assets/headers/header-admin.html';
-            }
+    if (isset($_SESSION['role'])) {
+      if ($_SESSION['role'] == "user") {
+        @include '../assets/headers/header-user.html';
+      } else
+        if ($_SESSION['role'] == "admin") {
+          @include '../assets/headers/header-admin.html';
         }
-        ?>
+    }
+    ?>
   </header>
   <div class="scenescontainer">
     <div class="scenesrow scenescol-container">

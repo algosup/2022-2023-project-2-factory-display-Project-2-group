@@ -24,9 +24,6 @@ else {
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Mon espace</title>
 
-    <script src="/factory-display/assets/js/section/header.js"></script>
-    <script src="/factory-display/assets/js/section/footer.js"></script>
-    <script src="/factory-display/assets/js/init.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
@@ -42,10 +39,10 @@ else {
         <?php
         if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == "user") {
-                @include './assets/headers/header-user.html';
+                @include '../assets/headers/header-user.html';
             } else
                 if ($_SESSION['role'] == "admin") {
-                    @include './assets/headers/header-admin.html';
+                    @include '../assets/headers/header-admin.html';
                 }
         }
         ?>
