@@ -22,9 +22,8 @@ if (isset($_SESSION['logged_in'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Accueil</title>
-    <script src="/factory-display/assets/headers/header.js"></script>
-    <!-- <script src="/factory-display/assets/js/section/footer.js"></script>
-    <script src="/factory-display/assets/js/init.js"></script> -->
+
+    <script src="assets/headers/header.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">

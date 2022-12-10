@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
     <title>Connexion</title>
 
     <script src="/factory-display/assets/headers/header.js"></script>
-    <script src="factory-display/assets/js/settings/connexion.js"></script>
+    <script src="/factory-display/assets/js/settings/connexion.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/account.css">
