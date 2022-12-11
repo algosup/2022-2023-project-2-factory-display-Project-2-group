@@ -132,7 +132,7 @@
     margin-top: 25px;
 }
 
-p > .success{
+.success{
     border-color: #00b300;
     background: white;
     color: #00b300;
@@ -143,10 +143,10 @@ p > .success{
 }
 
 
-p > .error{
+.error{
     border-color: #ff0000;
     background: white;
-    color:#ff0000;
+    color: #ff0000;
     border-radius: 5px;
     font-size: 20px;
     padding:10px;

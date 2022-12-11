@@ -77,18 +77,26 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h2>Connectez-vous :</h2>
-            <?php
-            if (isset($error)) {
-                foreach ($error as $error) {
-                    echo '<p class="error">' . $error . '</p>';
+
+            <div class="error">
+                <?php
+                if (isset($error)) {
+                    foreach ($error as $error) {
+                        echo '<p>' . $error . '</p>';
+                    }
                 }
-            }
-            if (isset($success)) {
-                foreach ($success as $success) {
-                    echo '<p class="success">' . $success . '</p>';
+                ?>
+            </div>
+
+            <div class="success">
+                <?php
+                if (isset($success)) {
+                    foreach ($success as $success) {
+                        echo '<p>' . $success . '</p>';
+                    }
                 }
-            }
-            ?>
+                ?>
+            </div>
 
             <div class="input_container">
                 <input type="email" name="email" placeholder="E-mail" required>
