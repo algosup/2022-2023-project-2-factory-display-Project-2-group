@@ -131,3 +131,23 @@
     position: absolute;
     margin-top: 25px;
 }
+
+.success{
+    background: #00b300;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding:10px;
+    margin:10px 0;
+    display: block;
+}
+
+.error{
+    background: #ff0000;
+    color:#fff;
+    border-radius: 5px;
+    font-size: 20px;
+    padding:10px;
+    margin:10px 0;
+    display: block;
+}

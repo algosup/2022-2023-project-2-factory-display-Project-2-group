@@ -50,12 +50,20 @@ if (isset($_POST['submit'])) {
 
     <script src="/factory-display/assets/headers/header.js"></script>
     <script src="/factory-display/assets/js/settings/connexion.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/account.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
 
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.error').delay(2000).fadeOut();
+            $('.success').delay(2000).fadeOut();
+        });
+    </script>
 </head>
 
 <body>
@@ -80,12 +88,18 @@ if (isset($_POST['submit'])) {
                 }
             }
             ?>
-            <input type="email" name="email" required placeholder="E-mail">
-            <div class="input_password">
+
+            <div class="input_container">
+                <input type="email" name="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="input_container">
                 <input type="password" id="pass" name="pass" placeholder="Mot de passe" required>
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
+
             <input type="submit" name="submit" value="Connectez-vous" class="form-btn">
+
             <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
             <p>Mot de passe oublié ? <a href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>
         </form>
