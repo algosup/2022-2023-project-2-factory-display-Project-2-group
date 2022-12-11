@@ -60,10 +60,15 @@ if (isset($_POST['submit'])) {
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('.error').delay(2000).fadeOut();
-            $('.success').delay(2000).fadeOut();
-        });
+        // showMessage() function is used to display the divs error and success and hide them 5 seconds after
+        function showMessage() {
+            $(".error").show();
+            $(".success").show();
+            setTimeout(function() {
+                $(".error").hide();
+                $(".success").hide();
+            }, 5000);
+        }
     </script>
 </head>
 
@@ -107,7 +112,7 @@ if (isset($_POST['submit'])) {
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
 
-            <input type="submit" name="submit" value="Connectez-vous" class="form-btn">
+            <input type="submit" name="submit" value="Connectez-vous" class="form-btn" onclick="showMessage()">
 
             <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
             <p>Mot de passe oublié ? <a href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>

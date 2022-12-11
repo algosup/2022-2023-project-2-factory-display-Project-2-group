@@ -6,9 +6,7 @@ session_start();
 // check if the user is logged in with $_SESSION['logged_in']
 if (isset($_SESSION['logged_in'])) {
     $success[] = "Vous êtes connecté en tant que " . $_SESSION['name'] . ".";
-
-}
-else {
+} else {
     // redirect to the login page
     header('location:/factory-display/settings/account.php');
 }
@@ -25,7 +23,7 @@ else {
     <title>Mon espace</title>
 
     <script src="/factory-display/assets/headers/header.js"></script>
-    
+
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
@@ -37,24 +35,25 @@ else {
 </head>
 
 <body>
-<header>
+    <header>
         <?php
         if (isset($_SESSION['role'])) {
             if ($_SESSION['role'] == "user") {
                 @include '../assets/headers/header-user.html';
             } else
                 if ($_SESSION['role'] == "admin") {
-                    @include '../assets/headers/header-admin.html';
-                }
+                @include '../assets/headers/header-admin.html';
+            }
         }
         ?>
     </header>
     <?php
-    if (isset($error)) {
-        foreach ($error as $error) {
-            echo '<p class="error">' . $error . '</p>';
+    if (isset($success)) {
+        foreach ($success as $success) {
+            echo '<div class="alert alert-success" role="alert">' . $success . '</div>';
         }
     }
+
     ?>
     <div class="main-div">
         <div class="leftside-main-container">

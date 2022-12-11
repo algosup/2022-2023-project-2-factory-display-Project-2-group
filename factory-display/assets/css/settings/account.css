@@ -133,6 +133,7 @@
 }
 
 .success{
+    display:none;
     border-color: #00b300;
     background: white;
     color: #00b300;
@@ -144,6 +145,7 @@
 
 
 .error{
+    display: none;
     border-color: #ff0000;
     background: white;
     color: #ff0000;
