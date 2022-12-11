@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
         $verified = password_verify($pass, $pass_db); // Verify the password given by the user with the password hash from the database
 
         if ($verified) { // If the password is correct we start the session
-            $success[] = "Vous êtes connecté avec succès.";
+            $success[] = "Vous vous êtes connecté avec succès !";
 
             $_SESSION['name'] = $retrieveData['name'];
             $_SESSION['email'] = $retrieveData['email'];

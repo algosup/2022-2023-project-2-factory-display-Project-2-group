@@ -125,29 +125,30 @@
     align-items: center;
 }
 
-.form-container > form > .input_password > #eye {
+.form-container > form > .input_container > #eye {
     height:25px ;
     cursor: pointer;
     position: absolute;
     margin-top: 25px;
 }
 
-.success{
-    background: #00b300;
-    color:#fff;
+p > .success{
+    border-color: #00b300;
+    background: white;
+    color: #00b300;
     border-radius: 5px;
     font-size: 20px;
     padding:10px;
     margin:10px 0;
-    display: block;
 }
 
-.error{
-    background: #ff0000;
-    color:#fff;
+
+p > .error{
+    border-color: #ff0000;
+    background: white;
+    color:#ff0000;
     border-radius: 5px;
     font-size: 20px;
     padding:10px;
     margin:10px 0;
-    display: block;
 }
