@@ -20,13 +20,14 @@
 
 ### 1. Project role distribution
 
-| PERSON | ROLE |
-| :-: | :-: |
-| Nicolas MIDA | Project Manager |
-| Grégory PAGNOUX | Program Manager |
-| Rémy CHARLES | Tech Leader |
-| Audrey Telliez | Software Engineer |
-| Pierre GORIN | Quality Assurance |
+| PERSON | ROLE | DOCUMENT |
+| :-: | :-: | :-: |
+| Nicolas MIDA | Project Manager | [Trello](https://trello.com/b/dzhNxtqm/project-2-web-js)
+|  |  | [Critical Path]() |
+| Grégory PAGNOUX | Program Manager | [Functional Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Functional_specification.md) |
+| Rémy CHARLES | Tech Leader | [Technical Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Technical_Specification.md) |
+| Audrey Telliez | Software Engineer | none |
+| Pierre GORIN | Quality Assurance | [Test Plan]() |
 
 ### 2. Overview
 
