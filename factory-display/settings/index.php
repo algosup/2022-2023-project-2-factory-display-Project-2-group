@@ -47,14 +47,6 @@ if (isset($_SESSION['logged_in'])) {
         }
         ?>
     </header>
-    <?php
-    if (isset($success)) {
-        foreach ($success as $success) {
-            echo '<div class="alert alert-success" role="alert">' . $success . '</div>';
-        }
-    }
-
-    ?>
     <div class="main-div">
         <div class="leftside-main-container">
             <div class="leftside-containers">
@@ -91,17 +83,7 @@ if (isset($_SESSION['logged_in'])) {
         <div class="rightside-main-container">
             <div class="rightside-containers">
                 <div class="rightside-container-account">
-                    <!--<div class="rightside-container-account-header">
-                        <h2>Mon compte</h2>
-                    </div>
-                    <div class="rightside-container-account-body">
-                        <div class="rightside-container-account-body-left">
-                            <div class="account-prenom">
-                                <h2>Prénom</h2>
-                            </div>
-                            <div class="account-nom">
-                                <h2>Nom</h2>
-                            </div>-->
+
                     <div class="rightside-container-account-header">
                         <h2>Mon compte</h2>
                     </div>

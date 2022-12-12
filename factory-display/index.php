@@ -46,6 +46,14 @@ if (isset($_SESSION['logged_in'])) {
         }
         ?>
     </header>
+    <?php
+    // display the success message
+    if (isset($success)) {
+        foreach ($success as $message) {
+            echo "<div class='alert alert-success' role='alert'>" . $message . "</div>";
+        }
+    }
+    ?>
     <div class="a-propos">
         <div class="div-main-container">
             <h3>L'entreprise</h3>

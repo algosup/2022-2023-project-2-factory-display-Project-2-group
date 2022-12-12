@@ -12,13 +12,13 @@ body{
     width: 15%;
     float: left;
     height: 100%;
-    background: rgba(36, 36, 36, 0.5);
+    background: whitesmoke;
 }
 .rightside-main-container {
     width: 85%;
     float: right;
     height: 100%;
-    background: rgb(166, 166, 166);
+    background: white;
 }
 
 
@@ -31,19 +31,19 @@ body{
 .leftside-account-container > .leftside-text > .title {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 .leftside-setting-container > .leftside-text > .title {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 .leftside-logout-container > .leftside-text > .title {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin-bottom: 10px;
 }
 
