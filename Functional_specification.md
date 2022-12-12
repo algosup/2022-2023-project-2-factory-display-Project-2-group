@@ -39,7 +39,7 @@ The company commissioned ALGOSUP to create a communication tool to ==centralize 
 Currently, the company share and send the informations via different application like Team, Email or Yammer, but also with a paper display. However, these means of communication are too numerous and even outdated. The company would like to facilitate communication and make it more modern with the digital tools that exist.
 Mr. Saeed, the Project owner of the company, would like a ==simple and secure communication tool==.
 
-source :
+sources :
  - [Jacobi Group history](https://www.jacobi.net/jacobi-history/)
  - [Jacobi Group about](https://www.jacobi.net/about/)
 
@@ -68,7 +68,7 @@ source :
 
 ---
 Information :
-- [exchange report with Mr SAEED](https://docs.google.com/document/d/14CGThUVf1itMEbXqam2NZHnIt6qDEUlVNuUI7ULTiBA/edit?usp=sharing)
+- [exchange report with Mr SAEED](report_meeting.pdf)
 ---
 
 ### 4. Personas and scenario
@@ -108,7 +108,7 @@ Of course, employees will have limited access to the site. On their phone they w
 
 ##### Tomorrow
 
-In the future, on the amdinistrator side, it will be possible to add videos, files (PDF type) via links or QR code or to see the state of the internet network or having more color choices for scenes.
+In the future, on the amdinistrator side, it will be possible to add videos, files (PDF type) via links or QR code or to see the state of the internet network or having more color choices for scenes. We can also add the feature of decorating the scenes during the holidays with decorative frames for Christmas, Halloween or Easter.
 The page may also be translated into several languages to promote the export of the website to other Jacobi production sites.
 
 ### 7. Risks and Assumptions
