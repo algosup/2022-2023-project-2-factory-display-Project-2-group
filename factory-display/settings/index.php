@@ -94,6 +94,7 @@ if (isset($_SESSION['logged_in'])) {
                         <h4>(ng******************com)</h4>
                         <h3>mot de passe : </h3>
                         <h4>(**********)</h4>
+                        <h5><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublier ? </a></h5>
                     </div>
                 </div>
                 <div class="rightside-container-setting">
