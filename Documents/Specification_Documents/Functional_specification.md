@@ -27,7 +27,7 @@
 | Grégory PAGNOUX | Program Manager | [Functional Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Documents/Specification_Documents/Functional_specification.md) |
 | Rémy CHARLES | Tech Leader | [Technical Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Documents/Specification_Documents/Technical_Specification.md) |
 | Audrey Telliez | Software Engineer | none |
-| Pierre GORIN | Quality Assurance | [Test Plan]() |
+| Pierre GORIN | Quality Assurance | [Test Plan](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Documents/Quality_Assurance/Test_Plan.md) |
 
 ### 2. Overview
 
@@ -69,7 +69,7 @@ sources :
 
 ---
 Information :
-- [exchange report with Mr SAEED](report_meeting.pdf)
+- [exchange report with Mr SAEED](../report_meeting.pdf)
 ---
 
 ### 4. Personas and scenario
