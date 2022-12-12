@@ -38,9 +38,6 @@ ___
     - [a. Impact](#a-impact)
     - [b. Metrics](#b-metrics)
   - [5. Work](#5-work)
-    - [a. Work estimates and timelines](#a-work-estimates-and-timelines)
-    - [b. Prioritization](#b-prioritization)
-    - [c. Milestones](#c-milestones)
   - [6. Glossary](#6-glossary)
 
 </details>
@@ -185,17 +182,7 @@ The impact of the project is to allow the Jacobi Group to have a digital signage
 
 ## 5. Work
 
-### a. Work estimates and timelines
-<!-- ! TO DO -->
-
-
-### b. Prioritization
-<!-- ! TO DO -->
-
-
-### c. Milestones
-<!-- ! TO DO -->
-
+See the document Work Estimates and Timelines. <!-- ! add a link -->
 
 <br>
 
