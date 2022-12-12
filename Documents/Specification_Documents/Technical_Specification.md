@@ -175,7 +175,7 @@ The project is accessible to everyone. The screens are accessible to everyone an
 
 ### a. Impact
 
-The impact of the project is to allow the Jacobi Group to have a digital signage system that is easy to install and easy to use. Indeed, the Jacobi Group will be able to install the screens in a few minutes and will be able to use the website to control the screens.  
+The impact of the project is to allow the Jacobi Group to have a digital signage system that is easy to install and easy to use. Indeed, they will be able to install the screens in a few minutes and will be able to use the website to control the screens.  
 <br>
 
 ### b. Metrics
