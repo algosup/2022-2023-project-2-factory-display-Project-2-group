@@ -11,17 +11,19 @@ body {
   background: #f4f4f4;
 }
 
+header{
+  opacity: 0.8;
+
+}
 nav {
   display: flex;
   align-items: center;
   padding: 15px 25px;
   background: #fafafa;
-  box-shadow: inset 0px -1px 0px #c5c5c6;
   width: 100%;
   position: static;
   z-index: 10;
   height: 10vh;
-  margin-left: 10px;
 }
 
 .nav-icon {
