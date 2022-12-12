@@ -24,14 +24,14 @@
 | :-: | :-: | :-: |
 | Nicolas MIDA | Project Manager | [Trello](https://trello.com/b/dzhNxtqm/project-2-web-js)
 |  |  | [Critical Path]() |
-| Grégory PAGNOUX | Program Manager | [Functional Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Functional_specification.md) |
-| Rémy CHARLES | Tech Leader | [Technical Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Technical_Specification.md) |
+| Grégory PAGNOUX | Program Manager | [Functional Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Documents/Specification_Documents/Functional_specification.md) |
+| Rémy CHARLES | Tech Leader | [Technical Specification](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Documents/Specification_Documents/Technical_Specification.md) |
 | Audrey Telliez | Software Engineer | none |
-| Pierre GORIN | Quality Assurance | [Test Plan]() |
+| Pierre GORIN | Quality Assurance | [Test Plan](https://github.com/algosup/2022-2023-project-2-factory-display-Project-2-group/blob/doc/Documents/Quality_Assurance/Test_Plan.md) |
 
 ### 2. Overview
 
-![Jacobi logo](img/Jacobi-logo.jpg)
+![Jacobi logo](../img/Jacobi-logo.jpg)
 
 [Jacobi](http://www.jacobi.net)[^1] is a company ==developing innovative air and water filtration products== with active coals and resin. The company created by Ferdinand Adolphe Wilhelm Jacobi has been in existence since 1916 and continues to develop around the world, such as in Allemangne, Philadelphia, India and Malaysia.
 Remko Goudappel, CEO of Jacobi Company, makes a point of the ==safety== of these customers and products, but also the ==respect of the environment== during each stage of production. To contribute to the success of all these goals, the company can count on these employees whose well-being within the company is also a key point in Jacobi’s success.
@@ -69,7 +69,7 @@ sources :
 
 ---
 Information :
-- [exchange report with Mr SAEED](report_meeting.pdf)
+- [exchange report with Mr SAEED](../report_meeting.pdf)
 ---
 
 ### 4. Personas and scenario
@@ -96,7 +96,7 @@ She arrives at the factory at 7:20 a.m., goes into the locker room to put on her
 On her post, Estelle has a computer that allows her, if she wishes, to have a return of the screens on the same site as Hervé, but she connects with her own employee account. This allows him to follow developments during the day without going through the changing rooms or the cafeteria and thus stay at his workstation.
 
 ### 5. Use case
-![use case](img/use_case.png)
+![use case](../img/use_case.png)
 
 ### 6. What will happen for the site
 
