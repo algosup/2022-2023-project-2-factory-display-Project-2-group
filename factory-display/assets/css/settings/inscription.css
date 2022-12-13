@@ -151,3 +151,7 @@ h3{
 .success{
     border: 1px solid green;
 }
+
+.signup-links{
+    text-decoration: none;
+}

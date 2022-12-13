@@ -154,3 +154,7 @@
     padding:10px;
     margin:10px 0;
 }
+
+.account-links{
+    text-decoration: none;
+}
