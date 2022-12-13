@@ -99,7 +99,6 @@ if (isset($_SESSION['logged_in'])) {
         <div class="rightside-main-container">
             <div class="rightside-containers">
                 <div class="rightside-container-account">
-
                     <div class="rightside-container-account-header">
                         <h2>Mon compte</h2>
                     </div>
@@ -117,9 +116,8 @@ if (isset($_SESSION['logged_in'])) {
                                 <p>Vous êtes connecté en tant qu' <?php echo $_SESSION['role']; ?>.</p>
                             </div>
                         </div>
-
                     </div>
-
+                </div>
                     <div class="rightside-container-setting">
                         <div class="rightside-container-setting-header">
                             <h2>Paramètres</h2>
@@ -152,8 +150,8 @@ if (isset($_SESSION['logged_in'])) {
 
 
         function openSettings() {
-            accountContainer.style.display = "none";
             settingContainer.style.display = "block";
+            accountContainer.style.display = "none";
             adminContainer.style.display = "none";
         }
 
@@ -164,9 +162,9 @@ if (isset($_SESSION['logged_in'])) {
         }
 
         function openAdmin() {
+            adminContainer.style.display = "block";
             accountContainer.style.display = "none";
             settingContainer.style.display = "none";
-            adminContainer.style.display = "block";
         }
     </script>
 </body>
