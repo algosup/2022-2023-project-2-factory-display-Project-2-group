@@ -23,6 +23,7 @@ if (isset($_SESSION['logged_in'])) {
     <title>Mon espace</title>
 
     <script src="/factory-display/assets/headers/header.js"></script>
+    <script src="/factory-display/assets/js/settings/darkmode.js"></script>
 
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
@@ -103,6 +104,7 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                     <div>
                         <p><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublié ? </a></p>
+                        <button id="toggle-mode">Dark mode</button>
                     </div>
                     <div>
                         <!--div class="rightside-container-setting-body">
