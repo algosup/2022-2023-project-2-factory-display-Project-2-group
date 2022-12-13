@@ -77,25 +77,41 @@ if (isset($_SESSION['logged_in'])) {
                         <i class="fa-solid fa-tools"></i>
                     </div>
                 </div>
-                    <hr class="solid">
-                    <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
-                        <div class="leftside-text">
-                            <h2 class="title">Déconnexion</h2>
-                        </div>
-                        <div class="leftside-icons">
-                            <i class="fa-solid fa-sign-out"></i>
-                        </div>
+                <hr class="solid">
+                <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
+                    <div class="leftside-text">
+                        <h2 class="title">Déconnexion</h2>
+                    </div>
+                    <div class="leftside-icons">
+                        <i class="fa-solid fa-sign-out"></i>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="rightside-main-container">
-                <div class="rightside-containers">
-                    <div class="rightside-container-account">
+        <div class="rightside-main-container">
+            <div class="rightside-containers">
+                <div class="rightside-container-account">
 
-                        <div class="rightside-container-account-header">
-                            <h2>Mon compte</h2>
+                    <div class="rightside-container-account-header">
+                        <h2>Mon compte</h2>
+                    </div>
+                    <div class="rightside-container-account-content">
+                        <div class="rightside-container-account-content-left">
+                            <div class="rightside-container-account-content-left-img">
+                                <img src="/factory-display/assets/img/icons/jacobi-icon.png" alt="Jacobi Icon">
+                            </div>
+                            <div class="rightside-container-account-content-left-text">
+                                <h3><?php echo $_SESSION['name']; ?></h3>
+                                <p><?php echo $_SESSION['email']; ?></p>
+                            </div>
                         </div>
+                        <div class="rightside-container-account-content-right">
+                            <div class="rightside-container-account-content-right-text">
+                                <p>Vous êtes connecté en tant que <?php echo $_SESSION['role']; ?>.</p>
+                            </div>
+                        </div>
+
                     </div>
 
                     <div class="rightside-container-setting">
@@ -123,6 +139,7 @@ if (isset($_SESSION['logged_in'])) {
         var account = document.querySelector(".leftside-account-container");
         var setting = document.querySelector(".leftside-setting-container");
         var logout = document.querySelector(".leftside-logout-container");
+        var admin = document.querySelector(".leftside-admin-container");
         var accountContainer = document.querySelector(".rightside-container-account");
         var settingContainer = document.querySelector(".rightside-container-setting");
         var adminContainer = document.querySelector(".rightside-container-admin");

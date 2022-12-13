@@ -56,7 +56,7 @@ body{
 .leftside-account-container .leftside-icons {
     font-size: 2em;
     display: none;
-    color: #d16218
+    color: white;
 }
   
   /* SETTING PART */
@@ -74,7 +74,7 @@ body{
 .leftside-setting-container .leftside-icons {
     font-size: 2em;
     display: none;
-    color: #d16218;
+    color: white;
 }
 
   /* LOGOUT PART */
@@ -92,7 +92,7 @@ body{
 .leftside-logout-container .leftside-icons {
     font-size: 2em;
     display: none;
-    color: #d16218
+    color: white;
 }
 
 /* ADMIN PART */
@@ -282,6 +282,22 @@ a{
 }
 h5{
     margin-left: 290px;
+}
+
+/* Account Right Part */
+
+.rightside-container-account-content-left {
+    width: 50%;
+    height: 100%;
+    background-color: #d16218;
+    float: left;
+}
+
+.rightside-container-account-content-right {
+    width: 50%;
+    height: 100%;
+    background-color: #d16218;
+    float: right;
 }
 
 
