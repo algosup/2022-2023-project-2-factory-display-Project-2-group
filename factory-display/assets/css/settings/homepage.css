@@ -215,6 +215,13 @@ body{
     transition: 0.3s;
 }
 
+.leftside-admin-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
 hr.solid {
     border-top: 3px solid #000000;
 }
@@ -291,6 +298,7 @@ h5{
     height: 100%;
     background-color: #d16218;
     float: left;
+    border: 1px solid black
 }
 
 .rightside-container-account-content-right {

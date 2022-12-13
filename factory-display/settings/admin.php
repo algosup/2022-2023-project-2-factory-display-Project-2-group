@@ -14,6 +14,9 @@ if (isset($_SESSION['role'])) {
 ?>
 
 <?php
-if ($authorize) {
-    echo "You are authorized to access this page";
-} ?>
+// we print the error message if there is one
+if (isset($error)) {
+    foreach ($error as $error) {
+        echo '<p class="error">' . $error . '</p>';
+    }
+}

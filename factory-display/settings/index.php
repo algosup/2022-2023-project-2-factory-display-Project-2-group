@@ -20,7 +20,7 @@ if (isset($_SESSION['logged_in'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
-    <title>Mon espace</title>
+    <title>Mon Espace</title>
 
     <script src="/factory-display/assets/headers/header.js"></script>
     <script src="/factory-display/assets/js/settings/darkmode.js"></script>
@@ -30,6 +30,7 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/homepage.css">
+    <link rel="stylesheet" href="/factory-display/assets/css/settings/admin.css">
 
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 
