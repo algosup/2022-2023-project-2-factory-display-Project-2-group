@@ -249,8 +249,10 @@ function themeOne (){
   theme = 1;
   document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-1.png')";
   document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-1.png')";
-  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png')";
-
+  document.querySelectorAll("#date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png')";
+  document.querySelectorAll("#date-hour-placeholder")[1].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png')";
+  document.getElementById("news-lg-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-1.png')";
+  document.getElementById("weather-sm-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-1.png')";
 
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
   document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-1.png')";
@@ -261,6 +263,12 @@ function themeOne (){
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
   document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-1.png')";
 }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".news-lg-placeholder") !== null) {
+  document.getElementsByClassName("news-lg-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-1.png')";
+}
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".weather-sm-placeholder") !== null) {
+  document.getElementsByClassName("weather-sm-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-1.png')";
+}
   
   document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#3e3e3e";
   console.log("theme 1 loaded");
@@ -270,10 +278,11 @@ function themeTwo (){
   theme = 2;
   document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-2.png')";
   document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-2.png')";
-  for (let i = 0; i < document.getElementsByClassName("custom-canva")[0].querySelectorAll(".date-hour-placeholder").length; i++) {
-    document.getElementsByClassName("date-hour-placeholder")[i].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
-  }
-  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
+  document.querySelectorAll("#date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
+  document.querySelectorAll("#date-hour-placeholder")[1].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
+  document.getElementById("news-lg-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-2.png')";
+  document.getElementById("weather-sm-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-2.png')";
+
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
     document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-2.png')";
   }
@@ -283,6 +292,12 @@ function themeTwo (){
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
     document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-2.png')";
   }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".news-lg-placeholder") !== null) {
+    document.getElementsByClassName("news-lg-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-2.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".weather-sm-placeholder") !== null) {
+    document.getElementsByClassName("weather-sm-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-2.png')";
+  }
   document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#000000";
   console.log("theme 2 loaded");
 }
@@ -291,7 +306,10 @@ function themeThree (){
   theme = 3;
   document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-3.png')";
   document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-3.png')";
-  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-3.png')";
+  document.querySelectorAll("#date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-3.png')";
+  document.querySelectorAll("#date-hour-placeholder")[1].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-3.png')";
+  document.getElementById("news-lg-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-3.png')";
+  document.getElementById("weather-sm-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-3.png')";
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
     document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-3.png')";
   }
@@ -301,6 +319,12 @@ function themeThree (){
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
     document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-3.png')";
   }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".news-lg-placeholder") !== null) {
+    document.getElementsByClassName("news-lg-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-3.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".weather-sm-placeholder") !== null) {
+    document.getElementsByClassName("weather-sm-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-3.png')";
+  }
   document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#333333";
   console.log("theme 3 loaded");
 }
@@ -309,7 +333,10 @@ function themeFour (){
   theme = 4;
   document.getElementById("clock-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-4.png')";
   document.getElementById("date-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date/date_theme-4.png')";
-  document.getElementById("date-hour-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-4.png')";
+  document.querySelectorAll("#date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-4.png')";
+  document.querySelectorAll("#date-hour-placeholder")[1].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-4.png')";
+  document.getElementById("news-lg-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-4.png')";
+  document.getElementById("weather-sm-placeholder").style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-4.png')";
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".clock-placeholder") !== null) {
     document.getElementsByClassName("clock-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/clock/clock_theme-4.png')";
   }
@@ -318,6 +345,12 @@ function themeFour (){
   }
   if (document.getElementsByClassName("custom-canva")[0].querySelector(".date-hour-placeholder") !== null) {
     document.getElementsByClassName("date-hour-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/date_hour/date-hour_theme-4.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".news-lg-placeholder") !== null) {
+    document.getElementsByClassName("news-lg-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/news-lg/news_theme-4.png')";
+  }
+  if (document.getElementsByClassName("custom-canva")[0].querySelector(".weather-sm-placeholder") !== null) {
+    document.getElementsByClassName("weather-sm-placeholder")[0].style.backgroundImage = "url('/factory-display/assets/img/widgets/placeholder/weather-sm/weather_theme-4.png')";
   }
   document.getElementsByClassName("custom-canva")[0].style.backgroundColor = "#e3e3e3";
   console.log("theme 4 loaded");

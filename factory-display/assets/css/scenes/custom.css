@@ -76,9 +76,9 @@ body {
 }
 
 .move i {
-  font-size: 12px;
+  font-size: 10px;
   color: black;
-  transform: translateY(-5px) translateX(2px);
+  transform: translateY(-5px);
 }
 
 .delete {
@@ -93,9 +93,9 @@ body {
 }
 
 .delete i {
-  font-size: 12px;
+  font-size: 10px;
   color: red;
-  transform: translateY(-5px) translateX(3px);
+  transform: translateY(-5px);
 }
 
 .resize {
@@ -112,9 +112,9 @@ body {
 }
 
 .resize i {
-  font-size: 11px;
+  font-size: 10px;
   color: black;
-  transform: translateY(-5px) translateX(3px);
+  transform: translateY(-5px);
 }
 
 .resize-drag {

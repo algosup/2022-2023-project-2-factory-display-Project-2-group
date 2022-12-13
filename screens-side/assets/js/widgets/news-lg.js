@@ -1,5 +1,7 @@
-const API_KEY = "42464cbc68ca4ed5b2cc0fe5fa538f46";
-const url = "https://newsapi.org/v2/top-headlines?country=fr&apiKey=" + API_KEY;
+// const url = "https://newsapi.org/v2/top-headlines?country=fr&apiKey=";
+// const API_KEY = "42464cbc68ca4ed5b2cc0fe5fa538f46";
+const API_KEY = "40bb3943-5966-4adc-b05b-9ad0395b094f"
+const url = "https://api.webz.io/filterWebContent?token="+API_KEY+"&q=site_type:news%20country:FR"
 
 
 const news = document.querySelector(".news");

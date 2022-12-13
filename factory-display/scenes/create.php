@@ -145,7 +145,6 @@ else {
         </div>
         <div class="row custom-canva">
           <div class="resize-container">
-            <div class="resize-drag news-lg-placeholder"></div>
           </div>
         </div>
       </div>
