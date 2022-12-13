@@ -17,7 +17,7 @@
         - [Tomorrow](#tomorrow)
     - [8. Risks and Assumptions](#8-risks-and-assumptions)
     - [9. Security](#9-security)
-    - [10. Development and environement and Requirements](#10-development-and-environement-and-requirements)
+    - [10. Development and environement](#10-development-and-environement)
     - [Glossary](#glossary)
 
 ### 1. Project role distribution
@@ -153,7 +153,7 @@ Also, we have opted for Microsoft Azure as the host for the website, because the
 source :
  - [Azure avantages](https://mobiskill.fr/blog/conseils-emploi-tech/aws-vs-azure-quelle-plateforme-cloud-choisir/)
 
-### 10. Development and environement and Requirements
+### 10. Development and environement
 
   - HTML[^3]
   - CSS [^4]
