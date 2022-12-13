@@ -81,11 +81,10 @@ if (isset($_SESSION['logged_in'])) {
                                 <i class="fa-solid fa-tools"></i>
                             </div>
                         </div>
+                        <hr class="solid">
                 <?php }
                 }
                 ?>
-
-                <hr class="solid">
                 <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
                     <div class="leftside-text">
                         <h2 class="title">Déconnexion</h2>

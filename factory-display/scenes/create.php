@@ -39,16 +39,24 @@ else {
   <link rel="stylesheet" href="/factory-display/assets/css/scenes/custom.css">
   <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
   <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
+
+  <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
   
 </head>
 
 <body onload="loadFirstView()">
 
-
-
-
-
-  <header></header>
+<header>
+    <?php
+    if (isset($_SESSION['role'])) {
+      if ($_SESSION['role'] == "user") {
+        @include '../assets/headers/header-user.html';
+      } else
+        if ($_SESSION['role'] == "admin") {
+          @include '../assets/headers/header-admin.html';
+        }
+    }
+    ?>
 
   <div class="d-flex justify-content-center">
     <h1 id="global-title">Nouvelle scène</h1>
