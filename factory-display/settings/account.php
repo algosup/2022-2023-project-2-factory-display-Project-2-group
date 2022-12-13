@@ -112,9 +112,9 @@ if (isset($_POST['submit'])) {
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
 
-            <input type="submit" name="submit" value="Connectez-vous" class="form-btn" onclick="showMessage()">
+            <input type="submit" name="submit" value="Connexion" class="form-btn" onclick="showMessage()">
 
-            <p>Vous n'avez pas de compte ? <a href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
-            <p>Mot de passe oublié ? <a href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>
+            <p>Vous n'avez pas de compte ? <a class="account-links" href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
+            <p>Mot de passe oublié ? <a class="account-links" href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>
         </form>
 </body>

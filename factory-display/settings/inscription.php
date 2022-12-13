@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
     </header>
     <div class="form-container">
         <form action="" method="post">
-            <h1>Inscrivez-vous:</h1>
+            <h1>Inscrivez-vous :</h1>
 
             <?php
             if (isset($error)) {
@@ -91,8 +91,8 @@ if (isset($_POST['submit'])) {
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye1" onclick="changer1()" />
             </div>
 
-            <input type="submit" name="submit" value="Inscrivez-vous" class="form-btn">
-            <p> Vous avez déjà un compte ? <a href="/factory-display/settings/account.php">Connectez-vous </a></p>
+            <input type="submit" name="submit" value="Inscription" class="form-btn">
+            <p> Vous avez déjà un compte ? <a class="signup-links" href="/factory-display/settings/account.php"> Connectez-vous </a></p>
 
         </form>
 </body>

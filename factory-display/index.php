@@ -5,7 +5,7 @@ session_start();
 
 // check if the user is logged in with $_SESSION['logged_in']
 if (isset($_SESSION['logged_in'])) {
-    $success[] = "Vous êtes connecté en tant que " . $_SESSION['name'] . ".";
+    $success[] = "Bienvenue " . $_SESSION['name'] . " !";
 
 } else {
     // redirect to the login page
@@ -50,7 +50,7 @@ if (isset($_SESSION['logged_in'])) {
     // display the success message
     if (isset($success)) {
         foreach ($success as $message) {
-            echo "<div class='alert alert-success' role='alert'>" . $message . "</div>";
+            echo "<div class='alert alert-success'>" . $message . "</div>";
         }
     }
     ?>
