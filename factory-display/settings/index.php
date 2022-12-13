@@ -106,8 +106,10 @@ if (isset($_SESSION['logged_in'])) {
                     <div class="rightside-container-account-content">
                         <div class="rightside-container-account-content-left">
                             <div class="rightside-container-account-content-left-text">
-                                <h3>Nom : <?php echo $_SESSION['name']; ?></h3>
+                                <h3>Informations personnelles</h3>
+                                <p>Nom : <?php echo $_SESSION['name']; ?></p>
                                 <p>E-mail : <?php echo $_SESSION['email']; ?></p>
+                                <p>Role : <?php if($_SESSION['role'] == "user") { echo "Utilisateur"; } else { echo "Administrateur"; } ?></p>
                             </div>
                         </div>
                         <div class="rightside-container-account-content-right">
