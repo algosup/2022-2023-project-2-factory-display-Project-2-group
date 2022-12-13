@@ -7,5 +7,14 @@
     text-align: center;
     /* add a little margin to the top */
     margin-top: 1em;
-    
+
+}
+
+.admin-main-content-header {
+    background-color: #d16218;
+    color: white;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-align: center;
 }

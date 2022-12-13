@@ -70,14 +70,21 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                 </div>
                 <hr class="solid">
-                <div class="leftside-admin-container" onclick=openAdmin()>
-                    <div class="leftside-text">
-                        <h2 class="title"> Administration</h2>
-                    </div>
-                    <div class="leftside-icons">
-                        <i class="fa-solid fa-tools"></i>
-                    </div>
-                </div>
+                <?php
+                if (isset($_SESSION['role'])) {
+                    if ($_SESSION['role'] == "admin") { ?>
+                        <div class="leftside-admin-container" onclick=openAdmin()>
+                            <div class="leftside-text">
+                                <h2 class="title"> Administration</h2>
+                            </div>
+                            <div class="leftside-icons">
+                                <i class="fa-solid fa-tools"></i>
+                            </div>
+                        </div>
+                <?php }
+                }
+                ?>
+
                 <hr class="solid">
                 <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
                     <div class="leftside-text">
