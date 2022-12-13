@@ -6,17 +6,19 @@
     - [1. Project role distribution](#1-project-role-distribution)
     - [2. Overview](#2-overview)
     - [3. Goals and non goals](#3-goals-and-non-goals)
-    - [4. Personas and scenario](#4-personas-and-scenario)
+    - [4. Requirement](#4-requirement)
+    - [5. Personas and scenario](#5-personas-and-scenario)
         - [a. Hervé](#a-hervé)
         - [b. Solange](#b-solange)
         - [c. Estelle](#c-estelle)
-    - [5. Use case](#5-use-case)
-    - [6. What will happen for the site](#6-what-will-happen-for-the-site)
+    - [6. Use case](#6-use-case)
+    - [7. What will happen for the site](#7-what-will-happen-for-the-site)
         - [Today](#today)
         - [Tomorrow](#tomorrow)
-    - [7. Risks and Assumptions](#7-risks-and-assumptions)
+    - [8. Risks and Assumptions](#8-risks-and-assumptions)
+    - [9. Security](#9-security)
     - [8. Development and environement and Requirements](#8-development-and-environement-and-requirements)
-    - [9. Glossary](#9-glossary)
+    - [Glossary](#glossary)
 
 ### 1. Project role distribution
 
@@ -67,12 +69,29 @@ sources :
 
 - Do not use the screen for entertainment purposes
 
+### 4. Requirement
+
+F0 = mandatory
+F1 = important
+F2 = secondary
+
+| Function | Criteria | Level | Tolerance | Flexibility |
+| :-: | :-: | :-: | :-: | :-: |
+| site connexion | status | connected/disconnected | None | F0 |
+|  | account | administrator/visitor | None | F0 |
+| create the scenes | display | portrait/landscape | None | F1 |
+|  | color theme | orange/blue/black/red | one | F2 |
+|  | widget | text | None | F0 |
+|  | widget | picture/news/date/clock/weather | one for each categories | F1 |
+| share the scenes | screen | cafeteria/locker room | None | F0 |
+| site theme | color | dark/light mode | one | F2 |
+
 ---
 Information :
 - [exchange report with Mr SAEED](../report_meeting.pdf)
 ---
 
-### 4. Personas and scenario
+### 5. Personas and scenario
 
 ##### a. Hervé
 
@@ -95,10 +114,11 @@ Estelle is 39, engaged to Alan, her 36-year-old Product Manager, and they have a
 She arrives at the factory at 7:20 a.m., goes into the locker room to put on her work clothes and goes in front of the screen to discover possible news.
 On her post, Estelle has a computer that allows her, if she wishes, to have a return of the screens on the same site as Hervé, but she connects with her own employee account. This allows him to follow developments during the day without going through the changing rooms or the cafeteria and thus stay at his workstation.
 
-### 5. Use case
+### 6. Use case
+
 ![use case](../img/use_case.png)
 
-### 6. What will happen for the site
+### 7. What will happen for the site
 
 ##### Today
 
@@ -112,7 +132,7 @@ Of course, employees will have limited access to the site. On their phone they w
 In the future, on the amdinistrator side, it will be possible to add videos, files (PDF type) via links or QR code or to see the state of the internet network or having more color choices for scenes. We can also add the feature of decorating the scenes during the holidays with decorative frames for Christmas, Halloween or Easter.
 The page may also be translated into several languages to promote the export of the website to other Jacobi production sites.
 
-### 7. Risks and Assumptions
+### 8. Risks and Assumptions
 
 **the reglementation of data backups :**
 
@@ -124,6 +144,12 @@ There are three different archives depending on the type of data :
 source :
  - [CNIL](https://www.cnil.fr/sites/default/files/atoms/files/guide_durees_de_conservation.pdf)[^2]
 
+### 9. Security
+
+First of all, for the security of the site, we have an obligation to log in with an administrator account in order to be able to access all the functionality of the site.
+In addition, all passwords are written to prevent the maximum theft of data.
+Also,<!-- site web basé sur azure (se renseigner) -->
+
 ### 8. Development and environement and Requirements
 
   - HTML[^3]
@@ -133,7 +159,7 @@ source :
   - Windows/MacOS on development
 
 ---
-### 9. Glossary
+### Glossary
 
 [^1]: Jacobi
 It's an air and water purification solutions company. The company is based in Vierzon since 1956.
