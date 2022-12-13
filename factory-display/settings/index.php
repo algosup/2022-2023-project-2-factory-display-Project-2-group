@@ -43,8 +43,8 @@ if (isset($_SESSION['logged_in'])) {
                 @include '../assets/headers/header-user.html';
             } else
                 if ($_SESSION['role'] == "admin") {
-                @include '../assets/headers/header-admin.html';
-            }
+                    @include '../assets/headers/header-admin.html';
+                }
         }
         ?>
     </header>
@@ -69,45 +69,54 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                 </div>
                 <hr class="solid">
-                <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
+                <div class="leftside-admin-container" onclick=openAdmin()>
                     <div class="leftside-text">
-                        <h2 class="title">Déconnexion</h2>
+                        <h2 class="title"> Administration</h2>
                     </div>
                     <div class="leftside-icons">
-                        <i class="fa-solid fa-sign-out"></i>
+                        <i class="fa-solid fa-tools"></i>
                     </div>
-                </div>
+                    <hr class="solid">
+                    <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
+                        <div class="leftside-text">
+                            <h2 class="title">Déconnexion</h2>
+                        </div>
+                        <div class="leftside-icons">
+                            <i class="fa-solid fa-sign-out"></i>
+                        </div>
+                    </div>
 
+                </div>
             </div>
-        </div>
 
-        <div class="rightside-main-container">
-            <div class="rightside-containers">
-                <div class="rightside-container-account">
+            <div class="rightside-main-container">
+                <div class="rightside-containers">
+                    <div class="rightside-container-account">
 
-                    <div class="rightside-container-account-header">
-                        <h2>Mon compte</h2>
+                        <div class="rightside-container-account-header">
+                            <h2>Mon compte</h2>
+                        </div>
+                        <div class="profil">
+                            <h3>nom d'utilisateur : </h3>
+                            <h4>(nom)</h4>
+                            <h3>email : </h3>
+                            <h4>(ng******************com)</h4>
+                            <h3>mot de passe : </h3>
+                            <h4>(**********)</h4>
+                            <h5><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublier ? </a>
+                            </h5>
+                        </div>
                     </div>
-                    <div class="profil">
-                        <h3>nom d'utilisateur : </h3>
-                        <h4>(nom)</h4>
-                        <h3>email : </h3>
-                        <h4>(ng******************com)</h4>
-                        <h3>mot de passe : </h3>
-                        <h4>(**********)</h4>
-                        <h5><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublier ? </a></h5>
-                    </div>
-                </div>
-                <div class="rightside-container-setting">
-                    <div class="rightside-container-setting-header">
-                        <h2>Paramètres</h2>
-                    </div>
-                    <div>
-                        <p><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublié ? </a></p>
-                        <button id="toggle-mode">Dark mode</button>
-                    </div>
-                    <div>
-                        <!--div class="rightside-container-setting-body">
+                    <div class="rightside-container-setting">
+                        <div class="rightside-container-setting-header">
+                            <h2>Paramètres</h2>
+                        </div>
+                        <div>
+                            <p><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublié ? </a></p>
+                            <button id="toggle-mode">Dark mode</button>
+                        </div>
+                        <div>
+                            <!--div class="rightside-container-setting-body">
                             <div class="rightside-container-setting-body-left">
                                 <div class="setting-theme">
                                     <h2>Thème</h2>
@@ -120,11 +129,14 @@ if (isset($_SESSION['logged_in'])) {
                                 </div>
                             </div>
                         </div-->
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="rightside-container-admin">
+                <?php include('admin.php'); ?>
+            </div>
         </div>
-    </div>
     </div>
     <script>
         // Open the div when the user clicks on the icon and display it on the right side 
@@ -133,16 +145,20 @@ if (isset($_SESSION['logged_in'])) {
         var logout = document.querySelector(".leftside-logout-container");
         var accountContainer = document.querySelector(".rightside-container-account");
         var settingContainer = document.querySelector(".rightside-container-setting");
+        var adminContainer = document.querySelector(".rightside-container-admin");
+
 
         function openSettings() {
             accountContainer.style.display = "none";
             settingContainer.style.display = "block";
+            adminContainer.style.display = "none";
         }
 
         function openAccount() {
             accountContainer.style.display = "block";
             settingContainer.style.display = "none";
-        }
+            adminContainer.style.display = "none";
+    }
     </script>
 </body>
 

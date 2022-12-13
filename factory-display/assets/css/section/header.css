@@ -12,7 +12,7 @@ body {
 }
 
 header{
-  opacity: 0.8;
+  backdrop-filter : opacity(0.5);
 
 }
 nav {
