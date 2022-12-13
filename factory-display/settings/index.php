@@ -105,17 +105,14 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                     <div class="rightside-container-account-content">
                         <div class="rightside-container-account-content-left">
-                            <div class="rightside-container-account-content-left-img">
-                                <img src="/factory-display/assets/img/icons/jacobi-icon.png" alt="Jacobi Icon">
-                            </div>
                             <div class="rightside-container-account-content-left-text">
-                                <h3><?php echo $_SESSION['name']; ?></h3>
-                                <p><?php echo $_SESSION['email']; ?></p>
+                                <h3>Nom : <?php echo $_SESSION['name']; ?></h3>
+                                <p>E-mail : <?php echo $_SESSION['email']; ?></p>
                             </div>
                         </div>
                         <div class="rightside-container-account-content-right">
                             <div class="rightside-container-account-content-right-text">
-                                <p>Vous êtes connecté en tant que <?php echo $_SESSION['role']; ?>.</p>
+                                <p>Vous êtes connecté en tant qu' <?php echo $_SESSION['role']; ?>.</p>
                             </div>
                         </div>
 

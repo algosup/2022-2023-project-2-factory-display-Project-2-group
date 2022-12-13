@@ -1,71 +1,76 @@
-body{
+body {
     font-family: Noto Sans;
 }
+
 .main-div {
     height: 90vh;
     width: 100vw;
     z-index: -1;
     position: absolute;
 }
+
 .leftside-main-container {
     width: 15%;
     float: left;
     height: 100%;
     background: #d16218;
 }
+
 .rightside-main-container {
     width: 85%;
     float: right;
     height: 100%;
     background: rgb(239, 239, 239);
 }
-  
-  
-  /* ACCOUNT PART */
-.leftside-account-container{
+
+
+/* ACCOUNT PART */
+.leftside-account-container {
     text-align: center;
     margin-top: 20px;
 }
-  
-.leftside-account-container > .leftside-text > .title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-.leftside-setting-container > .leftside-text > .title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-.leftside-logout-container > .leftside-text > .title {
+
+.leftside-account-container>.leftside-text>.title {
     font-size: 20px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 10px;
 }
 
-.leftside-admin-container > .leftside-text > .title {
+.leftside-setting-container>.leftside-text>.title {
     font-size: 20px;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 10px;
 }
-  
+
+.leftside-logout-container>.leftside-text>.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.leftside-admin-container>.leftside-text>.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
 .leftside-account-container .leftside-icons {
     font-size: 2em;
     display: none;
     color: white;
 }
-  
-  /* SETTING PART */
-.leftside-setting-container{
+
+/* SETTING PART */
+.leftside-setting-container {
     text-align: center;
     margin-top: 20px;
 }
-  
-.leftside-setting-container .leftside-text{
+
+.leftside-setting-container .leftside-text {
     color: #d16218;
     font-size: 20px;
     font-weight: 300;
@@ -77,13 +82,14 @@ body{
     color: white;
 }
 
-  /* LOGOUT PART */
-.leftside-logout-container{
+/* LOGOUT PART */
+.leftside-logout-container {
     text-align: center;
     margin-top: 20px;
 
 }
-.leftside-logout-container .leftside-text{
+
+.leftside-logout-container .leftside-text {
     color: #d16218;
     font-size: 1px;
     font-weight: 700;
@@ -97,12 +103,12 @@ body{
 
 /* ADMIN PART */
 
-.leftside-admin-container{
+.leftside-admin-container {
     text-align: center;
     margin-top: 20px;
 }
 
-.leftside-admin-container .leftside-text{
+.leftside-admin-container .leftside-text {
     color: #d16218;
     font-size: 20px;
     font-weight: 300;
@@ -114,15 +120,16 @@ body{
     color: white;
 }
 
-  /* Media query */
+/* Media query */
 
 @media (max-width: 900px) {
+
     /* Account part */
     .leftside-account-container .leftside-icons {
         display: block;
     }
 
-    .leftside-account-container .leftside-text{
+    .leftside-account-container .leftside-text {
         display: none;
     }
 
@@ -131,7 +138,7 @@ body{
         display: block;
     }
 
-    .leftside-setting-container .leftside-text{
+    .leftside-setting-container .leftside-text {
         display: none;
     }
 
@@ -139,7 +146,8 @@ body{
     .leftside-logout-container .leftside-icons {
         display: block;
     }
-    .leftside-logout-container .leftside-text{
+
+    .leftside-logout-container .leftside-text {
         display: none;
     }
 
@@ -148,24 +156,24 @@ body{
         display: block;
     }
 
-    .leftside-admin-container .leftside-text{
+    .leftside-admin-container .leftside-text {
         display: none;
     }
 }
 
-  /* Rightside */
+/* Rightside */
 
 .rightside-container-account {
     color: rgb(0, 0, 0);
     display: none;
 }
 
-.rightside-container-account > .rightside-container-account-header {
+.rightside-container-account>.rightside-container-account-header {
     text-align: center;
     padding-top: 10px;
     border: 5px solid #d16218;
     box-shadow: 0px 0px 10px 0px #d16218;
-    color : #d16218;
+    color: #d16218;
     border-top: none;
     width: 40%;
     margin: 0 auto;
@@ -173,19 +181,20 @@ body{
     font-style: normal;
     font-size: 20px;
 }
-  
+
 .rightside-container-account-body-left {
     width: 100%;
     height: 100%;
     background-color: brown;
 }
-  
-.rightside-container-account-body-left > .account-prenom {
+
+.rightside-container-account-body-left>.account-prenom {
     display: inline-block;
-    background-color: aqua; 
+    background-color: aqua;
 }
-.rightside-container-account-body-left > .account-nom {
-    display: inline-block;   
+
+.rightside-container-account-body-left>.account-nom {
+    display: inline-block;
     background-color: blue;
 }
 
@@ -196,7 +205,7 @@ body{
     display: none;
 }
 
-  /* Hover effect */
+/* Hover effect */
 .leftside-account-container:hover {
     cursor: pointer;
     transform: scale(1.1);
@@ -228,37 +237,39 @@ hr.solid {
 
 
 
-  /* Path: factory-display\assets\css\settings\homepage.css */
+/* Path: factory-display\assets\css\settings\homepage.css */
 
-.profil h3{
+.profil h3 {
     margin-left: 30px;
     text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
     color: #d16218;
 }
-.profil h4{
+
+.profil h4 {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 10px;
     color: rgb(0, 0, 0);
     margin-left: 40px;
-    background-color: #adadad;   
+    background-color: #adadad;
     border-radius: 5px;
     padding: 5px;
     font-weight: 5px;
     width: 500px;
 }
-.profil{
+
+.profil {
     margin-bottom: 100px;
 }
 
-.rightside-container-setting > .rightside-container-setting-header {
+.rightside-container-setting>.rightside-container-setting-header {
     text-align: center;
     padding-top: 10px;
     border: 5px solid #d16218;
     box-shadow: 0px 0px 10px 0px #d16218;
-    color : #d16218;
+    color: #d16218;
     border-top: none;
     width: 40%;
     margin: 0 auto;
@@ -267,12 +278,12 @@ hr.solid {
     font-size: 20px;
 }
 
-.rightside-container-deconnexion > .rightside-container-deconnexion-header {
+.rightside-container-deconnexion>.rightside-container-deconnexion-header {
     text-align: center;
     padding-top: 10px;
     border: 5px solid #d16218;
     box-shadow: 0px 0px 10px 0px #d16218;
-    color : #d16218;
+    color: #d16218;
     border-top: none;
     width: 40%;
     margin: 0 auto;
@@ -281,31 +292,77 @@ hr.solid {
     font-size: 20px;
 }
 
-a{
+a {
     text-align: left;
-    margin-top:10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     color: rgb(49, 44, 44);
 }
-h5{
+
+h5 {
     margin-left: 290px;
 }
 
 /* Account Right Part */
 
 .rightside-container-account-content-left {
-    width: 50%;
+    width: 45%;
     height: 100%;
     background-color: #d16218;
     float: left;
-    border: 1px solid black
+    box-shadow: 0px 0px 10px 0px black;
+    margin-left: 15px;
+}
+
+.rightside-container-account-content-left-text {
+    text-align: center;
+    padding-top: 10px;
+    color: #d16218;
+    border-top: none;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 .rightside-container-account-content-right {
-    width: 50%;
+    width: 45%;
     height: 100%;
     background-color: #d16218;
     float: right;
+    box-shadow: 0px 0px 10px 0px black;
+    margin-right: 15px;
 }
 
+.rightside-container-account-content-right-text {
+    text-align: center;
+    padding-top: 10px;
+    color: #d16218;
+    border-top: none;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
 
+@media (max-width: 500px) {
+    .rightside-container-account-content-left {
+        width: 100%;
+        height: 100%;
+        background-color: #d16218;
+        box-shadow: 0px 0px 10px 0px black;
+        margin-left: 15px;
+        display: block;
+    }
+
+    .rightside-container-account-content-right {
+        width: 100%;
+        height: 100%;
+        background-color: #d16218;
+        box-shadow: 0px 0px 10px 0px black;
+        margin-right: 15px;
+        display: block;
+    }
+}
