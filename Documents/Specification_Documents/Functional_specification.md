@@ -17,7 +17,7 @@
         - [Tomorrow](#tomorrow)
     - [8. Risks and Assumptions](#8-risks-and-assumptions)
     - [9. Security](#9-security)
-    - [8. Development and environement and Requirements](#8-development-and-environement-and-requirements)
+    - [10. Development and environement and Requirements](#10-development-and-environement-and-requirements)
     - [Glossary](#glossary)
 
 ### 1. Project role distribution
@@ -67,7 +67,7 @@ sources :
 
 **Non goals :**
 
-- Do not use the screen for entertainment purposes
+- Don't use the screen for entertainment purposes
 
 ### 4. Requirement
 
@@ -146,11 +146,14 @@ source :
 
 ### 9. Security
 
-First of all, for the security of the site, we have an obligation to log in with an administrator account in order to be able to access all the functionality of the site.
-In addition, all passwords are written to prevent the maximum theft of data.
-Also,<!-- site web basé sur azure (se renseigner) -->
+First of all, for the security of the site, we have an ==obligation to log== in with an administrator account in order to be able to access all the functionality of the site.
+In addition, all ==passwords are written to prevent== the maximum theft of data.
+Also, we have opted for Microsoft Azure as the host for the website, because they are ==certified secure==, both on the virtual and physical level, they provide ==high-quality encryption==, ==multifractional authentication== and ==real-time analysis==.
 
-### 8. Development and environement and Requirements
+source :
+ - [Azure avantages](https://mobiskill.fr/blog/conseils-emploi-tech/aws-vs-azure-quelle-plateforme-cloud-choisir/)
+
+### 10. Development and environement and Requirements
 
   - HTML[^3]
   - CSS [^4]
