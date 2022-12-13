@@ -20,8 +20,8 @@ if (isset($error)) {
     }
 }
 ?>
-<div class="admin-main-content">
-    <div class="admin-main-content-header">
-        <h2>Administration</h2>
+    <div class="admin-main-content">
+        <div class="admin-main-content-header">
+            <h2>Administration</h2>
+        </div>
     </div>
-</div>
