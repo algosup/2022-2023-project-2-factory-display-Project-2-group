@@ -45,6 +45,13 @@ body{
     color: #ffffff;
     margin-bottom: 10px;
 }
+
+.leftside-admin-container > .leftside-text > .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
   
 .leftside-account-container .leftside-icons {
     font-size: 2em;
@@ -88,6 +95,27 @@ body{
     color: #d16218
 }
 
+/* ADMIN PART */
+
+.leftside-admin-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.leftside-admin-container .leftside-text{
+    color: #d16218;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.leftside-admin-container .leftside-icons {
+    font-size: 2em;
+    display: none;
+    color: white;
+}
+
+  /* Media query */
+
 @media (max-width: 900px) {
     /* Account part */
     .leftside-account-container .leftside-icons {
@@ -112,6 +140,15 @@ body{
         display: block;
     }
     .leftside-logout-container .leftside-text{
+        display: none;
+    }
+
+    /* Admin part */
+    .leftside-admin-container .leftside-icons {
+        display: block;
+    }
+
+    .leftside-admin-container .leftside-text{
         display: none;
     }
 }

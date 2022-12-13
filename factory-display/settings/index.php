@@ -103,8 +103,8 @@ if (isset($_SESSION['logged_in'])) {
                             <h2>Paramètres</h2>
                         </div>
                         <div>
-                            <p><a href="/factory-display/settings/passwordforgot.html"> mot de passe oublié ? </a></p>
-                            <button id="toggle-mode">Dark mode</button>
+                            <p><a href="/factory-display/settings/passwordforgot.html"> Mot de passe oublié ? </a></p>
+                            <button id="toggle-mode">Mode Sombre</button>
                         </div>
                     </div>
 
@@ -138,6 +138,12 @@ if (isset($_SESSION['logged_in'])) {
             accountContainer.style.display = "block";
             settingContainer.style.display = "none";
             adminContainer.style.display = "none";
+        }
+
+        function openAdmin() {
+            accountContainer.style.display = "none";
+            settingContainer.style.display = "none";
+            adminContainer.style.display = "block";
         }
     </script>
 </body>
