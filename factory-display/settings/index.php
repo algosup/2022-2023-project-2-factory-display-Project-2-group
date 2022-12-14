@@ -90,72 +90,69 @@ if (isset($_SESSION['logged_in'])) {
                 </div>
             </div>
         </div>
-    </div>
 
-
-
-    <div class="rightside-main-container">
-        <div class="rightside-containers">
-            <div class="rightside-container-account">
-                <div class="rightside-container-account-header">
-                    <h2>Mon compte</h2>
-                </div>
-                <div class="rightside-container-account-content">
-                    <div class="account-header">
-                        <div id="icon">
-                            <i class="fa-solid fa-user-large"></i>
+        <div class="rightside-main-container">
+            <div class="rightside-containers">
+                <div class="rightside-container-account">
+                    <div class="rightside-container-account-header">
+                        <h2>Mon compte</h2>
+                    </div>
+                    <div class="rightside-container-account-content">
+                        <div class="account-header">
+                            <div id="icon">
+                                <i class="fa-solid fa-user-large"></i>
+                            </div>
+                            <div id="title">
+                                <h3>Informations personnelles</h3>
+                            </div>
                         </div>
-                        <div id="title">
-                            <h3>Informations personnelles</h3>
+                        <hr class="solid">
+                        <div>
+                            <div class="name">
+                                <p><b>Nom :</b>
+                                    <?php echo '<input type="text" name="name" value="' . $_SESSION['name'] . '" disabled>'; ?>
+                                </p>
+                            </div>
+                            <div class="email">
+                                <p><b>E-mail :</b>
+                                    <?php echo '<input type="text" name="email" value="' . $_SESSION['email'] . '" disabled>'; ?>
+                                </p>
+                            </div>
+                            <div class="role">
+                                <p><b>Rôle :</b>
+                                    <?php
+                                    if ($_SESSION['role'] == "user") {
+                                        $role = "Utilisateur";
+                                    } else
+                                        if ($_SESSION['role'] == "admin") {
+                                            $role = "Administrateur";
+                                        }
+                                    echo '<input type="text" name="role" value="' . $role . '" disabled>'; ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <hr class="solid">
+                </div>
+                <div class="rightside-container-setting">
+                    <div class="rightside-container-setting-header">
+                        <h2>Paramètres</h2>
+                    </div>
                     <div>
-                        <div class="name">
-                            <p><b>Nom :</b>
-                                <?php echo '<input type="text" name="name" value="' . $_SESSION['name'] . '" disabled>'; ?>
-                            </p>
-                        </div>
-                        <div class="email">
-                            <p><b>E-mail :</b>
-                                <?php echo '<input type="text" name="email" value="' . $_SESSION['email'] . '" disabled>'; ?>
-                            </p>
-                        </div>
-                        <div class="role">
-                            <p><b>Rôle :</b>
-                                <?php
-                                if ($_SESSION['role'] == "user") {
-                                    $role = "Utilisateur";
-                                } else
-                                    if ($_SESSION['role'] == "admin") {
-                                        $role = "Administrateur";
-                                    }
-                                echo '<input type="text" name="role" value="' . $role . '" disabled>'; ?>
-                            </p>
-                        </div>
+                        <p><a href="/factory-display/settings/passwordforgot.html"> Mot de passe oublié ? </a></p>
+                        <button id="toggle-mode">Mode Sombre</button>
                     </div>
                 </div>
-            </div>
-            <div class="rightside-container-setting">
-                <div class="rightside-container-setting-header">
-                    <h2>Paramètres</h2>
-                </div>
-                <div>
-                    <p><a href="/factory-display/settings/passwordforgot.html"> Mot de passe oublié ? </a></p>
-                    <button id="toggle-mode">Mode Sombre</button>
-                </div>
-            </div>
 
-            <div class="rightside-container-admin">
-                <?php include('admin.php'); ?>
+                <div class="rightside-container-admin">
+                    <?php include('admin.php'); ?>
+                </div>
+
             </div>
         </div>
     </div>
 
-
-
     <script>
-        // Open the div when the user clicks on the icon and display it on the right side 
+        //Open the div when the user clicks on the icon and display it on the right side              
         var account = document.querySelector(".leftside-account-container");
         var setting = document.querySelector(".leftside-setting-container");
         var logout = document.querySelector(".leftside-logout-container");
@@ -164,25 +161,9 @@ if (isset($_SESSION['logged_in'])) {
         var settingContainer = document.querySelector(".rightside-container-setting");
         var adminContainer = document.querySelector(".rightside-container-admin");
 
-
-        function openSettings() {
-            settingContainer.style.display = "block";
-            accountContainer.style.display = "none";
-            adminContainer.style.display = "none";
-        }
-
-        function openAccount() {
-            accountContainer.style.display = "block";
-            settingContainer.style.display = "none";
-            adminContainer.style.display = "none";
-        }
-
-        function openAdmin() {
-            adminContainer.style.display = "block";
-            accountContainer.style.display = "none";
-            settingContainer.style.display = "none";
-        }
+        function openSettings() { settingContainer.style.display = "block"; accountContainer.style.display = "none"; adminContainer.style.display = "none"; }
+        function openAccount() { accountContainer.style.display = "block"; settingContainer.style.display = "none"; adminContainer.style.display = "none"; }
+        function openAdmin() { adminContainer.style.display = "block"; accountContainer.style.display = "none"; settingContainer.style.display = "none"; }
     </script>
 </body>
-
 </html>
