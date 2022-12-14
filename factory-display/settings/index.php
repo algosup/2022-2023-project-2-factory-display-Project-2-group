@@ -53,7 +53,7 @@ if (isset($_SESSION['logged_in'])) {
     <div class="main-div">
         <div class="leftside-main-container">
             <div class="leftside-containers">
-                <div class="leftside-account-container" onclick=openAccount()>
+                <div class="leftside-account-container" onclick="openAccount()">
                     <div class="leftside-text">
                         <h2 class="title"> Mon compte</h2>
                     </div>
@@ -62,7 +62,8 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                 </div>
                 <hr class="solid">
-                <div class="leftside-setting-container" onclick=openSettings()>
+                
+                <div class="leftside-setting-container" onclick="openSettings()">
                     <div class="leftside-text">
                         <h2 class="title">Paramètres</h2>
                     </div>
@@ -71,7 +72,8 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                 </div>
                 <hr class="solid">
-                <div class="leftside-admin-container" onclick=openAdmin()>
+
+                <div class="leftside-admin-container" onclick="openAdmin()">
                     <div class="leftside-text">
                         <h2 class="title"> Administration</h2>
                     </div>
@@ -80,6 +82,7 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                 </div>
                 <hr class="solid">
+                
                 <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
                     <div class="leftside-text">
                         <h2 class="title">Déconnexion</h2>
@@ -157,6 +160,7 @@ if (isset($_SESSION['logged_in'])) {
         var setting = document.querySelector(".leftside-setting-container");
         var logout = document.querySelector(".leftside-logout-container");
         var admin = document.querySelector(".leftside-admin-container");
+
         var accountContainer = document.querySelector(".rightside-container-account");
         var settingContainer = document.querySelector(".rightside-container-setting");
         var adminContainer = document.querySelector(".rightside-container-admin");
