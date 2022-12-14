@@ -5,6 +5,13 @@
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] != "admin") {
         $error[] = "Vous n'êtes pas autorisé à accéder à cette page.";
+
+        // make a select request to get the name and the id of all the users
+        $sql = "SELECT name, id FROM user_form";
+        $result = $conn->query($sql);
+
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+
     }
 } else {
     $error[] = "Vous n'êtes pas connecté, vous ne pouvez pas accéder à cette page.";
@@ -35,9 +42,16 @@ if (isset($error)) {
     </div>
 
     <div class="admin-select">
-        <p>Choissisez un utilisateur : </p><select name="users" id="list-users">
-            <option value="user1">User 1</option>
-            <option value="user2">User 2</option>
+        <p>Choissisez un utilisateur : </p>
+        <select name="users" id="list-users">
+            <option value="0">Choissisez un utilisateur</option>
+            <?php
+            // we print the list of users
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
+            }
+            ?>
+        </select>
     </div>
     <hr class="solid">
     <div class="select-value-display">

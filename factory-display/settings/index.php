@@ -111,20 +111,24 @@ if (isset($_SESSION['logged_in'])) {
                         <div>
                             <div class="name">
                                 <p><b>Nom :</b>
-                                    <?php $_SESSION['name'] = "John Doe";
-                                    echo '<input type="text" name="name" value="' . $_SESSION['name'] . '" disabled>'; ?>
+                                    <?php echo '<input type="text" name="name" value="' . $_SESSION['name'] . '" disabled>'; ?>
                                 </p>
                             </div>
                             <div class="email">
                                 <p><b>E-mail :</b>
-                                    <?php $_SESSION['email'] = "testing@gmail.com";
-                                    echo '<input type="text" name="email" value="' . $_SESSION['email'] . '" disabled>'; ?>
+                                    <?php echo '<input type="text" name="email" value="' . $_SESSION['email'] . '" disabled>'; ?>
                                 </p>
                             </div>
                             <div class="role">
                                 <p><b>Rôle :</b>
-                                    <?php $_SESSION['role'] = "Administrateur";
-                                    echo '<input type="text" name="role" value="' . $_SESSION['role'] . '" disabled>'; ?>
+                                    <?php 
+                                    if ($_SESSION['role'] == "user") {
+                                        $role = "Utilisateur";
+                                    } else
+                                        if ($_SESSION['role'] == "admin") {
+                                            $role = "Administrateur";
+                                        }
+                                    echo '<input type="text" name="role" value="' . $role . '" disabled>'; ?>
                                 </p>
                             </div>
                         </div>
