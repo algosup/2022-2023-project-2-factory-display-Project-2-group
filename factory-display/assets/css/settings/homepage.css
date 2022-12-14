@@ -294,26 +294,15 @@ h5 {
 /* Account Right Part */
 
 .rightside-container-account-content-left {
-    width: 45%;
+    width: 100%;
     height: 100%;
     background-color: #d16218;
     float: left;
     box-shadow: 0px 0px 10px 0px black;
-    margin-left: 15px;
-    margin-top: 20px;
+    margin: 20 15 0 15;
     color: #ffffff;
 }
 
-.rightside-container-account-content-right {
-    width: 45%;
-    height: 100%;
-    background-color: #d16218;
-    float: right;
-    box-shadow: 0px 0px 10px 0px black;
-    margin-right: 15px;
-    margin-top: 20px;
-    color: #ffffff;
-}
 
 
 
@@ -323,12 +312,6 @@ h5 {
         height: 100%;
         display: block;
 
-    }
-
-    .rightside-container-account-content-right {
-        width: 100%;
-        height: 100%;
-        display: block;
     }
 }
 

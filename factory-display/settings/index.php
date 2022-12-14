@@ -111,11 +111,6 @@ if (isset($_SESSION['logged_in'])) {
                                 <p><b>Role :</b> <?php if($_SESSION['role'] == "user") { echo "Utilisateur"; } else { echo "Administrateur"; } ?></p>
                             </div>
                         </div>
-                        <div class="rightside-container-account-content-right">
-                            <div class="rightside-container-account-content-right-text">
-                                <p>Vous êtes connecté en tant qu' <?php echo $_SESSION['role']; ?>.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                     <div class="rightside-container-setting">
