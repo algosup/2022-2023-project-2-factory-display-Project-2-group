@@ -45,7 +45,8 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> <!-- To allow the use of http links in https pages -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <!-- To allow the use of http links in https pages -->
     <link rel="icon" type="image/x-icon" href="/factory-display/assets/img/icons/jacobi-icon.png">
     <title>Connexion</title>
 
@@ -64,19 +65,27 @@ if (isset($_POST['submit'])) {
         function showMessage() {
             $(".error").show();
             $(".success").show();
-            setTimeout(function() {
+            setTimeout(function () {
                 $(".error").hide();
                 $(".success").hide();
             }, 5000);
         }
-        swal({
-            text: <?php foreach ($error as $error) {
-                        echo '<p>' . $error . '</p>';
-                    } ?>,
-            icon: "error",
-            button: "Ok",
 
-        });
+        function ok() {
+            <?php if  (isset($success)) { ?>
+                swal({
+                    icon: "success",
+                });
+            <?php } ?>
+            else
+            <?php if  (isset($error)) { ?>
+                swal({
+                    icon: "error",
+                    text: <?php echo $error; ?>,
+                });
+            <?php } ?>
+        }
+
     </script>
 </head>
 
@@ -120,10 +129,12 @@ if (isset($_POST['submit'])) {
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
 
-            <input type="submit" name="submit" value="Connexion" class="form-btn" onclick="swal()">
+            <input type="submit" name="submit" value="Connexion" class="form-btn" onclick="ok()">
 
-            <p>Vous n'avez pas de compte ? <a class="account-links" href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
-            <p>Mot de passe oublié ? <a class="account-links" href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>
+            <p>Vous n'avez pas de compte ? <a class="account-links" href="/factory-display/settings/inscription.php">
+                    Inscrivez-vous </a></p>
+            <p>Mot de passe oublié ? <a class="account-links" href="/factory-display/settings/passwordforgot.html">
+                    Cliquez-ici </a></p>
         </form>
     </div>
 </body>
