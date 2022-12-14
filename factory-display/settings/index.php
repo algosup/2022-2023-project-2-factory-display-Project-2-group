@@ -149,6 +149,8 @@ if (isset($_SESSION['logged_in'])) {
                 </div>
             </div>
         </div>
+    </div>
+    
 
         <script>
             // Open the div when the user clicks on the icon and display it on the right side 

@@ -13,6 +13,18 @@ if (isset($_SESSION['role'])) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
 
     }
+
+    // we check the user choice in the select and we make a request to get the data of the user
+    if (isset($_POST['users'])) {
+        $id = $_POST['users'];
+        $sql = "SELECT name, email, role FROM user_form WHERE id = $id";
+        $result = $conn->query($sql);
+        $row = $result->fetch(PDO::FETCH_ASSOC);
+        $_SESSION['select-name'] = $row['name'];
+        $_SESSION['select-email'] = $row['email'];
+        $_SESSION['select-role'] = $row['role'];
+    }
+
 } else {
     $error[] = "Vous n'êtes pas connecté, vous ne pouvez pas accéder à cette page.";
     header('Location: /factory-display/settings/account.php');
@@ -55,30 +67,48 @@ if (isset($error)) {
     </div>
     <hr class="solid">
     <div class="select-value-display">
-        <form action="a" method="post">
+        <form action="" method="post">
             <div class="name">
                 <p><b>Nom :</b>
-                    <?php $_SESSION['name'] = "John Doe";
-                                        echo '<input type="text" name="name" value="' . $_SESSION['name'] . '" disabled>'; ?>
+                    <?php
+                    if (isset($_SESSION['select-name'])) {
+                        echo '<input type="text" name="name" value="' . $_SESSION['select-name'] . '" disabled>';
+                    } else {
+                        echo '<input type="text" name="name" value="" disabled>';
+                    }
+                    ?>
                 </p>
             </div>
             <div class="email">
                 <p><b>E-mail :</b>
-                    <?php $_SESSION['email'] = "test@gmail.com";
-                                        echo '<input type="text" name="email" value="' . $_SESSION['email'] . '" disabled>'; ?>
+                    <?php
+                    if (isset($_SESSION['select-email'])) {
+                        echo '<input type="text" name="email" value="' . $_SESSION['select-email'] . '" disabled>';
+                    } else {
+                        echo '<input type="text" name="email" value="" disabled>';
+                    }
+                    ?>
                 </p>
             </div>
             <div class="role">
                 <p><b>Rôle :</b>
-                    <?php $_SESSION['role'] = "Administrateur";
-                                        echo '<input type="text" name="role" value="' . $_SESSION['role'] . '" disabled>'; ?>
+                    <?php
+                    if (isset($_SESSION['select-role'])) {
+                        if ($_SESSION['select-role'] == "user") {
+                            $role = "Utilisateur";
+                        } else
+                            if ($_SESSION['select-role'] == "admin") {
+                                $role = "Administrateur";
+                            }
+                        echo '<input type="text" name="role" value="' . $role . '" disabled>';
+                    } else {
+                        echo '<input type="text" name="role" value="" disabled>';
+                    }
+                    ?>
                 </p>
             </div>
-            <div class="role">
-                <p><b>Statut :</b>
-                    <?php $_SESSION['status'] = "Actif";
-                                        echo '<input type="text" name="status" value="' . $_SESSION['status'] . '" disabled>'; ?>
-                </p>
+            <div class="admin-button">
+                <button type="submit" name="submit" value="submit">Modifier</button>
             </div>
         </form>
     </div>
