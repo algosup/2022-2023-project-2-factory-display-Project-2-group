@@ -69,6 +69,14 @@ if (isset($_POST['submit'])) {
                 $(".success").hide();
             }, 5000);
         }
+        swal({
+            text: <?php foreach ($error as $error) {
+                        echo '<p>' . $error . '</p>';
+                    } ?>,
+            icon: "error",
+            button: "Ok",
+
+        });
     </script>
 </head>
 
@@ -112,9 +120,10 @@ if (isset($_POST['submit'])) {
                 <img src="/factory-display/assets/img/icons/oeil_ouvert.png" id="eye" onclick="changer()" />
             </div>
 
-            <input type="submit" name="submit" value="Connexion" class="form-btn" onclick="showMessage()">
+            <input type="submit" name="submit" value="Connexion" class="form-btn" onclick="swal()">
 
             <p>Vous n'avez pas de compte ? <a class="account-links" href="/factory-display/settings/inscription.php"> Inscrivez-vous </a></p>
             <p>Mot de passe oublié ? <a class="account-links" href="/factory-display/settings/passwordforgot.html"> Cliquez-ici </a></p>
         </form>
+    </div>
 </body>
