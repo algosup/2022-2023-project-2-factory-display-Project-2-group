@@ -168,16 +168,7 @@ body {
     display: block;
 }
 
-.rightside-container-account>.rightside-container-account-header {
-    background-color: #d16218;
-    color: white;
-    padding: 10px;
-    font-size: 1.5em;
-    font-weight: 300;
-    text-align: center;
-    margin-top: 20px;
 
-}
 
 .rightside-container-setting {
     color: #d16218;
@@ -252,19 +243,6 @@ hr.solid {
     margin-bottom: 100px;
 }
 
-.rightside-container-setting>.rightside-container-setting-header {
-    text-align: center;
-    padding-top: 10px;
-    border: 5px solid #d16218;
-    box-shadow: 0px 0px 10px 0px #d16218;
-    color: #d16218;
-    border-top: none;
-    width: 40%;
-    margin: 0 auto;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
-}
 
 .rightside-container-deconnexion>.rightside-container-deconnexion-header {
     text-align: center;
@@ -291,35 +269,131 @@ h5 {
     margin-left: 290px;
 }
 
-/* Account Right Part */
 
-.rightside-container-account-content-left {
-    width: 100%;
-    height: 100%;
-    background-color: #d16218;
-    float: left;
+.rightside-container-account-content {
+
+    padding: 10px;
+    border: 5px solid #bbb6b6;
     box-shadow: 0px 0px 10px 0px black;
-    margin: 20 15 0 15;
-    color: #ffffff;
+    color: black;
+    background-color: #e4dede;
+    width: 60%;
+    margin: 20px auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.rightside-container-account-content > h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    /* gras */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rightside-container-account-content > .account-header {
+    margin-top: 10px;
+    color: black;
+    /* gras */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.rightside-container-account-content > .account-header > #icon {
+    display: inline-block;
+    font-size: 2em;
+
+}
+
+.rightside-container-account-content > .account-header > #title {
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.name {
+    display : inline-block;
+    margin : 10px;
+
+}
+
+.email {
+    display : inline-block;
+    margin-left: 60px;
+    
+}
+
+.role {
+    display : block;
+    margin-left: 10px;
 }
 
 
-
-
-@media (max-width: 500px) {
-    .rightside-container-account-content-left {
-        width: 100%;
-        height: 100%;
-        display: block;
+@media (max-width: 1400px) {
+    .email {
+        display : block;
+        margin-left: 10px;
+        margin-bottom: 25px;
 
     }
 }
 
-.rightside-container-account-content-left-text > h3 {
-    text-align: center;
-    margin-top: 10px;
+@media (max-width: 520px) {
+
+    .role > p > input {
+        margin-left: -18px;
+        width: 115%;
+    }
+    .email > p > input {
+        margin-left: -18px;
+        width: 115%;
+    }
+
+    .name > p > input {
+        margin-left: -18px;
+        width: 115%;
+    }
+
+
 }
 
-.rightside-container-account-content-left-text > p {
-    text-align: center; 
+.rightside-container-account-header {
+    text-align: center;
+    padding-top: 10px;
+    border: 5px solid #bbb6b6;
+    box-shadow: 0px 0px 10px 0px black;
+    color: black;
+    border-top: none;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e4dede;
 }
+
+
+.rightside-container-setting-header {
+    text-align: center;
+    padding-top: 10px;
+    border: 5px solid #bbb6b6;
+    box-shadow: 0px 0px 10px 0px black;
+    color: black;
+    border-top: none;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e4dede;
+}
+

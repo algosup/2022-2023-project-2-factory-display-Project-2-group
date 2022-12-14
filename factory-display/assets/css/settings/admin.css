@@ -10,11 +10,74 @@
 
 }
 
-.admin-main-content-header {
-    background-color: #d16218;
-    color: white;
-    padding: 10px;
-    font-size: 1.5em;
-    font-weight: 300;
+.rightside-container-admin-header {
     text-align: center;
+    padding-top: 10px;
+    border: 5px solid #bbb6b6;
+    box-shadow: 0px 0px 10px 0px black;
+    color: black;
+    border-top: none;
+    width: 40%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e4dede;
+}
+
+.rightside-container-admin-content {
+    padding: 10px;
+    border: 5px solid #bbb6b6;
+    box-shadow: 0px 0px 10px 0px black;
+    color: black;
+    background-color: #e4dede;
+    width: 60%;
+    margin: 20px auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rightside-container-admin-content > h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    /* gras */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rightside-container-admin-content > .admin-header {
+    margin-top: 10px;
+    color: black;
+    /* gras */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.rightside-container-admin-content > .admin-header > #icon {
+    display: inline-block;
+    font-size: 2em;
+}
+
+.rightside-container-admin-content > .admin-header > #title {
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    font-weight: 900;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.admin-select > p {
+    display: inline-block;
+    margin: 10px;
+}
+
+.admin-select > select {
+    display: inline-block;
+    margin: 10px;
 }
