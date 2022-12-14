@@ -76,9 +76,8 @@ if (isset($_POST['submit'])) {
                 swal({
                     icon: "success",
                 });
-            <?php } ?>
-            else
-            <?php if  (isset($error)) { ?>
+            <?php } 
+            if  (isset($error)) { ?>
                 swal({
                     icon: "error",
                     text: <?php echo $error; ?>,
