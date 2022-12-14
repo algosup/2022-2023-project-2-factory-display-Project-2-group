@@ -5,14 +5,13 @@
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] != "admin") {
         $error[] = "Vous n'êtes pas autorisé à accéder à cette page.";
-
-        // make a select request to get the name and the id of all the users
-        $sql = "SELECT name, id FROM user_form";
-        $result = $conn->query($sql);
-
-        $row = $result->fetch(PDO::FETCH_ASSOC);
-
     }
+
+    // we get the list of users
+    $select_all_users = "SELECT id, name FROM user_form";
+    $result_users = $conn->query($select_all_users);
+
+    $row1 = $result_users->fetch(PDO::FETCH_ASSOC);
 
     // we check the user choice in the select and we make a request to get the data of the user
     if (isset($_POST['users'])) {
@@ -55,15 +54,18 @@ if (isset($error)) {
 
     <div class="admin-select">
         <p>Choissisez un utilisateur : </p>
-        <select name="users" id="list-users">
-            <option value="0">Choissisez un utilisateur</option>
-            <?php
-            // we print the list of users
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
-            }
-            ?>
-        </select>
+        <form action="" method="post">
+            <select name="users" id="list-users">
+                <option value="">Choissisez un utilisateur</option>
+                <?php
+                // we print the list of users
+                while ($row1 = $result_users->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<option value="' . $row1['id'] . '">' . $row1['name'] . '</option>';
+                }
+                ?>
+            </select>
+            <input type="submit" name="submit" value="Valider">
+        </form>
     </div>
     <hr class="solid">
     <div class="select-value-display">
