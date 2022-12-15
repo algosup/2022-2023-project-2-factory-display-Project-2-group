@@ -1,5 +1,5 @@
 <?php
-@include 'assets/php/login/config_db.php';
+@include '../assets/php/login/config_db.php';
 
 session_start();
 
@@ -29,8 +29,19 @@ else {
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
 <body>
-    
-<header></header>
+
+<header>
+    <?php
+    if (isset($_SESSION['role'])) {
+        if ($_SESSION['role'] == "user") {
+            @include '../assets/headers/header-user.html';
+        } else
+            if ($_SESSION['role'] == "admin") {
+            @include '../assets/headers/header-admin.html';
+        }
+    }
+    ?>
+</header>
 
 <?php 
     if ($handle = opendir('../../screens-side/saved-scenes/')) {

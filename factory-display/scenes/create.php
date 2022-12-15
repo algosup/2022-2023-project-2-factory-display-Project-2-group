@@ -1,5 +1,5 @@
 <?php
-@include 'assets/php/login/config_db.php';
+@include '../assets/php/login/config_db.php';
 
 session_start();
 
@@ -46,13 +46,19 @@ else {
 </head>
 
 <body onload="loadFirstView()">
-
-
-
-
-
-  <header></header>
-
+<header>
+        <?php
+        if (isset($_SESSION['role'])) {
+            if ($_SESSION['role'] == "user") {
+                @include '../assets/headers/header-user.html';
+            } else
+                if ($_SESSION['role'] == "admin") {
+                @include '../assets/headers/header-admin.html';
+            }
+        }
+        ?>
+    </header>
+    
   <div class="d-flex justify-content-center">
     <h1 id="global-title">Nouvelle scène</h1>
   </div>
@@ -305,8 +311,8 @@ function saveAs() {
   $txt = $_COOKIE["code"];
   fwrite($myfile, $txt);
   fclose($myfile);
-  header("Location: ../scenes/manage.php");
-  // echo "<script>swal ( '👍' ,  'Votre scène à bien été sauvegarder, vous allez être redirigé à l'emplacement de la sauvegarde !' ,  'success' ); setTimeout(function(){window.location.href = 'manage.php'};</script>";
+  // header("location:manage.php");
+  echo '<script>swal("👍" ,  "Votre scène à bien été sauvegarder, vous allez être redirigé vers la position de la sauvegarde !" ,  "success",{button:false,timer:3000,});setTimeout(() => {window.location.href = "manage.php";}, 3000);</script>';
 }
 
 if (isset($_GET['request-save'])) {
