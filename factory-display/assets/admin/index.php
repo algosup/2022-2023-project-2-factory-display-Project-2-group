@@ -8,7 +8,7 @@ if (isset($_SESSION['logged_in'])) {
     // check if the user is an admin
     if ($_SESSION['role'] == "admin") {
         // redirect to the admin page
-        header('location:/factory-display/assets/admin/admin.php');
+        header('location:admin.php');
     }
     else {
         // redirect to the user page
