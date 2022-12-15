@@ -6,7 +6,7 @@ class Clock {
   constructor(date) {
     this.seconds = date.getSeconds();  
     this.minutes = date.getMinutes();  
-    this.hours = date.getHours();  
+    this.hours = date.getHours() + 1;  
   }
   
   degrees(unit) {
