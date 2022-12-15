@@ -5,25 +5,23 @@
 if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] != "admin") {
         $error[] = "Vous n'êtes pas autorisé à accéder à cette page.";
+    } else {
+        // we get the list of users
+        $select_all_users = "SELECT id, name FROM user_form";
+        $result_users = $conn->query($select_all_users);
+        $row1 = $result_users->fetch(PDO::FETCH_ASSOC);
+
+        // we check the user choice in the select and we make a request to get the data of the user
+        if (isset($_POST['users'])) {
+            $id = $_POST['users'];
+            $sql = "SELECT name, email, role FROM user_form WHERE id = $id";
+            $result = $conn->query($sql);
+            $row = $result->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['select-name'] = $row['name'];
+            $_SESSION['select-email'] = $row['email'];
+            $_SESSION['select-role'] = $row['role'];
+        }
     }
-
-    // we get the list of users
-    $select_all_users = "SELECT id, name FROM user_form";
-    $result_users = $conn->query($select_all_users);
-
-    $row1 = $result_users->fetch(PDO::FETCH_ASSOC);
-
-    // we check the user choice in the select and we make a request to get the data of the user
-    if (isset($_POST['users'])) {
-        $id = $_POST['users'];
-        $sql = "SELECT name, email, role FROM user_form WHERE id = $id";
-        $result = $conn->query($sql);
-        $row = $result->fetch(PDO::FETCH_ASSOC);
-        $_SESSION['select-name'] = $row['name'];
-        $_SESSION['select-email'] = $row['email'];
-        $_SESSION['select-role'] = $row['role'];
-    }
-
 } else {
     $error[] = "Vous n'êtes pas connecté, vous ne pouvez pas accéder à cette page.";
     header('Location: /factory-display/settings/account.php');
@@ -69,7 +67,7 @@ if (isset($error)) {
     </div>
     <hr class="solid">
     <div class="select-value-display">
-        <form action="" method="post">
+        <form  method="post">
             <div class="name">
                 <p><b>Nom :</b>
                     <?php

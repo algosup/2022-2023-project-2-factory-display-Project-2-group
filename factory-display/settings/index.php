@@ -30,7 +30,6 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/homepage.css">
-    <link rel="stylesheet" href="/factory-display/assets/css/settings/admin.css">
 
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 
@@ -62,7 +61,7 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                 </div>
                 <hr class="solid">
-                
+
                 <div class="leftside-setting-container" onclick="openSettings()">
                     <div class="leftside-text">
                         <h2 class="title">Paramètres</h2>
@@ -73,16 +72,6 @@ if (isset($_SESSION['logged_in'])) {
                 </div>
                 <hr class="solid">
 
-                <div class="leftside-admin-container" onclick="openAdmin()">
-                    <div class="leftside-text">
-                        <h2 class="title"> Administration</h2>
-                    </div>
-                    <div class="leftside-icons">
-                        <i class="fa-solid fa-tools"></i>
-                    </div>
-                </div>
-                <hr class="solid">
-                
                 <div class="leftside-logout-container" onClick="document.location.href='disconnect.php'">
                     <div class="leftside-text">
                         <h2 class="title">Déconnexion</h2>
@@ -144,11 +133,6 @@ if (isset($_SESSION['logged_in'])) {
                         <p><a href="/factory-display/settings/passwordforgot.html"> Mot de passe oublié ? </a></p>
                     </div>
                 </div>
-
-                <div class="rightside-container-admin">
-                    <?php include('admin.php'); ?>
-                </div>
-
             </div>
         </div>
     </div>
@@ -158,15 +142,13 @@ if (isset($_SESSION['logged_in'])) {
         var account = document.querySelector(".leftside-account-container");
         var setting = document.querySelector(".leftside-setting-container");
         var logout = document.querySelector(".leftside-logout-container");
-        var admin = document.querySelector(".leftside-admin-container");
 
         var accountContainer = document.querySelector(".rightside-container-account");
         var settingContainer = document.querySelector(".rightside-container-setting");
-        var adminContainer = document.querySelector(".rightside-container-admin");
 
         function openSettings() { settingContainer.style.display = "block"; accountContainer.style.display = "none"; adminContainer.style.display = "none"; }
         function openAccount() { accountContainer.style.display = "block"; settingContainer.style.display = "none"; adminContainer.style.display = "none"; }
-        function openAdmin() { adminContainer.style.display = "block"; accountContainer.style.display = "none"; settingContainer.style.display = "none"; }
     </script>
 </body>
+
 </html>
