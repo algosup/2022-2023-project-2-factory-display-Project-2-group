@@ -10,12 +10,6 @@ if (isset($_SESSION['logged_in'])) {
         // redirect to the admin page
         $ok = true;
 
-        // make a request to the database to get all the users
-        $sql = "SELECT * FROM user_form";
-
-        // we get the result of the request
-        $result = $conn->query($sql);
-
     } else {
         // redirect to the user page
         $_SESSION['error'] = "Vous n'avez pas les droits pour accéder à cette page.";
