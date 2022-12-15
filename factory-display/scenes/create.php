@@ -305,8 +305,8 @@ function saveAs() {
   $txt = $_COOKIE["code"];
   fwrite($myfile, $txt);
   fclose($myfile);
-  // header("Location: ../scenes/manage.php");
-  echo "<script>swal ( '👍' ,  'Votre scène à bien été sauvegarder, vous allez être redirigé à l'emplacement de la sauvegarde !' ,  'success' ); setTimeout(function(){window.location.href = 'manage.php'};</script>";
+  header("Location: ../scenes/manage.php");
+  // echo "<script>swal ( '👍' ,  'Votre scène à bien été sauvegarder, vous allez être redirigé à l'emplacement de la sauvegarde !' ,  'success' ); setTimeout(function(){window.location.href = 'manage.php'};</script>";
 }
 
 if (isset($_GET['request-save'])) {
