@@ -142,7 +142,6 @@ if (isset($_SESSION['logged_in'])) {
                     </div>
                     <div>
                         <p><a href="/factory-display/settings/passwordforgot.html"> Mot de passe oublié ? </a></p>
-                        <button id="toggle-mode">Mode Sombre</button>
                     </div>
                 </div>
 
