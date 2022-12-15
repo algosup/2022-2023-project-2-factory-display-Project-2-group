@@ -49,28 +49,7 @@ $result = $conn->query($sql);
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                    // we fetch the result
-                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
-                    <tr>
-                        <td>
-                            <?php echo $row['name']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['email']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['role']; ?>
-                        </td>
-                        <td>
-                            <form action="process.php" method="post">
-                                <input type="submit" id="<?php echo $row['id']; ?>" name="delete" value="Supprimer"
-                                    class="btn btn-danger">
-                                <input type="submit" id="<?php echo $row['id']; ?>" name="edit" value="Modifier"
-                                    class="btn btn-primary">
-                        </td>
-                    </tr>
-                    <?php } ?>
+                    
                 </tbody>
             </table>
         </div>
