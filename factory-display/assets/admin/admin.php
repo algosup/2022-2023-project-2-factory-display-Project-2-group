@@ -6,12 +6,6 @@ session_start();
 // make a request to the database to get all the users
 $sql = "SELECT * FROM users";
 
-// we get the result of the request
-$result = $conn->query($sql);
-
-$row = $result->fetch(PDO::FETCH_ASSOC);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -42,25 +36,6 @@ $row = $result->fetch(PDO::FETCH_ASSOC);
         <?php@include '../assets/headers/header-admin.html'; ?>
     </header>
 
-    <?php
-    if (isset($_SESSION['error'])) { ?>
-    <div class="alert alert-danger" role="alert">
-        <?php echo $_SESSION['error'];
-        header('location:/factory-display/index.php')
-            ?>
-    </div>
-    <?php } ?>
-
-    <?php
-    if (isset($_SESSION['success'])) { ?>
-    <div class="alert alert-success" role="alert">
-        <?php echo $_SESSION['success'];
-        header('location:/factory-display/index.php')
-            ?>
-    </div>
-    <?php } ?>
-
-    
     <div class="main-content-admin">
         <div class="admin-header">
             <h1>Administration</h1>
@@ -85,9 +60,6 @@ $row = $result->fetch(PDO::FETCH_ASSOC);
                     <tr>
                         <td>
                             <?php echo $row['name']; ?>
-                        </td>
-                        <td>
-                            <?php echo $row['firstname']; ?>
                         </td>
                         <td>
                             <?php echo $row['email']; ?>
