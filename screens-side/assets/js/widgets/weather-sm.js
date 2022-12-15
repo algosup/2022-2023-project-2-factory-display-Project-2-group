@@ -62,12 +62,12 @@ function getLocation() {
                 </div>
                 <div class="bar_container">
                   <div class="weather__sunrise"><img src="/screens-side/assets/img/weather/sunrise.png" alt="">
-                    ${new Date(data.sys.sunrise * 1000).toLocaleTimeString().slice(0, -3)+1}
+                    ${new Date(data.sys.sunrise * 1000).toLocaleTimeString().slice(0, -3)}
                   </div>
                   <div class="progress_bar schedules"></div>
                   <div class="weather__sunset">
                     <img src="/screens-side/assets/img/weather/sunset.png" alt="">
-                    ${new Date(data.sys.sunset * 1000).toLocaleTimeString().slice(0,-3)+1}
+                    ${new Date(data.sys.sunset * 1000).toLocaleTimeString().slice(0,-3)}
                   </div>
                 </div>
                   <div class="bar_container">
