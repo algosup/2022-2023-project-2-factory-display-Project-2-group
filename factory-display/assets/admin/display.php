@@ -54,8 +54,8 @@ $result = $conn->query($sql);
                 </thead>
                 <tbody>
                     <?php
-    // we fetch the result
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+                    // we fetch the result
+                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
                     <tr>
                         <td>
                             <?php echo $row['name']; ?>
@@ -65,10 +65,10 @@ $result = $conn->query($sql);
                         </td>
                         <td>
                             <?php if ($row['user_type'] == "admin") {
-                                echo "Administrateur";
-                            } else {
-                                echo "Utilisateur";
-                            } ?>
+                            echo "Administrateur";
+                        } else {
+                            echo "Utilisateur";
+                        } ?>
                         </td>
                         <td>
                             <form action="process.php" method="post">

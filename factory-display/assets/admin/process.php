@@ -9,7 +9,7 @@ if (isset($_SESSION['logged_in'])) {
     // check if the user is an admin
     if ($_SESSION['role'] == "admin") {
 
-        if (isset($_POST['modify'])) {
+        if (isset($_POST['submit'])) {
             $id = $_POST['id'];
             $name = $_POST['name'];
             $email = $_POST['email'];
@@ -61,10 +61,22 @@ if (isset($_SESSION['logged_in'])) {
 </head>
 
 <body>
-<header>
+    <header>
         <?php include '../headers/header-admin.html'; ?>
     </header>
 
+    <?php if (isset($success)) { ?>
+    <script>
+        swal("L'utilisateur a bien été modifié.",
+            "Vous allez être redirigé vers la page d'accueil.",
+            "success", {
+            button: "OK",
+        }).then(function () {
+            window.location = "/factory-display/index.php";
+        });
+    </script>
+    <?php } ?>
+    
     <?php if (isset($_POST['delete'])) {
         $id = $_POST['id'];
         $sql = "DELETE FROM user_form WHERE id = :id";
@@ -84,6 +96,41 @@ if (isset($_SESSION['logged_in'])) {
     </script>
     <?php } ?>
 
-    <?php if (isset($_POST['modify'])) { ?>
+    <?php if (isset($_POST['modify'])) { // we creating a html page where the admin can edit user's informations ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Edition de l'utilisateur <?php echo $user['name']; ?></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="process.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" name="name" id="name" value="<?php echo $user['name']; ?>">
+                    </div>
 
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="email" value="<?php echo $user['email']; ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Rôle</label>
+                        <select class="form-control" name="role" id="role">
+                            <option value="admin" <?php if ($user['role'] == "admin") {
+                                                        echo "selected";
+                                                    } ?>>Administrateur</option>
+                            <option value="user" <?php if ($user['role'] == "user") {
+                                                        echo "selected";
+                                                    } ?>>Utilisateur</option>
+                        </select>
+                    </div>
+
+                    <input type="submit" name="modify" value="Modifier" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
     <?php } ?>
