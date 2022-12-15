@@ -77,10 +77,12 @@ else {
             $entryLink = $_GET['link'];
             $file = file_get_contents("../../screens-side/saved-scenes/$entryLink");
             file_put_contents("../../screens-side/screens/locker-room.html", $file);
+            echo '<script>swal("👍" ,  "Votre scène à bien été Publier vers les vestiaires !" ,  "success",{button:false,timer:3000,});</script>';
         } else if($_GET['location'] == "toCafeteria") {
             $entryLink = $_GET['link'];
             $file = file_get_contents("../../screens-side/saved-scenes/$entryLink");
             file_put_contents("../../screens-side/screens/cafeteria.html", $file);
+            echo '<script>swal("👍" ,  "Votre scène à bien été Publier vers la cafétéria !" ,  "success",{button:false,timer:3000,});</script>';
         }
     }
 
