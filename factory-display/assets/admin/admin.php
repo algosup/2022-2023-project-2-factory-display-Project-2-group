@@ -6,6 +6,8 @@ session_start();
 // make a request to the database to get all the users
 $sql = "SELECT * FROM users";
 
+// we get the result of the request
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -52,9 +54,6 @@ $sql = "SELECT * FROM users";
                 </thead>
                 <tbody>
                     <?php
-                    // we get the result of the request
-                    $result = $conn->query($sql);
-
                     // we fetch the result
                     while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
                     <tr>
@@ -80,6 +79,7 @@ $sql = "SELECT * FROM users";
             </table>
         </div>
     </div>
+
 </body>
 
 </html>

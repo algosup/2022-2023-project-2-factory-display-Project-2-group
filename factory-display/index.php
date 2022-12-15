@@ -87,3 +87,5 @@ if (isset($_SESSION['logged_in'])) {
         <br>
     </div>
 </body>
+
+</html>
