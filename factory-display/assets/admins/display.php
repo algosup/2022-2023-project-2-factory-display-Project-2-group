@@ -1,15 +1,3 @@
-<?php
-@include '../assets/php/login/config_db.php';
-
-session_start();
-
-// make a request to the database to get all the users
-$sql = "SELECT * FROM user_form";
-
-// we get the result of the request
-$result = $conn->query($sql);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +21,6 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-
     <div class="main-content-admin">
         <div class="admin-header">
             <h1>Administration</h1>
@@ -54,7 +41,5 @@ $result = $conn->query($sql);
             </table>
         </div>
     </div>
-
 </body>
-
 </html>
