@@ -1,6 +1,15 @@
 <?php
 @include '../php/login/config_db.php';
 
+if (isset($_SESSION['logged_in'])) {
+    if ($_SESSION['role'] != "admin") {
+        $_SESSION['error'] = "Vous n'avez pas les droits pour accéder à cette page.";
+        header('location:/factory-display/settings/account.php');
+    }
+} else {
+    header('location:/factory-display/settings/account.php');
+}
+
 session_start();
 
 // make a request to the database to get all the users
@@ -64,7 +73,7 @@ $result = $conn->query($sql);
                             <?php echo $row['email']; ?>
                         </td>
                         <td>
-                            <?php if ($row['role'] == "admin") {
+                            <?php if ($row['user_type'] == "admin") {
                                 echo "Administrateur";
                             } else {
                                 echo "Utilisateur";

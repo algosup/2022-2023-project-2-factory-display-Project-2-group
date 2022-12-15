@@ -73,8 +73,12 @@ if (isset($_POST['submit'])) {
             <h2>Connectez-vous :</h2>
             <?php
             if (isset($error)) {
-                echo '<script> swal("Erreur !", "<?php echo $error; ?>"); </script>';
-            } ?>
+                echo '<script> swal("Erreur !", "' . $error . '"); </script>';
+            }
+            if (isset($success)) {
+                echo '<script> swal("Succès !", "' . $success . '"); </script>';
+            }
+            ?>
             <div class="input_container">
                 <input type="email" name="email" placeholder="E-mail" required>
             </div>

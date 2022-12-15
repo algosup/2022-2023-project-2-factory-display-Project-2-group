@@ -16,22 +16,22 @@ if (isset($_POST['submit'])) {
     $email_count = $result_email_exist->rowCount();
 
     if ($email_count) {
-        $error[] = "Un compte avec cet email existe déjà.";
+        $error = "Un compte avec cet email existe déjà.";
     } else {
         if ($pass == $c_pass) {
             $sql = "INSERT INTO user_form (name, email, password) VALUES ('$name', '$email', '$pass_hash')";
             $result = $conn->query($sql);
 
             if ($result) {
-                $success[] = "Votre compte a été créé avec succès.";
+                $success = "Votre compte a été créé avec succès.";
                 // wait 3 seconds before redirecting to login page
                 header('refresh:3;location:account.php');
 
             } else {
-                $error[] = "Une erreur s'est produite lors de la création de votre compte.";
+                $error = "Une erreur s'est produite lors de la création de votre compte.";
             }
         } else {
-            $error[] = "Les mots de passe ne correspondent pas.";
+            $error = "Les mots de passe ne correspondent pas.";
         }
     }
 }
@@ -49,10 +49,12 @@ if (isset($_POST['submit'])) {
 
     <script src="/factory-display/assets/headers/header.js"></script>
     <script src="/factory-display/assets/js/settings/inscription.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/inscription.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
+    
 
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
@@ -64,17 +66,12 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h1>Inscrivez-vous :</h1>
-
             <?php
             if (isset($error)) {
-                foreach ($error as $error) {
-                    echo '<p class="error">' . $error . '</p>';
-                }
+                echo '<div class="alert alert-danger" role="alert">' . $error . '</div>';
             }
             if (isset($success)) {
-                foreach ($success as $success) {
-                    echo '<p class="success">' . $success . '</p>';
-                }
+                echo '<div class="alert alert-success" role="alert">' . $success . '</div>';
             }
             ?>
 
