@@ -26,9 +26,7 @@ else {
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/scenes/manage.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
-
-
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
 <body>
     
