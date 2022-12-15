@@ -169,7 +169,14 @@ body {
 #widgets-accordion > .accordion-item > .accordion-collapse > .accordion-body {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
+#widgets-accordion > .accordion-item > .accordion-collapse > .accordion-body > div > img {
+  margin: 5px;
+}
+
 
 .btn {
   width: 100%;

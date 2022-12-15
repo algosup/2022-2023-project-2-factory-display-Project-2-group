@@ -1,6 +1,10 @@
-.iframe-container {
+.screen-container {
     display: flex;
     flex-direction: row;
+}
+
+body {
+    margin-bottom: 10vh;
 }
 
 h1 {
@@ -10,8 +14,53 @@ h1 {
 }
 
 iframe{
-    width: 80vw;
-    height: 45vw;
+    width: 40vw;
+    height: 22.5vw;
     overflow: hidden;
     margin-left:10vw;
+}
+
+a.buttons {
+    margin-left: 20px;
+    margin-top: 20px;
+    color: rgba(0,0,0,0.7);
+    text-decoration: none;
+    width: fit-content;
+    height: auto;
+    background-color: white;
+    border: #ff7d26 2px solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a.buttons:nth-child(4) {
+    background-color: rgb(216, 9, 9);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+a.buttons:nth-child(4):hover {
+    background-color: white;
+    color: rgba(211, 24, 24, 0.804);
+    outline: 2px solid rgba(211, 24, 24, 0.804);
+}
+
+a.buttons:hover {
+    background-color: #ff7d26;
+    color: white;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    margin-left: 10vw;
+}
+
+hr {
+    width: 95vw;
+    margin: 30px auto 0 auto;
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 5px 1px black;
 }

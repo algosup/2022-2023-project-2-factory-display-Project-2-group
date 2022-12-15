@@ -29,12 +29,8 @@
       />
     </head>
     <body onload="setColors()">
-<iframe src="/screens-side/widgets/clock.html" style="width: 26vh;height: 26vh;margin-top: 19vh; margin-bottom: 55vh; margin-left: 15vw; margin-right: 70vw;"></iframe>
+<iframe src="/screens-side/widgets/clock.html" style="width: 72vh;height: 72vh;margin-top: 0vh; margin-bottom: 28vh; margin-left: 0vw; margin-right: 57vw;"></iframe>
 <script>
-document.getElementsByTagName("body")[0].addEventListener("click", function() {
-    document.getElementsByTagName("body")[0].requestFullscreen();
-});
-
 function setColors() {
   var iframes = document.getElementsByTagName("iframe");
   for (var i = 0; i < iframes.length; i++) {
@@ -45,11 +41,6 @@ function setColors() {
       iframes[i].contentWindow.document.head.appendChild(cssLink);
   }
 }
-
-function autoRefresh() {
-  window.location = window.location.href;
-}
-setInterval('autoRefresh()', 120000);
 
 </script>
 </body>

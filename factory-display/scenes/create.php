@@ -32,6 +32,7 @@ else {
   <!-- <script src="/factory-display/assets/js/scenes/custom.js"></script> -->
   <script src="/factory-display/assets/js/scenes/themes.js"></script>
   <script src="/factory-display/assets/js/init.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   
 
   <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
@@ -39,24 +40,18 @@ else {
   <link rel="stylesheet" href="/factory-display/assets/css/scenes/custom.css">
   <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
   <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 
-  <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
   
 </head>
 
 <body onload="loadFirstView()">
 
-<header>
-    <?php
-    if (isset($_SESSION['role'])) {
-      if ($_SESSION['role'] == "user") {
-        @include '../assets/headers/header-user.html';
-      } else
-        if ($_SESSION['role'] == "admin") {
-          @include '../assets/headers/header-admin.html';
-        }
-    }
-    ?>
+
+
+
+
+  <header></header>
 
   <div class="d-flex justify-content-center">
     <h1 id="global-title">Nouvelle scène</h1>
@@ -70,11 +65,14 @@ else {
           <h2> Informations</h2>
         </div>
         <div class="row">
-          <p>Nom de la Scène</p>
-          <input type="text" name="scene-name" id="scene-name" placeholder="Votre scène" />
-          <hr />
-          <p>Description</p>
-          <input type="text" name="desc-name" id="desc-name" placeholder="Description" />
+          <form name="form" method="get">
+            <p>Nom de la Scène</p>
+            <input type="text" name="scene-name" id="scene-name" placeholder="Votre scène" />
+            <hr />
+            <p>Description</p>
+            <input type="text" name="desc-name" id="desc-name" placeholder="Description" />
+            <hr />
+        </form>
         </div>
       </div>
 
@@ -125,10 +123,19 @@ else {
               </h2>
               <div id="fileSettingCollapse" class="accordion-collapse collapse show" aria-labelledby="fileSettingHeading" data-bs-parent="#settings-accordion">
                 <div class="accordion-body no-padding">
-                  <button class="btn btn-outline-light" id="previewBtn" onclick="runPreview()">Preview</button>
+                  <button class="btn btn-outline-light" id="previewBtn" onclick="runPreview()">Prévisualiser</button>
                   <button class="btn btn-outline-light" id="saveBtn" onclick="saveScene()">Sauvegarder</button>
-                  <button class="btn btn-outline-light" onclick="downloadScene()">Télécharger</button>
-                  <button class="btn btn-outline-light">Charger</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="publishSettingHeading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#publishSettingCollapse" aria-expanded="true" aria-controls="publishSettingCollapse">
+                  Publier
+                </button>
+              </h2>
+              <div id="publishSettingCollapse" class="accordion-collapse collapse" aria-labelledby="publishSettingHeading" data-bs-parent="#settings-accordion">
+                <div class="accordion-body no-padding">
                   <button class="btn btn-outline-light" onclick="publishScene('locker-room')">Publier au Vestiaires</button>
                   <button class="btn btn-outline-light" onclick="publishScene('cafeteria')">Publier à la Cafeteria</button>
                 </div>
@@ -167,7 +174,29 @@ else {
             </h2>
             <div id="textWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="textWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                  <div onclick="appendTextWithHeading()">Lorem, ipsum dolor.</div>
+                  <div onclick="appendText('white','small')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_white.png" style="filter: drop-shadow(0 0 0.2rem black); width:60px;" alt=""></div>
+                  <div onclick="appendText('white','medium')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_white.png" style="filter: drop-shadow(0 0 0.2rem black); width:80px;" alt=""></div>
+                  <div onclick="appendText('white','large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_white.png" style="filter: drop-shadow(0 0 0.2rem black); width:100px;" alt=""></div>
+                  <div onclick="appendText('white','extra-large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_white.png" style="filter: drop-shadow(0 0 0.2rem black); width:120px;" alt=""></div>
+                  <div onclick="appendText('black','small')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_black.png" style="width:60px;" alt=""></div>
+                  <div onclick="appendText('black','medium')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_black.png" style="width:80px;" alt=""></div>
+                  <div onclick="appendText('black','large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_black.png" style="width:100px;" alt=""></div>
+                  <div onclick="appendText('black','extra-large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_black.png" style="width:120px;" alt=""></div>
+                  <br>
+                  <div onclick="appendText('orange','small')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_orange.png" style="width:60px;" alt=""></div>
+                  <div onclick="appendText('orange','medium')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_orange.png" style="width:80px;" alt=""></div>
+                  <div onclick="appendText('orange','large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_orange.png" style="width:100px;" alt=""></div>
+                  <div onclick="appendText('orange','extra-large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_orange.png" style="width:120px;" alt=""></div>
+                  <br>
+                  <div onclick="appendText('red','small')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_red.png" style="width:60px;" alt=""></div>
+                  <div onclick="appendText('red','medium')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_red.png" style="width:80px;" alt=""></div>
+                  <div onclick="appendText('red','large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_red.png" style="width:100px;" alt=""></div>
+                  <div onclick="appendText('red','extra-large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_red.png" style="width:120px;" alt=""></div>
+                  <br>
+                  <div onclick="appendText('blue','small')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_blue.png" style="width:60px;" alt=""></div>
+                  <div onclick="appendText('blue','medium')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_blue.png" style="width:80px;" alt=""></div>
+                  <div onclick="appendText('blue','large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_blue.png" style="width:100px;" alt=""></div>
+                  <div onclick="appendText('blue','extra-large')"><img src="/factory-display/assets/img/widgets/placeholder/text/txt_blue.png" style="width:120px;" alt=""></div>
               </div>
             </div>
           </div>
@@ -179,7 +208,7 @@ else {
             </h2>
             <div id="imageWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="imageWidgetHeading" data-bs-parent="#widgets-accordion">
               <div class="accordion-body">
-                <strong onclick="appendImg()">This is the second item's accordion body.</strong>
+                <div onclick="appendImg()"><img src="/factory-display/assets/img/widgets/placeholder/img_url/chain_link.png" style="width:150px;" alt=""></div>
               </div>
             </div>
           </div>
@@ -233,42 +262,6 @@ else {
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="videoWidgetHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#videoWidgetCollapse" aria-expanded="false" aria-controls="videoWidgetCollapse">
-                <h4> Vidéos </h4>
-              </button>
-            </h2>
-            <div id="videoWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="videoWidgetHeading" data-bs-parent="#widgets-accordion">
-              <div class="accordion-body">
-                <strong>This is the seventh item's accordion body.</strong>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="fileWidgetHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fileWidgetCollapse" aria-expanded="false" aria-controls="fileWidgetCollapse">
-                <h4> Fichier </h4>
-              </button>
-            </h2>
-            <div id="fileWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="fileWidgetHeading" data-bs-parent="#widgets-accordion">
-              <div class="accordion-body">
-                <strong>This is the eighth item's accordion body.</strong>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="otherWidgetHeading">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#otherWidgetCollapse" aria-expanded="false" aria-controls="otherWidgetCollapse">
-                <h4> Autres </h4>
-              </button>
-            </h2>
-            <div id="otherWidgetCollapse" class="accordion-collapse collapse" aria-labelledby="otherWidgetHeading" data-bs-parent="#widgets-accordion">
-              <div class="accordion-body">
-                <strong>This is the ninth item's accordion body.</strong>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -285,14 +278,14 @@ else {
 <?php
 
 function writeInLockers() {
-  $myfile = fopen("../../screens-side/screens/locker-room.html", "w") or die("Unable to open file!");
+  $myfile = fopen("../../screens-side/screens/locker-room.html", "w");
   $txt = $_COOKIE["code"];
   fwrite($myfile, $txt);
   fclose($myfile);
 }
 
 function writeInCafeteria() {
-  $myfile = fopen("../../screens-side/screens/cafeteria.html", "w") or die("Unable to open file!");
+  $myfile = fopen("../../screens-side/screens/cafeteria.html", "w");
   $txt = $_COOKIE["code"];
   fwrite($myfile, $txt);
   fclose($myfile);
@@ -304,6 +297,20 @@ if (isset($_GET['locker-room'])) {
 
 if (isset($_GET['cafeteria'])) {
   writeInCafeteria();
+}
+
+function saveAs() {
+  $name = $_COOKIE["name"];
+  $myfile = fopen("../../screens-side/saved-scenes/" . $name . ".html", "w");
+  $txt = $_COOKIE["code"];
+  fwrite($myfile, $txt);
+  fclose($myfile);
+  // header("Location: ../scenes/manage.php");
+  echo "<script>swal ( '👍' ,  'Votre scène à bien été sauvegarder, vous allez être redirigé à l'emplacement de la sauvegarde !' ,  'success' ); setTimeout(function(){window.location.href = 'manage.php'};</script>";
+}
+
+if (isset($_GET['request-save'])) {
+  saveAs();
 }
 
   ?>

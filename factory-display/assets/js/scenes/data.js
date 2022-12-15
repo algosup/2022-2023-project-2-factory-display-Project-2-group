@@ -146,6 +146,8 @@ function percent() {
   element.setAttribute("data-values", JSON.stringify(values));
 }
 
+
+
 function createHtmlTag() {
   var htmlString = [];
 
@@ -200,13 +202,76 @@ function createHtmlTag() {
       );
       htmlString.push(iframe.outerHTML);
     
-    } else if(element.className.includes("image")) {
-      var img = document.createElement("img");
+    } else if(element.className.includes("img-placeholder")) {
+      link = element.getAttribute("data-source");
+
+      var img = document.createElement("div");
       img.setAttribute(
-        "src",
-        link
+        "style",
+        "width: " +
+          values.width +
+          "vh;height: " +
+          values.height +
+          "vh;margin-top: " +
+          values.margin_top +
+          "vh; margin-bottom: " +
+          values.margin_bottom +
+          "vh; margin-left: " +
+          values.margin_left +
+          "vw; margin-right: " +
+          values.margin_right +
+          "vw; background-image:" +
+          "url(" + link + "); background-size: contain; background-position: center; background-repeat: no-repeat;"
+
       );
-      img.setAttribute(
+        htmlString.push(img.outerHTML);
+    } else if(element.className.includes("text-placeholder")) {
+      textContent = element.getAttribute("data-text");
+      textColor = element.getAttribute("data-color");
+      textSize = element.getAttribute("data-size");
+
+      switch (textColor) {
+        case "white":
+          COLOR = "#ffffff";
+          break;
+        case "black":
+          COLOR = "#000000";
+          break;
+        case "red":
+          COLOR = "#ED1A1A";
+          break;
+        case "orange":
+          COLOR = "#ED7F1A";
+          break;
+        case "blue":
+          COLOR = "#1A94ED";
+          break;
+        default:
+            COLOR = "#ffffff";
+            break
+      }
+
+      switch (textSize) {
+        case "small":
+          SIZE = "2.5vh";
+          break;
+        case "medium":
+          SIZE = "4vh";
+          break;
+        case "large":
+          SIZE = "5vh";
+          break;
+        case "extra-large":
+          SIZE = "7vh";
+          break;
+        default:
+          SIZE = "4vh";
+          break
+      }
+
+
+      var TXT = document.createElement("div");
+      TXT.setAttribute(
         "style",
         "width: " +
           values.width +
@@ -222,6 +287,15 @@ function createHtmlTag() {
           values.margin_right +
           "vw;"
       );
+        var text = document.createElement("p");
+        text.setAttribute(
+          "style",
+          "font-size:" + SIZE + "; color:" + COLOR +"; text-align: center;"
+      );
+      text.innerHTML = textContent;
+      TXT.appendChild(text);
+
+        htmlString.push(TXT.outerHTML);
     }
   });
   console.log(htmlString);
@@ -422,6 +496,8 @@ function setColors() {
 function publishScene(location) {
   createHtmlTag();
 
+  createCookie("code", globalContent, "10");
+
   switch (location) {
     case "locker-room":
       window.location.href = "create.php?locker-room";
@@ -430,27 +506,6 @@ function publishScene(location) {
       window.location.href = "create.php?cafeteria";
       break;
   }
-
-
-$(document).ready(function () {
-  createCookie("code", globalContent, "10");
-});
-
-function createCookie(name, value, days) {
-  var expires;
-    
-  if (days) {
-      var date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toGMTString();
-  }
-  else {
-      expires = "";
-  }
-    
-  document.cookie = escape(name) + "=" + 
-      escape(value) + expires + "; path=/";
-}
 
 }
 
@@ -465,28 +520,29 @@ function runPreview() {
   previewWindow.document.close();
 }
 
-function downloadScene(){
-  createHtmlTag();
-  var blob = new Blob([globalContent], {type: "text/plain;charset=utf-8"});
-  saveAs(blob, "scene.html");
-}
+
 
 function saveScene(){
   createHtmlTag();
 
-  switch (location) {
-    case "locker-room":
-      window.location.href = "create.php?locker-room";
-      break;
-    case "cafeteria":
-      window.location.href = "create.php?cafeteria";
-      break;
+  // setTimeout(function(){
+
+  //sleep 3seconds
+  sceneName = document.getElementById("scene-name").value;
+  sceneDesc = document.getElementById("desc-name").value;
+
+  if (sceneName == "") {
+    sceneName = "untitled";
   }
-
-
-$(document).ready(function () {
+  createCookie("name", sceneName, "10");
   createCookie("code", globalContent, "10");
-});
+  createCookie("desc", sceneDesc, "10");
+  window.location.href = "create.php?request-save";
+// }, 3000);
+
+
+
+}
 
 function createCookie(name, value, days) {
   var expires;
@@ -502,6 +558,4 @@ function createCookie(name, value, days) {
     
   document.cookie = escape(name) + "=" + 
       escape(value) + expires + "; path=/";
-}
-
 }

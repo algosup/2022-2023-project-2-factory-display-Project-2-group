@@ -25,6 +25,7 @@ news_lg.className = "resize-drag news-lg-placeholder";
 var weather_sm = document.createElement("div");
 weather_sm.className = "resize-drag weather-sm-placeholder";
 
+
 function appendPlaceholder(img) {
   var resizeContainer = document.querySelector(".resize-container");
   resizeContainer.appendChild(img);
@@ -32,19 +33,85 @@ function appendPlaceholder(img) {
 }
 
 function appendImg() {
-  var placeholder = document.createElement("div");
-  placeholder.className = "resize-drag img-placeholder";
   var source = prompt("Enter Image URL");
+  var placeholder = document.createElement("div");
+
+  placeholder.className = "resize-drag img-placeholder";
   placeholder.style.backgroundImage = `url(${source})`;
+  placeholder.setAttribute("data-source", source);
+
   appendPlaceholder(placeholder);
+}
+
+function appendText(color, size) {
+  var text = prompt("Enter Text");
+  var placeholder = document.createElement("div");
+  var p = document.createElement("p");
+  p.textContent = text;
+
+  switch (color) {
+    case "white":
+      p.style.color = "#fff";
+      placeholder.setAttribute("data-color", "white");
+      break;
+    case "black":
+      p.style.color = "#000";
+      placeholder.setAttribute("data-color", "black");
+      break;
+    case "red":
+      p.style.color = "#ED1A1A";
+      placeholder.setAttribute("data-color", "red");
+      break;
+    case "orange":
+      p.style.color = "#ED7F1A";
+      placeholder.setAttribute("data-color", "orange");
+      break;
+    case "blue":
+      p.style.color = "#1A94ED";
+      placeholder.setAttribute("data-color", "blue");
+      break;
+    default:
+      p.style.color = "#fff";
+      placeholder.setAttribute("data-color", "white");
+      break;
+  }
+
+  switch (size) {
+    case "small":
+      p.style.fontSize = "1.5rem";
+      placeholder.setAttribute("data-size", "small");
+      break;
+    case "medium":
+      p.style.fontSize = "2rem";
+      placeholder.setAttribute("data-size", "medium");
+      break;
+    case "large":
+      p.style.fontSize = "2.5rem";
+      placeholder.setAttribute("data-size", "large");
+      break;
+    case "extra-large":
+      p.style.fontSize = "3rem";
+      placeholder.setAttribute("data-size", "extra-large");
+      break;
+    default:
+      p.style.fontSize = "2rem";
+      placeholder.setAttribute("data-size", "medium");
+      break;
+  }
+
+  placeholder.className = "resize-drag text-placeholder";
+  placeholder.setAttribute("data-text", text);
+
+  appendPlaceholder(placeholder);
+  placeholder.append(p);
 }
 
 function appendsBtns() {
   var selectedElements = document.querySelectorAll(".selected");
   selectedElements.forEach((element) => {
-    element.appendChild(moveBtn);
-    element.appendChild(deleteBtn);
-    element.appendChild(resizeBtn);
+    element.prepend(moveBtn);
+    element.prepend(deleteBtn);
+    element.prepend(resizeBtn);
   });
 }
 
@@ -57,27 +124,12 @@ function removeBtns() {
   });
 }
 
-function appendTextWithHeading() {
-  let text = prompt("Enter yout Text");
-  if (text) {
-    var placeholder = document.createElement("div");
-    placeholder.className = "resize-drag text-heading-placeholder";
-    var textHeadingCtn = document.createElement("div");
-    textHeadingCtn.className = "text-heading-ctn";
-    var textHeading = document.createElement("div");
-    textHeading.className = "text-heading";
-    textHeading.innerHTML = `<h1>${text}</h1>`;
-    textHeadingCtn.appendChild(textHeading);
-    placeholder.appendChild(textHeadingCtn);
-    appendPlaceholder(placeholder);
-  } else {
-    alert("Please enter text");
-  }
-}
 
 
-document.querySelectorAll("h1").forEach((el) => {
+
+document.querySelectorAll("p").forEach((el) => {
   if (el.classList.contains("selected")) {
     el.classList.remove("selected");
   }
 });
+
