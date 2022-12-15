@@ -28,11 +28,9 @@ if (isset($_POST['submit'])) {
             $_SESSION['logged_in'] = true;
 
             header('location:/factory-display/index.php');
-        } else {
-            $error[] = "Le mot de passe est incorrect.";
         }
     } else {
-        $error[] = "Aucun compte avec cet email n'existe.";
+        $error = "Adresse email ou mot de passe incorrect.";
     }
 }
 
@@ -53,7 +51,7 @@ if (isset($_POST['submit'])) {
     <script src="/factory-display/assets/headers/header.js"></script>
     <script src="/factory-display/assets/js/settings/connexion.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <link rel="stylesheet" href="/factory-display/assets/css/section/header.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/account.css">
@@ -73,7 +71,10 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h2>Connectez-vous :</h2>
-
+            <?php
+            if (isset($error)) {
+                echo '<script> swal("Erreur !", "<?php echo $error; ?>"); </script>';
+            } ?>
             <div class="input_container">
                 <input type="email" name="email" placeholder="E-mail" required>
             </div>

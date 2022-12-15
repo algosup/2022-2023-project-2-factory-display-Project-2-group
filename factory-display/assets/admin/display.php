@@ -49,7 +49,7 @@ $result = $conn->query($sql);
                     <tr>
                         <th scope="col">Nom</th>
                         <th scope="col">Email</th>
-                        <th scope="col">Role</th>
+                        <th scope="col">Rôle</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,7 +64,11 @@ $result = $conn->query($sql);
                             <?php echo $row['email']; ?>
                         </td>
                         <td>
-                            <?php echo $row['user_type']; ?>
+                            <?php if ($row['role'] == "admin") {
+                                echo "Administrateur";
+                            } else {
+                                echo "Utilisateur";
+                            } ?>
                         </td>
                         <td>
                             <form action="process.php" method="post">
@@ -72,6 +76,8 @@ $result = $conn->query($sql);
                                     class="btn btn-danger">
                                 <input type="submit" id="<?php echo $row['id']; ?>" name="edit" value="Modifier"
                                     class="btn btn-primary">
+                                <input type="submit" id="<?php echo $row['id']; ?>" name="view" value="Consulter"
+                                    class="btn btn-success">
                         </td>
                     </tr>
                     <?php } ?>
