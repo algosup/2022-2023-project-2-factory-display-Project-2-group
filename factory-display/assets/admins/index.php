@@ -1,5 +1,5 @@
 <?php
-@include '../assets/php/login/config_db.php';
+@include 'factory-display/assets/php/login/config_db.php';
 
 session_start();
 
@@ -9,6 +9,12 @@ if (isset($_SESSION['logged_in'])) {
     if ($_SESSION['role'] == "admin") {
         // redirect to the admin page
         $ok = true;
+
+        // make a request to the database to get all the users
+        $sql = "SELECT * FROM user_form";
+
+        // we get the result of the request
+        $result = $conn->query($sql);
 
     } else {
         // redirect to the user page
