@@ -25,17 +25,17 @@
       </style>
       <link
         rel="stylesheet"
-        href="/screens-side/assets/css/themes/theme1.css"
+        href="/screens-side/assets/css/themes/theme3.css"
       />
     </head>
     <body onload="setColors()">
-<iframe src="/screens-side/widgets/clock.html" style="width: 100vh;height: 100vh;margin-top: 0vh; margin-bottom: 0vh; margin-left: 19vw; margin-right: 22vw;"></iframe>
+<iframe src="/screens-side/widgets/weather-sm.html" style="width: 100vh;height: 100vh;margin-top: 0vh; margin-bottom: 0vh; margin-left: 21vw; margin-right: 20vw;"></iframe>
 <script>
 function setColors() {
   var iframes = document.getElementsByTagName("iframe");
   for (var i = 0; i < iframes.length; i++) {
       var cssLink = document.createElement("link");
-      cssLink.href = "/screens-side/assets/css/themes/theme1.css";
+      cssLink.href = "/screens-side/assets/css/themes/theme3.css";
       cssLink.rel = "stylesheet";
       cssLink.type = "text/css";
       iframes[i].contentWindow.document.head.appendChild(cssLink);
