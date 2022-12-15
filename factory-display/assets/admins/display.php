@@ -4,7 +4,7 @@
 session_start();
 
 // make a request to the database to get all the users
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM user_form";
 
 // we get the result of the request
 $result = $conn->query($sql);
