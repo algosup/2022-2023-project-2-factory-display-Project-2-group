@@ -87,7 +87,7 @@ else {
     if (isset($_GET['delete'])) {
         $entryLink = $_GET['link'];
         unlink("../../screens-side/saved-scenes/$entryLink");
-        header("Location: manage.php");
+        echo '<script>window.location.href = "manage.php";</script>';
     }
 
 ?>
