@@ -35,12 +35,12 @@ $result = $conn->query($sql);
 <body>
 
     <header>
-        <?php include '../headers/header-admin.php'; ?>
+        <?php include '../headers/header-admin.html'; ?>
     </header>
-    
+
     <div class="main-content-admin">
         <div class="admin-header">
-            <h1>Administration</h1>
+            <h1>Liste des comptes </h1>
         </div>
 
         <div class="admin-table-user"> <!-- make a table  with all the users from the database -->
@@ -64,7 +64,7 @@ $result = $conn->query($sql);
                             <?php echo $row['email']; ?>
                         </td>
                         <td>
-                            <?php echo $row['role']; ?>
+                            <?php echo $row['user_type']; ?>
                         </td>
                         <td>
                             <form action="process.php" method="post">

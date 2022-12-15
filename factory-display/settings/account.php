@@ -61,32 +61,6 @@ if (isset($_POST['submit'])) {
 
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 
-    <script type="text/javascript">
-        // showMessage() function is used to display the divs error and success and hide them 5 seconds after
-        function showMessage() {
-            $(".error").show();
-            $(".success").show();
-            setTimeout(function () {
-                $(".error").hide();
-                $(".success").hide();
-            }, 5000);
-        }
-
-        function ok() {
-            <?php if  (isset($success)) { ?>
-                swal({
-                    icon: "success",
-                });
-            <?php } 
-            if  (isset($error)) { ?>
-                swal({
-                    icon: "error",
-                    text: <?php echo $error; ?>,
-                });
-            <?php } ?>
-        }
-
-    </script>
 </head>
 
 <body>
@@ -99,26 +73,6 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
         <form action="" method="post">
             <h2>Connectez-vous :</h2>
-
-            <div class="error">
-                <?php
-                if (isset($error)) {
-                    foreach ($error as $error) {
-                        echo '<p>' . $error . '</p>';
-                    }
-                }
-                ?>
-            </div>
-
-            <div class="success">
-                <?php
-                if (isset($success)) {
-                    foreach ($success as $success) {
-                        echo '<p>' . $success . '</p>';
-                    }
-                }
-                ?>
-            </div>
 
             <div class="input_container">
                 <input type="email" name="email" placeholder="E-mail" required>

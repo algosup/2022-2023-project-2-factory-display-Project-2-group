@@ -6,10 +6,11 @@ body {
     
 }
 
+
 .admin-header {
     display: block;
     background: #fff;
-    text-align: center;
+    text-align: left;
 }
 
 .admin-header h1 {
@@ -25,5 +26,5 @@ body {
     background: #fff;
     margin: 0 auto;
     padding: 0;
-    width: 100%;
+    width: 80%;
 }

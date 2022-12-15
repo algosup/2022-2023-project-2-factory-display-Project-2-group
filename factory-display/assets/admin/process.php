@@ -17,19 +17,20 @@ if (isset($_SESSION['logged_in'])) {
             $stmt->execute(['id' => $id]);
             $_SESSION['success'] = "L'utilisateur a bien été supprimé.";
             header('location:/factory-display/settings/admin.php');
-        } else
-            if (isset($_POST['modify'])) {
-                $id = $_POST['id'];
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-                $role = $_POST['role'];
-                $sql = "UPDATE users SET name = :name, email = :email, role = :role WHERE id = :id";
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute(['id' => $id, 'name' => $name, 'email' => $email, 'role' => $role]);
-                $_SESSION['success'] = "L'utilisateur a bien été modifié.";
-                header('location:/factory-display/settings/admin.php');
-            }
-            
+        }
+        
+        if (isset($_POST['modify'])) {
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $role = $_POST['role'];
+            $sql = "UPDATE users SET name = :name, email = :email, role = :role WHERE id = :id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(['id' => $id, 'name' => $name, 'email' => $email, 'role' => $role]);
+            $_SESSION['success'] = "L'utilisateur a bien été modifié.";
+            header('location:/factory-display/index.php');
+        }
+
     } else {
         // redirect to the user page
         $_SESSION['error'] = "Vous n'avez pas les droits pour accéder à cette page.";
@@ -39,3 +40,6 @@ if (isset($_SESSION['logged_in'])) {
     // redirect to the login page
     header('location:/factory-display/settings/account.php');
 }
+
+?>
+
