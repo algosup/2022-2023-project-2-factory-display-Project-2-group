@@ -1,5 +1,5 @@
 <?php
-@include './php/login/config_db.php';
+@include '../assets/php/login/config_db.php';
 
 session_start();
 
@@ -33,10 +33,6 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-
-    <header>
-        <?php@include '../assets/headers/header-admin.html'; ?>
-    </header>
 
     <div class="main-content-admin">
         <div class="admin-header">
