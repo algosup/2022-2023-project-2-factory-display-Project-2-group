@@ -8,7 +8,7 @@ if (isset($_SESSION['logged_in'])) {
     // check if the user is an admin
     if ($_SESSION['role'] == "admin") {
         // redirect to the admin page
-        $ok = true;
+        header('location:display.php');
 
         // make a request to the database to get all the users
         $sql = "SELECT * FROM user_form";

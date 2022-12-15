@@ -1,3 +1,15 @@
+<?php
+@include '../php/login/config_db.php';
+
+session_start();
+
+// make a request to the database to get all the users
+$sql = "SELECT * FROM user_form";
+
+// we get the result of the request
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +33,11 @@
 </head>
 
 <body>
+
+    <header>
+        <?php include '../headers/header-admin.php'; ?>
+    </header>
+    
     <div class="main-content-admin">
         <div class="admin-header">
             <h1>Administration</h1>
@@ -36,10 +53,32 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <?php
+    // we fetch the result
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) { ?>
+                    <tr>
+                        <td>
+                            <?php echo $row['name']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['email']; ?>
+                        </td>
+                        <td>
+                            <?php echo $row['role']; ?>
+                        </td>
+                        <td>
+                            <form action="process.php" method="post">
+                                <input type="submit" id="<?php echo $row['id']; ?>" name="delete" value="Supprimer"
+                                    class="btn btn-danger">
+                                <input type="submit" id="<?php echo $row['id']; ?>" name="edit" value="Modifier"
+                                    class="btn btn-primary">
+                        </td>
+                    </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
     </div>
 </body>
+
 </html>
