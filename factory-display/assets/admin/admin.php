@@ -1,5 +1,5 @@
 <?php
-@include '../assets/php/login/config_db.php';
+@include './php/login/config_db.php';
 
 session_start();
 
@@ -27,9 +27,9 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/homepage.css">
+    <link rel="stylesheet" href="/factory-display/assets/css/admin/main.css">
 
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
-
 </head>
 
 <body>
