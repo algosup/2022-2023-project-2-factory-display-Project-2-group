@@ -76,7 +76,7 @@ if (isset($_SESSION['logged_in'])) {
         });
     </script>
     <?php } ?>
-    
+
     <?php if (isset($_POST['delete'])) {
         $id = $_POST['id'];
         $sql = "DELETE FROM user_form WHERE id = :id";
@@ -96,7 +96,7 @@ if (isset($_SESSION['logged_in'])) {
     </script>
     <?php } ?>
 
-    <?php if (isset($_POST['modify'])) { // we creating a html page where the admin can edit user's informations ?>
+    <?php if (isset($_POST['edit'])) { // we creating a html page where the admin can edit user's informations ?>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -120,15 +120,58 @@ if (isset($_SESSION['logged_in'])) {
                         <label for="role">Rôle</label>
                         <select class="form-control" name="role" id="role">
                             <option value="admin" <?php if ($user['role'] == "admin") {
-                                                        echo "selected";
-                                                    } ?>>Administrateur</option>
+            echo "selected";
+        } ?>>Administrateur</option>
                             <option value="user" <?php if ($user['role'] == "user") {
-                                                        echo "selected";
-                                                    } ?>>Utilisateur</option>
+            echo "selected";
+        } ?>>Utilisateur</option>
                         </select>
                     </div>
 
                     <input type="submit" name="modify" value="Modifier" class="btn btn-primary">
+                </form>
+            </div>
+        </div>
+    </div>
+    <?php } ?>
+
+    <?php if (isset($_POST['view'])) { // we creating a html page where the admin can view user's informations ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">Informations de l'utilisateur
+                    <?php echo $user['name']; ?>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <form action="process.php" method="post">
+                    <div class="form-group row">
+                        <label for="name" class="col-sm-2 col-form-label">Nom</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" id="name"
+                                value="<?php echo $user['name']; ?>" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" name="email" id="email"
+                                value="<?php echo $user['email']; ?>" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="role" class="col-sm-2 col-form-label">Rôle</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="role" id="role"
+                                value="<?php echo $user['role']; ?>" readonly>
+                        </div>
+                    </div>
+
+                    <a href="javascript:history.back()" class="btn btn-primary">Retour</a>
                 </form>
             </div>
         </div>
