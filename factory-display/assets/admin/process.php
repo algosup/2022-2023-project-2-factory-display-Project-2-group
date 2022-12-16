@@ -18,6 +18,7 @@ if (isset($_SESSION['logged_in'])) {
             $stmt->execute(['id' => $id]);
             $user = $stmt->fetch();
 
+
         }
 
         
@@ -122,7 +123,10 @@ if (isset($_SESSION['logged_in'])) {
                         </select>
                     </div>
 
-                    <input type="submit" name="modify" value="Modifier" id="btn-valid"class="btn btn-primary">
+                    <div class="btn-container">
+                    <input type="submit" name="modify" value="Modifier"  class="btn btn-primary">
+                    <a href="javascript:history.back()" class="btn btn-primary">Retour</a>
+                    </div>
                 </form>
             </div>
         </div>

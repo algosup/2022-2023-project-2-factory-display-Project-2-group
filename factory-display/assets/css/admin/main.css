@@ -30,7 +30,7 @@ body {
 
 
 .edit-main-container {
-    margin-top: 10px;
+    margin-top: 20px;
     display: block;
     background: #fff;
     margin: 0 auto;
@@ -51,7 +51,7 @@ body {
     width: 80%;
 }
 
-#btn-validate {
+.btn-container {
     margin: 0 auto;
     padding: 0;
     text-align: center;
