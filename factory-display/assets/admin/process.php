@@ -9,21 +9,14 @@ if (isset($_SESSION['logged_in'])) {
     // check if the user is an admin
     if ($_SESSION['role'] == "admin") {
 
-        if (isset($_POST['edit'])) {
+        if (isset($_POST['submit'])) {
             $name = $_POST['name'];
             $email = $_POST['email'];
             $role = $_POST['role'];
             $id = $_POST['id'];
         }
 
-        if (isset($_POST['view'])) {
-            $id = $_POST['id'];
-            $sql = "SELECT * FROM user_form WHERE id = :id";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(['id' => $id]);
-            $user = $stmt->fetch();
-        }
-
+        
     } else {
         // redirect to the user page
         $_SESSION['error'] = "Vous n'avez pas les droits pour accéder à cette page.";
@@ -50,6 +43,7 @@ if (isset($_SESSION['logged_in'])) {
     <link rel="stylesheet" href="/factory-display/assets/css/libs/bootstrap.css">
     <link rel="stylesheet" href="/factory-display/assets/css/libs/font-awesome.css">
     <link rel="stylesheet" href="/factory-display/assets/css/settings/homepage.css">
+    <link rel="stylesheet" href="/factory-display/assets/css/admin/main.css">
 
     <script src="/factory-display/assets/headers/header.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
