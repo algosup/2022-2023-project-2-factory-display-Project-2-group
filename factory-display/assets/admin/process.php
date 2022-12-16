@@ -9,15 +9,11 @@ if (isset($_SESSION['logged_in'])) {
     // check if the user is an admin
     if ($_SESSION['role'] == "admin") {
 
-        if (isset($_POST['submit'])) {
-            $id = $_POST['id'];
+        if (isset($_POST['edit'])) {
             $name = $_POST['name'];
             $email = $_POST['email'];
             $role = $_POST['role'];
-            $sql = "UPDATE users SET name = :name, email = :email, role = :role WHERE id = :id";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute(['id' => $id, 'name' => $name, 'email' => $email, 'role' => $role]);
-            $success = "L'utilisateur a bien été modifié.";
+            $id = $_POST['id'];
         }
 
         if (isset($_POST['view'])) {
@@ -97,32 +93,32 @@ if (isset($_SESSION['logged_in'])) {
     <?php } ?>
 
     <?php if (isset($_POST['edit'])) { // we creating a html page where the admin can edit user's informations ?>
-    <div class="container">
+    <div class="edit-main-container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Edition de l'utilisateur <?php echo $user['name']; ?></h1>
+                <h1 class="text-center">Edition de l'utilisateur <?php echo $name; ?></h1>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <form action="process.php" method="post">
+                <form action="modify.php" method="post">
                     <div class="form-group">
                         <label for="name">Nom</label>
-                        <input type="text" class="form-control" name="name" id="name" value="<?php echo $user['name']; ?>">
+                        <input type="text" class="form-control" name="name" id="name" value="<?php echo $name; ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" value="<?php echo $user['email']; ?>">
+                        <input type="email" class="form-control" name="email" id="email" value="<?php echo $email; ?>">
                     </div>
 
                     <div class="form-group">
                         <label for="role">Rôle</label>
                         <select class="form-control" name="role" id="role">
-                            <option value="admin" <?php if ($user['role'] == "admin") {
+                            <option value="admin" <?php if ($role == "admin") {
             echo "selected";
         } ?>>Administrateur</option>
-                            <option value="user" <?php if ($user['role'] == "user") {
+                            <option value="user" <?php if ($role == "user") {
             echo "selected";
         } ?>>Utilisateur</option>
                         </select>
